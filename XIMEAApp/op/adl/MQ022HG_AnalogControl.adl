@@ -7,8 +7,8 @@ display {
 	object {
 		x=50
 		y=50
-		width=415
-		height=160
+		width=405
+		height=110
 	}
 	clr=14
 	bclr=4
@@ -90,7 +90,7 @@ rectangle {
    object {
 	x=5
 	y=5
-	width=405
+	width=395
 	height=30
 	}
 	"basic attribute" {
@@ -102,8 +102,8 @@ rectangle {
    object {
 	x=5
 	y=50
-	width=405
-	height=100
+	width=395
+	height=50
 	}
 	"basic attribute" {
 		clr=14
@@ -118,7 +118,7 @@ rectangle {
 #	x=5
 #	y=50 
 #        width=475
-#	height=80
+#	height=30
 #	}
 #	"basic attribute" {
 #		clr=14
@@ -135,7 +135,7 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="Basic2 "
+	textix="AnalogControl "
 	align="horiz. right"
 }
 
@@ -149,81 +149,40 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="FfcDarkFieldFileName"
+	textix="Gain"
 	align="horiz. right"
 }    
 
-"text update" {
+"text entry" {
      object {
 	    x=270
 	    y=55
-	    width=125
+	    width=60
 	    height=15
 	    }
-	monitor {
-	chan="$(P)$(R)FfcDarkFieldFileName_RBV"   
-	clr=54
-	bclr=4
+	control {
+	chan="$(P)$(R)Gain"   
+	clr=14
+	bclr=51
 	}
 	limits {
 	}
-	align="horiz. center"
 }     
 
-text {
+"text update" {
      object {
-	    x=160
-	    y=80
-	    width=100
+	    x=335
+	    y=55
+	    width=70
 	    height=15
 	    }
-	"basic attribute" {
-		clr=14
+	monitor {
+		chan="$(P)$(R)Gain_RBV"   
+		clr=54
+		bclr=4
+		}
+	limits {
 	}
-	textix="HorizontalFlip"
-	align="horiz. right"
-}    
+}     
 
-menu {
-	object {
-	    x=270
-	    y=80
-	    width=125
-	    height=15
-	    }
-	control {
-		chan="$(P)$(R)HorizontalFlip"
-		clr=14
-		bclr=51
-	}
-}    
- 
-text {
-     object {
-	    x=160
-	    y=105
-	    width=100
-	    height=15
-	    }
-	"basic attribute" {
-		clr=14
-	}
-	textix="VerticalFlip"
-	align="horiz. right"
-}    
-
-menu {
-	object {
-	    x=270
-	    y=105
-	    width=125
-	    height=15
-	    }
-	control {
-		chan="$(P)$(R)VerticalFlip"
-		clr=14
-		bclr=51
-	}
-}    
- 
         

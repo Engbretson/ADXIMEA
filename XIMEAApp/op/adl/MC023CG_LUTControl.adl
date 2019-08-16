@@ -135,7 +135,7 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="Invisible "
+	textix="LUTControl "
 	align="horiz. right"
 }
 
@@ -149,19 +149,47 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="Imgpayloadsize"
+	textix="LUTEnable"
+	align="horiz. right"
+}    
+
+menu {
+	object {
+	    x=270
+	    y=55
+	    width=125
+	    height=15
+	    }
+	control {
+		chan="$(P)$(R)LUTEnable"
+		clr=14
+		bclr=51
+	}
+}    
+ 
+text {
+     object {
+	    x=160
+	    y=80
+	    width=100
+	    height=15
+	    }
+	"basic attribute" {
+		clr=14
+	}
+	textix="LUTIndex"
 	align="horiz. right"
 }    
 
 "text entry" {
      object {
 	    x=270
-	    y=55
+	    y=80
 	    width=60
 	    height=15
 	    }
 	control {
-	chan="$(P)$(R)Imgpayloadsize"   
+	chan="$(P)$(R)LUTIndex"   
 	clr=14
 	bclr=51
 	}
@@ -172,12 +200,12 @@ text {
 "text update" {
      object {
 	    x=335
-	    y=55
+	    y=80
 	    width=70
 	    height=15
 	    }
 	monitor {
-		chan="$(P)$(R)Imgpayloadsize_RBV"   
+		chan="$(P)$(R)LUTIndex_RBV"   
 		clr=54
 		bclr=4
 		}
@@ -188,37 +216,6 @@ text {
 text {
      object {
 	    x=160
-	    y=80
-	    width=100
-	    height=15
-	    }
-	"basic attribute" {
-		clr=14
-	}
-	textix="XiapiContextList"
-	align="horiz. right"
-}    
-
-"text update" {
-     object {
-	    x=270
-	    y=80
-	    width=125
-	    height=15
-	    }
-	monitor {
-	chan="$(P)$(R)XiapiContextList_RBV"   
-	clr=54
-	bclr=4
-	}
-	limits {
-	}
-	align="horiz. center"
-}     
-
-text {
-     object {
-	    x=160
 	    y=105
 	    width=100
 	    height=15
@@ -226,7 +223,7 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="TransportPixelFormat"
+	textix="LUTValue"
 	align="horiz. right"
 }    
 
@@ -238,7 +235,7 @@ text {
 	    height=15
 	    }
 	control {
-	chan="$(P)$(R)TransportPixelFormat"   
+	chan="$(P)$(R)LUTValue"   
 	clr=14
 	bclr=51
 	}
@@ -254,7 +251,7 @@ text {
 	    height=15
 	    }
 	monitor {
-		chan="$(P)$(R)TransportPixelFormat_RBV"   
+		chan="$(P)$(R)LUTValue_RBV"   
 		clr=54
 		bclr=4
 		}

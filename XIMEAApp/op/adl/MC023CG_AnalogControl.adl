@@ -7,8 +7,8 @@ display {
 	object {
 		x=50
 		y=50
-		width=425
-		height=210
+		width=445
+		height=310
 	}
 	clr=14
 	bclr=4
@@ -90,7 +90,7 @@ rectangle {
    object {
 	x=5
 	y=5
-	width=415
+	width=435
 	height=30
 	}
 	"basic attribute" {
@@ -102,8 +102,8 @@ rectangle {
    object {
 	x=5
 	y=50
-	width=415
-	height=150
+	width=435
+	height=250
 	}
 	"basic attribute" {
 		clr=14
@@ -118,7 +118,7 @@ rectangle {
 #	x=5
 #	y=50 
 #        width=475
-#	height=130
+#	height=230
 #	}
 #	"basic attribute" {
 #		clr=14
@@ -135,7 +135,7 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="HDR Setup "
+	textix="AnalogControl "
 	align="horiz. right"
 }
 
@@ -149,42 +149,24 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="HdrKneepointCount"
+	textix="BalanceWhiteAuto"
 	align="horiz. right"
 }    
 
-"text entry" {
-     object {
+menu {
+	object {
 	    x=270
 	    y=55
-	    width=60
+	    width=125
 	    height=15
 	    }
 	control {
-	chan="$(P)$(R)HdrKneepointCount"   
-	clr=14
-	bclr=51
+		chan="$(P)$(R)BalanceWhiteAuto"
+		clr=14
+		bclr=51
 	}
-	limits {
-	}
-}     
-
-"text update" {
-     object {
-	    x=335
-	    y=55
-	    width=70
-	    height=15
-	    }
-	monitor {
-		chan="$(P)$(R)HdrKneepointCount_RBV"   
-		clr=54
-		bclr=4
-		}
-	limits {
-	}
-}     
-
+}    
+ 
 text {
      object {
 	    x=160
@@ -195,42 +177,24 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="HdrT1"
+	textix="GainSelector"
 	align="horiz. right"
 }    
 
-"text entry" {
-     object {
+menu {
+	object {
 	    x=270
 	    y=80
-	    width=60
+	    width=125
 	    height=15
 	    }
 	control {
-	chan="$(P)$(R)HdrT1"   
-	clr=14
-	bclr=51
+		chan="$(P)$(R)GainSelector"
+		clr=14
+		bclr=51
 	}
-	limits {
-	}
-}     
-
-"text update" {
-     object {
-	    x=335
-	    y=80
-	    width=70
-	    height=15
-	    }
-	monitor {
-		chan="$(P)$(R)HdrT1_RBV"   
-		clr=54
-		bclr=4
-		}
-	limits {
-	}
-}     
-
+}    
+ 
 text {
      object {
 	    x=160
@@ -241,7 +205,7 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="HdrT2"
+	textix="Gain"
 	align="horiz. right"
 }    
 
@@ -253,7 +217,7 @@ text {
 	    height=15
 	    }
 	control {
-	chan="$(P)$(R)HdrT2"   
+	chan="$(P)$(R)Gain"   
 	clr=14
 	bclr=51
 	}
@@ -269,7 +233,7 @@ text {
 	    height=15
 	    }
 	monitor {
-		chan="$(P)$(R)HdrT2_RBV"   
+		chan="$(P)$(R)Gain_RBV"   
 		clr=54
 		bclr=4
 		}
@@ -287,7 +251,7 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="HdrKneepoint1"
+	textix="WhiteBalanceRed"
 	align="horiz. right"
 }    
 
@@ -299,7 +263,7 @@ text {
 	    height=15
 	    }
 	control {
-	chan="$(P)$(R)HdrKneepoint1"   
+	chan="$(P)$(R)WhiteBalanceRed"   
 	clr=14
 	bclr=51
 	}
@@ -315,7 +279,7 @@ text {
 	    height=15
 	    }
 	monitor {
-		chan="$(P)$(R)HdrKneepoint1_RBV"   
+		chan="$(P)$(R)WhiteBalanceRed_RBV"   
 		clr=54
 		bclr=4
 		}
@@ -333,7 +297,7 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="HdrKneepoint2"
+	textix="WhiteBalanceGreen"
 	align="horiz. right"
 }    
 
@@ -345,7 +309,7 @@ text {
 	    height=15
 	    }
 	control {
-	chan="$(P)$(R)HdrKneepoint2"   
+	chan="$(P)$(R)WhiteBalanceGreen"   
 	clr=14
 	bclr=51
 	}
@@ -361,7 +325,191 @@ text {
 	    height=15
 	    }
 	monitor {
-		chan="$(P)$(R)HdrKneepoint2_RBV"   
+		chan="$(P)$(R)WhiteBalanceGreen_RBV"   
+		clr=54
+		bclr=4
+		}
+	limits {
+	}
+}     
+
+text {
+     object {
+	    x=160
+	    y=180
+	    width=100
+	    height=15
+	    }
+	"basic attribute" {
+		clr=14
+	}
+	textix="WhiteBalanceBlue"
+	align="horiz. right"
+}    
+
+"text entry" {
+     object {
+	    x=270
+	    y=180
+	    width=60
+	    height=15
+	    }
+	control {
+	chan="$(P)$(R)WhiteBalanceBlue"   
+	clr=14
+	bclr=51
+	}
+	limits {
+	}
+}     
+
+"text update" {
+     object {
+	    x=335
+	    y=180
+	    width=70
+	    height=15
+	    }
+	monitor {
+		chan="$(P)$(R)WhiteBalanceBlue_RBV"   
+		clr=54
+		bclr=4
+		}
+	limits {
+	}
+}     
+
+text {
+     object {
+	    x=160
+	    y=205
+	    width=100
+	    height=15
+	    }
+	"basic attribute" {
+		clr=14
+	}
+	textix="GammaY"
+	align="horiz. right"
+}    
+
+"text entry" {
+     object {
+	    x=270
+	    y=205
+	    width=60
+	    height=15
+	    }
+	control {
+	chan="$(P)$(R)GammaY"   
+	clr=14
+	bclr=51
+	}
+	limits {
+	}
+}     
+
+"text update" {
+     object {
+	    x=335
+	    y=205
+	    width=70
+	    height=15
+	    }
+	monitor {
+		chan="$(P)$(R)GammaY_RBV"   
+		clr=54
+		bclr=4
+		}
+	limits {
+	}
+}     
+
+text {
+     object {
+	    x=160
+	    y=230
+	    width=100
+	    height=15
+	    }
+	"basic attribute" {
+		clr=14
+	}
+	textix="GammaC"
+	align="horiz. right"
+}    
+
+"text entry" {
+     object {
+	    x=270
+	    y=230
+	    width=60
+	    height=15
+	    }
+	control {
+	chan="$(P)$(R)GammaC"   
+	clr=14
+	bclr=51
+	}
+	limits {
+	}
+}     
+
+"text update" {
+     object {
+	    x=335
+	    y=230
+	    width=70
+	    height=15
+	    }
+	monitor {
+		chan="$(P)$(R)GammaC_RBV"   
+		clr=54
+		bclr=4
+		}
+	limits {
+	}
+}     
+
+text {
+     object {
+	    x=160
+	    y=255
+	    width=100
+	    height=15
+	    }
+	"basic attribute" {
+		clr=14
+	}
+	textix="Sharpness"
+	align="horiz. right"
+}    
+
+"text entry" {
+     object {
+	    x=270
+	    y=255
+	    width=60
+	    height=15
+	    }
+	control {
+	chan="$(P)$(R)Sharpness"   
+	clr=14
+	bclr=51
+	}
+	limits {
+	}
+}     
+
+"text update" {
+     object {
+	    x=335
+	    y=255
+	    width=70
+	    height=15
+	    }
+	monitor {
+		chan="$(P)$(R)Sharpness_RBV"   
 		clr=54
 		bclr=4
 		}

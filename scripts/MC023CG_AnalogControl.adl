@@ -7,8 +7,8 @@ display {
 	object {
 		x=50
 		y=50
-		width=465
-		height=410
+		width=445
+		height=310
 	}
 	clr=14
 	bclr=4
@@ -90,7 +90,7 @@ rectangle {
    object {
 	x=5
 	y=5
-	width=455
+	width=435
 	height=30
 	}
 	"basic attribute" {
@@ -102,8 +102,8 @@ rectangle {
    object {
 	x=5
 	y=50
-	width=455
-	height=350
+	width=435
+	height=250
 	}
 	"basic attribute" {
 		clr=14
@@ -118,7 +118,7 @@ rectangle {
 #	x=5
 #	y=50 
 #        width=475
-#	height=330
+#	height=230
 #	}
 #	"basic attribute" {
 #		clr=14
@@ -135,7 +135,7 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="Performance "
+	textix="AnalogControl "
 	align="horiz. right"
 }
 
@@ -149,7 +149,7 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="LimitBandwidthMode"
+	textix="BalanceWhiteAuto"
 	align="horiz. right"
 }    
 
@@ -161,7 +161,7 @@ menu {
 	    height=15
 	    }
 	control {
-		chan="$(P)$(R)LimitBandwidthMode"
+		chan="$(P)$(R)BalanceWhiteAuto"
 		clr=14
 		bclr=51
 	}
@@ -177,42 +177,24 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="SensorOutputChannelCount"
+	textix="GainSelector"
 	align="horiz. right"
 }    
 
-"text entry" {
-     object {
+menu {
+	object {
 	    x=270
 	    y=80
-	    width=60
+	    width=125
 	    height=15
 	    }
 	control {
-	chan="$(P)$(R)SensorOutputChannelCount"   
-	clr=14
-	bclr=51
+		chan="$(P)$(R)GainSelector"
+		clr=14
+		bclr=51
 	}
-	limits {
-	}
-}     
-
-"text update" {
-     object {
-	    x=335
-	    y=80
-	    width=70
-	    height=15
-	    }
-	monitor {
-		chan="$(P)$(R)SensorOutputChannelCount_RBV"   
-		clr=54
-		bclr=4
-		}
-	limits {
-	}
-}     
-
+}    
+ 
 text {
      object {
 	    x=160
@@ -223,7 +205,7 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="LimitBandwidth"
+	textix="Gain"
 	align="horiz. right"
 }    
 
@@ -235,7 +217,7 @@ text {
 	    height=15
 	    }
 	control {
-	chan="$(P)$(R)LimitBandwidth"   
+	chan="$(P)$(R)Gain"   
 	clr=14
 	bclr=51
 	}
@@ -251,7 +233,7 @@ text {
 	    height=15
 	    }
 	monitor {
-		chan="$(P)$(R)LimitBandwidth_RBV"   
+		chan="$(P)$(R)Gain_RBV"   
 		clr=54
 		bclr=4
 		}
@@ -269,187 +251,19 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="SensorBitDepth"
+	textix="WhiteBalanceRed"
 	align="horiz. right"
 }    
 
-menu {
-	object {
+"text entry" {
+     object {
 	    x=270
 	    y=130
-	    width=125
-	    height=15
-	    }
-	control {
-		chan="$(P)$(R)SensorBitDepth"
-		clr=14
-		bclr=51
-	}
-}    
- 
-text {
-     object {
-	    x=160
-	    y=155
-	    width=100
-	    height=15
-	    }
-	"basic attribute" {
-		clr=14
-	}
-	textix="OutputBitDepth"
-	align="horiz. right"
-}    
-
-menu {
-	object {
-	    x=270
-	    y=155
-	    width=125
-	    height=15
-	    }
-	control {
-		chan="$(P)$(R)OutputBitDepth"
-		clr=14
-		bclr=51
-	}
-}    
- 
-text {
-     object {
-	    x=160
-	    y=180
-	    width=100
-	    height=15
-	    }
-	"basic attribute" {
-		clr=14
-	}
-	textix="OutputBitPacking"
-	align="horiz. right"
-}    
-
-menu {
-	object {
-	    x=270
-	    y=180
-	    width=125
-	    height=15
-	    }
-	control {
-		chan="$(P)$(R)OutputBitPacking"
-		clr=14
-		bclr=51
-	}
-}    
- 
-text {
-     object {
-	    x=160
-	    y=205
-	    width=100
-	    height=15
-	    }
-	"basic attribute" {
-		clr=14
-	}
-	textix="OutputBitPackingType"
-	align="horiz. right"
-}    
-
-menu {
-	object {
-	    x=270
-	    y=205
-	    width=125
-	    height=15
-	    }
-	control {
-		chan="$(P)$(R)OutputBitPackingType"
-		clr=14
-		bclr=51
-	}
-}    
- 
-text {
-     object {
-	    x=160
-	    y=230
-	    width=100
-	    height=15
-	    }
-	"basic attribute" {
-		clr=14
-	}
-	textix="ImageDataBitDepth"
-	align="horiz. right"
-}    
-
-menu {
-	object {
-	    x=270
-	    y=230
-	    width=125
-	    height=15
-	    }
-	control {
-		chan="$(P)$(R)ImageDataBitDepth"
-		clr=14
-		bclr=51
-	}
-}    
- 
-text {
-     object {
-	    x=160
-	    y=255
-	    width=100
-	    height=15
-	    }
-	"basic attribute" {
-		clr=14
-	}
-	textix="AcqTimingMode"
-	align="horiz. right"
-}    
-
-menu {
-	object {
-	    x=270
-	    y=255
-	    width=125
-	    height=15
-	    }
-	control {
-		chan="$(P)$(R)AcqTimingMode"
-		clr=14
-		bclr=51
-	}
-}    
- 
-text {
-     object {
-	    x=160
-	    y=280
-	    width=100
-	    height=15
-	    }
-	"basic attribute" {
-		clr=14
-	}
-	textix="Framerate"
-	align="horiz. right"
-}    
-
-"text entry" {
-     object {
-	    x=270
-	    y=280
 	    width=60
 	    height=15
 	    }
 	control {
-	chan="$(P)$(R)Framerate"   
+	chan="$(P)$(R)WhiteBalanceRed"   
 	clr=14
 	bclr=51
 	}
@@ -460,12 +274,12 @@ text {
 "text update" {
      object {
 	    x=335
-	    y=280
+	    y=130
 	    width=70
 	    height=15
 	    }
 	monitor {
-		chan="$(P)$(R)Framerate_RBV"   
+		chan="$(P)$(R)WhiteBalanceRed_RBV"   
 		clr=54
 		bclr=4
 		}
@@ -476,54 +290,26 @@ text {
 text {
      object {
 	    x=160
-	    y=305
+	    y=155
 	    width=100
 	    height=15
 	    }
 	"basic attribute" {
 		clr=14
 	}
-	textix="LUTEnable"
-	align="horiz. right"
-}    
-
-menu {
-	object {
-	    x=270
-	    y=305
-	    width=125
-	    height=15
-	    }
-	control {
-		chan="$(P)$(R)LUTEnable"
-		clr=14
-		bclr=51
-	}
-}    
- 
-text {
-     object {
-	    x=160
-	    y=330
-	    width=100
-	    height=15
-	    }
-	"basic attribute" {
-		clr=14
-	}
-	textix="LUTIndex"
+	textix="WhiteBalanceGreen"
 	align="horiz. right"
 }    
 
 "text entry" {
      object {
 	    x=270
-	    y=330
+	    y=155
 	    width=60
 	    height=15
 	    }
 	control {
-	chan="$(P)$(R)LUTIndex"   
+	chan="$(P)$(R)WhiteBalanceGreen"   
 	clr=14
 	bclr=51
 	}
@@ -534,12 +320,12 @@ text {
 "text update" {
      object {
 	    x=335
-	    y=330
+	    y=155
 	    width=70
 	    height=15
 	    }
 	monitor {
-		chan="$(P)$(R)LUTIndex_RBV"   
+		chan="$(P)$(R)WhiteBalanceGreen_RBV"   
 		clr=54
 		bclr=4
 		}
@@ -550,26 +336,26 @@ text {
 text {
      object {
 	    x=160
-	    y=355
+	    y=180
 	    width=100
 	    height=15
 	    }
 	"basic attribute" {
 		clr=14
 	}
-	textix="LUTValue"
+	textix="WhiteBalanceBlue"
 	align="horiz. right"
 }    
 
 "text entry" {
      object {
 	    x=270
-	    y=355
+	    y=180
 	    width=60
 	    height=15
 	    }
 	control {
-	chan="$(P)$(R)LUTValue"   
+	chan="$(P)$(R)WhiteBalanceBlue"   
 	clr=14
 	bclr=51
 	}
@@ -580,12 +366,150 @@ text {
 "text update" {
      object {
 	    x=335
-	    y=355
+	    y=180
 	    width=70
 	    height=15
 	    }
 	monitor {
-		chan="$(P)$(R)LUTValue_RBV"   
+		chan="$(P)$(R)WhiteBalanceBlue_RBV"   
+		clr=54
+		bclr=4
+		}
+	limits {
+	}
+}     
+
+text {
+     object {
+	    x=160
+	    y=205
+	    width=100
+	    height=15
+	    }
+	"basic attribute" {
+		clr=14
+	}
+	textix="GammaY"
+	align="horiz. right"
+}    
+
+"text entry" {
+     object {
+	    x=270
+	    y=205
+	    width=60
+	    height=15
+	    }
+	control {
+	chan="$(P)$(R)GammaY"   
+	clr=14
+	bclr=51
+	}
+	limits {
+	}
+}     
+
+"text update" {
+     object {
+	    x=335
+	    y=205
+	    width=70
+	    height=15
+	    }
+	monitor {
+		chan="$(P)$(R)GammaY_RBV"   
+		clr=54
+		bclr=4
+		}
+	limits {
+	}
+}     
+
+text {
+     object {
+	    x=160
+	    y=230
+	    width=100
+	    height=15
+	    }
+	"basic attribute" {
+		clr=14
+	}
+	textix="GammaC"
+	align="horiz. right"
+}    
+
+"text entry" {
+     object {
+	    x=270
+	    y=230
+	    width=60
+	    height=15
+	    }
+	control {
+	chan="$(P)$(R)GammaC"   
+	clr=14
+	bclr=51
+	}
+	limits {
+	}
+}     
+
+"text update" {
+     object {
+	    x=335
+	    y=230
+	    width=70
+	    height=15
+	    }
+	monitor {
+		chan="$(P)$(R)GammaC_RBV"   
+		clr=54
+		bclr=4
+		}
+	limits {
+	}
+}     
+
+text {
+     object {
+	    x=160
+	    y=255
+	    width=100
+	    height=15
+	    }
+	"basic attribute" {
+		clr=14
+	}
+	textix="Sharpness"
+	align="horiz. right"
+}    
+
+"text entry" {
+     object {
+	    x=270
+	    y=255
+	    width=60
+	    height=15
+	    }
+	control {
+	chan="$(P)$(R)Sharpness"   
+	clr=14
+	bclr=51
+	}
+	limits {
+	}
+}     
+
+"text update" {
+     object {
+	    x=335
+	    y=255
+	    width=70
+	    height=15
+	    }
+	monitor {
+		chan="$(P)$(R)Sharpness_RBV"   
 		clr=54
 		bclr=4
 		}

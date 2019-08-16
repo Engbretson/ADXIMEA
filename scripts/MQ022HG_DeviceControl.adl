@@ -7,8 +7,8 @@ display {
 	object {
 		x=50
 		y=50
-		width=470
-		height=435
+		width=455
+		height=360
 	}
 	clr=14
 	bclr=4
@@ -90,7 +90,7 @@ rectangle {
    object {
 	x=5
 	y=5
-	width=460
+	width=445
 	height=30
 	}
 	"basic attribute" {
@@ -102,8 +102,8 @@ rectangle {
    object {
 	x=5
 	y=50
-	width=460
-	height=375
+	width=445
+	height=300
 	}
 	"basic attribute" {
 		clr=14
@@ -118,7 +118,7 @@ rectangle {
 #	x=5
 #	y=50 
 #        width=475
-#	height=355
+#	height=280
 #	}
 #	"basic attribute" {
 #		clr=14
@@ -135,7 +135,7 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="Image Format "
+	textix="DeviceControl "
 	align="horiz. right"
 }
 
@@ -149,24 +149,27 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="BinningSelector"
+	textix="DeviceVendorName"
 	align="horiz. right"
 }    
 
-menu {
-	object {
+"text update" {
+     object {
 	    x=270
 	    y=55
 	    width=125
 	    height=15
 	    }
-	control {
-		chan="$(P)$(R)BinningSelector"
-		clr=14
-		bclr=51
+	monitor {
+	chan="$(P)$(R)DeviceVendorName_RBV"   
+	clr=54
+	bclr=4
 	}
-}    
- 
+	limits {
+	}
+	align="horiz. center"
+}     
+
 text {
      object {
 	    x=160
@@ -177,40 +180,25 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="BinningVertical"
+	textix="DeviceModelName"
 	align="horiz. right"
 }    
 
-"text entry" {
+"text update" {
      object {
 	    x=270
 	    y=80
-	    width=60
-	    height=15
-	    }
-	control {
-	chan="$(P)$(R)BinningVertical"   
-	clr=14
-	bclr=51
-	}
-	limits {
-	}
-}     
-
-"text update" {
-     object {
-	    x=335
-	    y=80
-	    width=70
+	    width=125
 	    height=15
 	    }
 	monitor {
-		chan="$(P)$(R)BinningVertical_RBV"   
-		clr=54
-		bclr=4
-		}
+	chan="$(P)$(R)DeviceModelName_RBV"   
+	clr=54
+	bclr=4
+	}
 	limits {
 	}
+	align="horiz. center"
 }     
 
 text {
@@ -223,40 +211,25 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="BinningHorizontal"
+	textix="DeviceManufacturerInfo"
 	align="horiz. right"
 }    
 
-"text entry" {
+"text update" {
      object {
 	    x=270
 	    y=105
-	    width=60
-	    height=15
-	    }
-	control {
-	chan="$(P)$(R)BinningHorizontal"   
-	clr=14
-	bclr=51
-	}
-	limits {
-	}
-}     
-
-"text update" {
-     object {
-	    x=335
-	    y=105
-	    width=70
+	    width=125
 	    height=15
 	    }
 	monitor {
-		chan="$(P)$(R)BinningHorizontal_RBV"   
-		clr=54
-		bclr=4
-		}
+	chan="$(P)$(R)DeviceManufacturerInfo_RBV"   
+	clr=54
+	bclr=4
+	}
 	limits {
 	}
+	align="horiz. center"
 }     
 
 text {
@@ -269,24 +242,27 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="BinningVerticalMode"
+	textix="DeviceFirmwareVersion"
 	align="horiz. right"
 }    
 
-menu {
-	object {
+"text update" {
+     object {
 	    x=270
 	    y=130
 	    width=125
 	    height=15
 	    }
-	control {
-		chan="$(P)$(R)BinningVerticalMode"
-		clr=14
-		bclr=51
+	monitor {
+	chan="$(P)$(R)DeviceFirmwareVersion_RBV"   
+	clr=54
+	bclr=4
 	}
-}    
- 
+	limits {
+	}
+	align="horiz. center"
+}     
+
 text {
      object {
 	    x=160
@@ -297,24 +273,27 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="BinningHorizontalMode"
+	textix="DeviceID"
 	align="horiz. right"
 }    
 
-menu {
-	object {
+"text update" {
+     object {
 	    x=270
 	    y=155
 	    width=125
 	    height=15
 	    }
-	control {
-		chan="$(P)$(R)BinningHorizontalMode"
-		clr=14
-		bclr=51
+	monitor {
+	chan="$(P)$(R)DeviceID_RBV"   
+	clr=54
+	bclr=4
 	}
-}    
- 
+	limits {
+	}
+	align="horiz. center"
+}     
+
 text {
      object {
 	    x=160
@@ -325,24 +304,27 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="BinningVerticalPattern"
+	textix="DeviceUserID"
 	align="horiz. right"
 }    
 
-menu {
-	object {
+"text update" {
+     object {
 	    x=270
 	    y=180
 	    width=125
 	    height=15
 	    }
-	control {
-		chan="$(P)$(R)BinningVerticalPattern"
-		clr=14
-		bclr=51
+	monitor {
+	chan="$(P)$(R)DeviceUserID_RBV"   
+	clr=54
+	bclr=4
 	}
-}    
- 
+	limits {
+	}
+	align="horiz. center"
+}     
+
 text {
      object {
 	    x=160
@@ -353,7 +335,7 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="BinningHorizontalPattern"
+	textix="DeviceTemperatureSelector"
 	align="horiz. right"
 }    
 
@@ -365,7 +347,7 @@ menu {
 	    height=15
 	    }
 	control {
-		chan="$(P)$(R)BinningHorizontalPattern"
+		chan="$(P)$(R)DeviceTemperatureSelector"
 		clr=14
 		bclr=51
 	}
@@ -381,24 +363,42 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="DecimationSelector"
+	textix="DeviceTemperature"
 	align="horiz. right"
 }    
 
-menu {
-	object {
+"text entry" {
+     object {
 	    x=270
 	    y=230
-	    width=125
+	    width=60
 	    height=15
 	    }
 	control {
-		chan="$(P)$(R)DecimationSelector"
-		clr=14
-		bclr=51
+	chan="$(P)$(R)DeviceTemperature"   
+	clr=14
+	bclr=51
 	}
-}    
- 
+	limits {
+	}
+}     
+
+"text update" {
+     object {
+	    x=335
+	    y=230
+	    width=70
+	    height=15
+	    }
+	monitor {
+		chan="$(P)$(R)DeviceTemperature_RBV"   
+		clr=54
+		bclr=4
+		}
+	limits {
+	}
+}     
+
 text {
      object {
 	    x=160
@@ -409,7 +409,7 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="DecimationVertical"
+	textix="TLParamsLocked"
 	align="horiz. right"
 }    
 
@@ -421,7 +421,7 @@ text {
 	    height=15
 	    }
 	control {
-	chan="$(P)$(R)DecimationVertical"   
+	chan="$(P)$(R)TLParamsLocked"   
 	clr=14
 	bclr=51
 	}
@@ -437,7 +437,7 @@ text {
 	    height=15
 	    }
 	monitor {
-		chan="$(P)$(R)DecimationVertical_RBV"   
+		chan="$(P)$(R)TLParamsLocked_RBV"   
 		clr=54
 		bclr=4
 		}
@@ -455,19 +455,47 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="DecimationHorizontal"
+	textix="DeviceLinkThroughputLimitMode"
+	align="horiz. right"
+}    
+
+menu {
+	object {
+	    x=270
+	    y=280
+	    width=125
+	    height=15
+	    }
+	control {
+		chan="$(P)$(R)DeviceLinkThroughputLimitMode"
+		clr=14
+		bclr=51
+	}
+}    
+ 
+text {
+     object {
+	    x=160
+	    y=305
+	    width=100
+	    height=15
+	    }
+	"basic attribute" {
+		clr=14
+	}
+	textix="DeviceLinkThroughputLimit"
 	align="horiz. right"
 }    
 
 "text entry" {
      object {
 	    x=270
-	    y=280
+	    y=305
 	    width=60
 	    height=15
 	    }
 	control {
-	chan="$(P)$(R)DecimationHorizontal"   
+	chan="$(P)$(R)DeviceLinkThroughputLimit"   
 	clr=14
 	bclr=51
 	}
@@ -478,12 +506,12 @@ text {
 "text update" {
      object {
 	    x=335
-	    y=280
+	    y=305
 	    width=70
 	    height=15
 	    }
 	monitor {
-		chan="$(P)$(R)DecimationHorizontal_RBV"   
+		chan="$(P)$(R)DeviceLinkThroughputLimit_RBV"   
 		clr=54
 		bclr=4
 		}
@@ -491,116 +519,4 @@ text {
 	}
 }     
 
-text {
-     object {
-	    x=160
-	    y=305
-	    width=100
-	    height=15
-	    }
-	"basic attribute" {
-		clr=14
-	}
-	textix="DecimationVerticalPattern"
-	align="horiz. right"
-}    
-
-menu {
-	object {
-	    x=270
-	    y=305
-	    width=125
-	    height=15
-	    }
-	control {
-		chan="$(P)$(R)DecimationVerticalPattern"
-		clr=14
-		bclr=51
-	}
-}    
- 
-text {
-     object {
-	    x=160
-	    y=330
-	    width=100
-	    height=15
-	    }
-	"basic attribute" {
-		clr=14
-	}
-	textix="DecimationHorizontalPattern"
-	align="horiz. right"
-}    
-
-menu {
-	object {
-	    x=270
-	    y=330
-	    width=125
-	    height=15
-	    }
-	control {
-		chan="$(P)$(R)DecimationHorizontalPattern"
-		clr=14
-		bclr=51
-	}
-}    
- 
-text {
-     object {
-	    x=160
-	    y=355
-	    width=100
-	    height=15
-	    }
-	"basic attribute" {
-		clr=14
-	}
-	textix="TestPatternGeneratorSelector"
-	align="horiz. right"
-}    
-
-menu {
-	object {
-	    x=270
-	    y=355
-	    width=125
-	    height=15
-	    }
-	control {
-		chan="$(P)$(R)TestPatternGeneratorSelector"
-		clr=14
-		bclr=51
-	}
-}    
- 
-text {
-     object {
-	    x=160
-	    y=380
-	    width=100
-	    height=15
-	    }
-	"basic attribute" {
-		clr=14
-	}
-	textix="TestPattern"
-	align="horiz. right"
-}    
-
-menu {
-	object {
-	    x=270
-	    y=380
-	    width=125
-	    height=15
-	    }
-	control {
-		chan="$(P)$(R)TestPattern"
-		clr=14
-		bclr=51
-	}
-}    
- 
         

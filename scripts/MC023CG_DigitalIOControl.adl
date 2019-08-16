@@ -7,8 +7,8 @@ display {
 	object {
 		x=50
 		y=50
-		width=435
-		height=260
+		width=440
+		height=285
 	}
 	clr=14
 	bclr=4
@@ -90,7 +90,7 @@ rectangle {
    object {
 	x=5
 	y=5
-	width=425
+	width=430
 	height=30
 	}
 	"basic attribute" {
@@ -102,8 +102,8 @@ rectangle {
    object {
 	x=5
 	y=50
-	width=425
-	height=200
+	width=430
+	height=225
 	}
 	"basic attribute" {
 		clr=14
@@ -118,7 +118,7 @@ rectangle {
 #	x=5
 #	y=50 
 #        width=475
-#	height=180
+#	height=205
 #	}
 #	"basic attribute" {
 #		clr=14
@@ -135,7 +135,7 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="GPIO Setup "
+	textix="DigitalIOControl "
 	align="horiz. right"
 }
 
@@ -149,7 +149,7 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="GpiSelector"
+	textix="LineSelector"
 	align="horiz. right"
 }    
 
@@ -161,7 +161,7 @@ menu {
 	    height=15
 	    }
 	control {
-		chan="$(P)$(R)GpiSelector"
+		chan="$(P)$(R)LineSelector"
 		clr=14
 		bclr=51
 	}
@@ -177,7 +177,7 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="GpiMode"
+	textix="LineMode"
 	align="horiz. right"
 }    
 
@@ -189,7 +189,7 @@ menu {
 	    height=15
 	    }
 	control {
-		chan="$(P)$(R)GpiMode"
+		chan="$(P)$(R)LineMode"
 		clr=14
 		bclr=51
 	}
@@ -205,42 +205,24 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="GpiLevel"
+	textix="LineInverter"
 	align="horiz. right"
 }    
 
-"text entry" {
-     object {
+menu {
+	object {
 	    x=270
 	    y=105
-	    width=60
+	    width=125
 	    height=15
 	    }
 	control {
-	chan="$(P)$(R)GpiLevel"   
-	clr=14
-	bclr=51
+		chan="$(P)$(R)LineInverter"
+		clr=14
+		bclr=51
 	}
-	limits {
-	}
-}     
-
-"text update" {
-     object {
-	    x=335
-	    y=105
-	    width=70
-	    height=15
-	    }
-	monitor {
-		chan="$(P)$(R)GpiLevel_RBV"   
-		clr=54
-		bclr=4
-		}
-	limits {
-	}
-}     
-
+}    
+ 
 text {
      object {
 	    x=160
@@ -251,7 +233,7 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="GpoSelector"
+	textix="LineStatus"
 	align="horiz. right"
 }    
 
@@ -263,7 +245,7 @@ menu {
 	    height=15
 	    }
 	control {
-		chan="$(P)$(R)GpoSelector"
+		chan="$(P)$(R)LineStatus"
 		clr=14
 		bclr=51
 	}
@@ -279,7 +261,7 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="GpoMode"
+	textix="LineSource"
 	align="horiz. right"
 }    
 
@@ -291,7 +273,7 @@ menu {
 	    height=15
 	    }
 	control {
-		chan="$(P)$(R)GpoMode"
+		chan="$(P)$(R)LineSource"
 		clr=14
 		bclr=51
 	}
@@ -307,7 +289,7 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="LedSelector"
+	textix="LineFormat"
 	align="horiz. right"
 }    
 
@@ -319,7 +301,7 @@ menu {
 	    height=15
 	    }
 	control {
-		chan="$(P)$(R)LedSelector"
+		chan="$(P)$(R)LineFormat"
 		clr=14
 		bclr=51
 	}
@@ -335,7 +317,7 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="LedMode"
+	textix="UserOutputSelector"
 	align="horiz. right"
 }    
 
@@ -347,7 +329,35 @@ menu {
 	    height=15
 	    }
 	control {
-		chan="$(P)$(R)LedMode"
+		chan="$(P)$(R)UserOutputSelector"
+		clr=14
+		bclr=51
+	}
+}    
+ 
+text {
+     object {
+	    x=160
+	    y=230
+	    width=100
+	    height=15
+	    }
+	"basic attribute" {
+		clr=14
+	}
+	textix="UserOutputValue"
+	align="horiz. right"
+}    
+
+menu {
+	object {
+	    x=270
+	    y=230
+	    width=125
+	    height=15
+	    }
+	control {
+		chan="$(P)$(R)UserOutputValue"
 		clr=14
 		bclr=51
 	}

@@ -7,8 +7,8 @@ display {
 	object {
 		x=50
 		y=50
-		width=435
-		height=260
+		width=455
+		height=360
 	}
 	clr=14
 	bclr=4
@@ -90,7 +90,7 @@ rectangle {
    object {
 	x=5
 	y=5
-	width=425
+	width=445
 	height=30
 	}
 	"basic attribute" {
@@ -102,8 +102,8 @@ rectangle {
    object {
 	x=5
 	y=50
-	width=425
-	height=200
+	width=445
+	height=300
 	}
 	"basic attribute" {
 		clr=14
@@ -118,7 +118,7 @@ rectangle {
 #	x=5
 #	y=50 
 #        width=475
-#	height=180
+#	height=280
 #	}
 #	"basic attribute" {
 #		clr=14
@@ -135,7 +135,7 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="Temperature "
+	textix="DeviceControl "
 	align="horiz. right"
 }
 
@@ -149,24 +149,27 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="Iscooled"
+	textix="DeviceVendorName"
 	align="horiz. right"
 }    
 
-menu {
-	object {
+"text update" {
+     object {
 	    x=270
 	    y=55
 	    width=125
 	    height=15
 	    }
-	control {
-		chan="$(P)$(R)Iscooled"
-		clr=14
-		bclr=51
+	monitor {
+	chan="$(P)$(R)DeviceVendorName_RBV"   
+	clr=54
+	bclr=4
 	}
-}    
- 
+	limits {
+	}
+	align="horiz. center"
+}     
+
 text {
      object {
 	    x=160
@@ -177,19 +180,174 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="Cooling"
+	textix="DeviceModelName"
+	align="horiz. right"
+}    
+
+"text update" {
+     object {
+	    x=270
+	    y=80
+	    width=125
+	    height=15
+	    }
+	monitor {
+	chan="$(P)$(R)DeviceModelName_RBV"   
+	clr=54
+	bclr=4
+	}
+	limits {
+	}
+	align="horiz. center"
+}     
+
+text {
+     object {
+	    x=160
+	    y=105
+	    width=100
+	    height=15
+	    }
+	"basic attribute" {
+		clr=14
+	}
+	textix="DeviceManufacturerInfo"
+	align="horiz. right"
+}    
+
+"text update" {
+     object {
+	    x=270
+	    y=105
+	    width=125
+	    height=15
+	    }
+	monitor {
+	chan="$(P)$(R)DeviceManufacturerInfo_RBV"   
+	clr=54
+	bclr=4
+	}
+	limits {
+	}
+	align="horiz. center"
+}     
+
+text {
+     object {
+	    x=160
+	    y=130
+	    width=100
+	    height=15
+	    }
+	"basic attribute" {
+		clr=14
+	}
+	textix="DeviceFirmwareVersion"
+	align="horiz. right"
+}    
+
+"text update" {
+     object {
+	    x=270
+	    y=130
+	    width=125
+	    height=15
+	    }
+	monitor {
+	chan="$(P)$(R)DeviceFirmwareVersion_RBV"   
+	clr=54
+	bclr=4
+	}
+	limits {
+	}
+	align="horiz. center"
+}     
+
+text {
+     object {
+	    x=160
+	    y=155
+	    width=100
+	    height=15
+	    }
+	"basic attribute" {
+		clr=14
+	}
+	textix="DeviceID"
+	align="horiz. right"
+}    
+
+"text update" {
+     object {
+	    x=270
+	    y=155
+	    width=125
+	    height=15
+	    }
+	monitor {
+	chan="$(P)$(R)DeviceID_RBV"   
+	clr=54
+	bclr=4
+	}
+	limits {
+	}
+	align="horiz. center"
+}     
+
+text {
+     object {
+	    x=160
+	    y=180
+	    width=100
+	    height=15
+	    }
+	"basic attribute" {
+		clr=14
+	}
+	textix="DeviceUserID"
+	align="horiz. right"
+}    
+
+"text update" {
+     object {
+	    x=270
+	    y=180
+	    width=125
+	    height=15
+	    }
+	monitor {
+	chan="$(P)$(R)DeviceUserID_RBV"   
+	clr=54
+	bclr=4
+	}
+	limits {
+	}
+	align="horiz. center"
+}     
+
+text {
+     object {
+	    x=160
+	    y=205
+	    width=100
+	    height=15
+	    }
+	"basic attribute" {
+		clr=14
+	}
+	textix="DeviceTemperatureSelector"
 	align="horiz. right"
 }    
 
 menu {
 	object {
 	    x=270
-	    y=80
+	    y=205
 	    width=125
 	    height=15
 	    }
 	control {
-		chan="$(P)$(R)Cooling"
+		chan="$(P)$(R)DeviceTemperatureSelector"
 		clr=14
 		bclr=51
 	}
@@ -198,26 +356,26 @@ menu {
 text {
      object {
 	    x=160
-	    y=105
+	    y=230
 	    width=100
 	    height=15
 	    }
 	"basic attribute" {
 		clr=14
 	}
-	textix="TargetTemp"
+	textix="DeviceTemperature"
 	align="horiz. right"
 }    
 
 "text entry" {
      object {
 	    x=270
-	    y=105
+	    y=230
 	    width=60
 	    height=15
 	    }
 	control {
-	chan="$(P)$(R)TargetTemp"   
+	chan="$(P)$(R)DeviceTemperature"   
 	clr=14
 	bclr=51
 	}
@@ -228,12 +386,12 @@ text {
 "text update" {
      object {
 	    x=335
-	    y=105
+	    y=230
 	    width=70
 	    height=15
 	    }
 	monitor {
-		chan="$(P)$(R)TargetTemp_RBV"   
+		chan="$(P)$(R)DeviceTemperature_RBV"   
 		clr=54
 		bclr=4
 		}
@@ -244,26 +402,26 @@ text {
 text {
      object {
 	    x=160
-	    y=130
+	    y=255
 	    width=100
 	    height=15
 	    }
 	"basic attribute" {
 		clr=14
 	}
-	textix="ChipTemp"
+	textix="TLParamsLocked"
 	align="horiz. right"
 }    
 
 "text entry" {
      object {
 	    x=270
-	    y=130
+	    y=255
 	    width=60
 	    height=15
 	    }
 	control {
-	chan="$(P)$(R)ChipTemp"   
+	chan="$(P)$(R)TLParamsLocked"   
 	clr=14
 	bclr=51
 	}
@@ -274,12 +432,12 @@ text {
 "text update" {
      object {
 	    x=335
-	    y=130
+	    y=255
 	    width=70
 	    height=15
 	    }
 	monitor {
-		chan="$(P)$(R)ChipTemp_RBV"   
+		chan="$(P)$(R)TLParamsLocked_RBV"   
 		clr=54
 		bclr=4
 		}
@@ -290,72 +448,54 @@ text {
 text {
      object {
 	    x=160
-	    y=155
+	    y=280
 	    width=100
 	    height=15
 	    }
 	"basic attribute" {
 		clr=14
 	}
-	textix="HousTemp"
+	textix="DeviceLinkThroughputLimitMode"
 	align="horiz. right"
 }    
 
-"text entry" {
-     object {
+menu {
+	object {
 	    x=270
-	    y=155
-	    width=60
+	    y=280
+	    width=125
 	    height=15
 	    }
 	control {
-	chan="$(P)$(R)HousTemp"   
-	clr=14
-	bclr=51
+		chan="$(P)$(R)DeviceLinkThroughputLimitMode"
+		clr=14
+		bclr=51
 	}
-	limits {
-	}
-}     
-
-"text update" {
-     object {
-	    x=335
-	    y=155
-	    width=70
-	    height=15
-	    }
-	monitor {
-		chan="$(P)$(R)HousTemp_RBV"   
-		clr=54
-		bclr=4
-		}
-	limits {
-	}
-}     
-
+}    
+ 
 text {
      object {
 	    x=160
-	    y=180
+	    y=305
 	    width=100
 	    height=15
 	    }
 	"basic attribute" {
 		clr=14
 	}
-	textix="HousBackSideTemp"
+	textix="DeviceLinkThroughputLimit"
 	align="horiz. right"
 }    
 
 "text entry" {
      object {
 	    x=270
-	    y=180
+	    y=305
 	    width=60
 	    height=15
 	    }
 	control {
-	chan="$(P)$(R)HousBackSideTemp"   
+	chan="$(P)$(R)DeviceLinkThroughputLimit"   
 	clr=14
 	bclr=51
 	}
@@ -366,58 +506,12 @@ text {
 "text update" {
      object {
 	    x=335
-	    y=180
+	    y=305
 	    width=70
 	    height=15
 	    }
 	monitor {
-		chan="$(P)$(R)HousBackSideTemp_RBV"   
-		clr=54
-		bclr=4
-		}
-	limits {
-	}
-}     
-
-text {
-     object {
-	    x=160
-	    y=205
-	    width=100
-	    height=15
-	    }
-	"basic attribute" {
-		clr=14
-	}
-	textix="SensorBoardTemp"
-	align="horiz. right"
-}    
-
-"text entry" {
-     object {
-	    x=270
-	    y=205
-	    width=60
-	    height=15
-	    }
-	control {
-	chan="$(P)$(R)SensorBoardTemp"   
-	clr=14
-	bclr=51
-	}
-	limits {
-	}
-}     
-
-"text update" {
-     object {
-	    x=335
-	    y=205
-	    width=70
-	    height=15
-	    }
-	monitor {
-		chan="$(P)$(R)SensorBoardTemp_RBV"   
+		chan="$(P)$(R)DeviceLinkThroughputLimit_RBV"   
 		clr=54
 		bclr=4
 		}
