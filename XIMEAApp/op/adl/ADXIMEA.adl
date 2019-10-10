@@ -1,6 +1,6 @@
 
 file {
-	name="Z:\epics\synApps_6_0\support\areaDetector-R3-7\ADXIMEA\XIMEAApp\op\adl\ADXIMEA.adl"
+	name="Z:\epics\synApps_6_0\support\areaDetector-R3-7\ADXIMEA-R1-0\XIMEAApp\op\adl\ADXIMEA.adl"
 	version=030109
 }
 display {

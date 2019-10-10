@@ -1,13 +1,14 @@
-ADSeaBreeze
-=============
+ADSpinnaker
+===========
 An 
-[EPICS](http://www.aps.anl.gov/epics/) 
-[areaDetector](http://cars.uchicago.edu/software/epics/areaDetector.html) 
-driver for Spectrometers from OceanOptics that are supported by the SeaBreeze library.
+[EPICS](http://www.aps.anl.gov/epics)
+[areaDetector](https://cars.uchicago.edu/software/epics/areaDetector.html)
+driver for cameras from 
+[FLIR](http://www.flir.com) using their Spinnaker SDK.
+These include GigE, 10GigE, and USB 3.0 cameras.
 
-[SeaBreeze](https://sourceforge.net/p/seabreeze/wiki/Home)
-This driver is based on the SeaBreeze Library, which is included in the SeaBreezeSupport directory in version 3.0.11.
+Beginning with R2-0 this driver derives from the [ADGenICam](https://github.com/areaDetector/ADGenICam) base class.
 
 Additional information:
-* [Documentation](https://oceanoptics.com/api/seabreeze)
-* [Release notes and links to source and binary releases](RELEASE.md).
+* [Documentation](https://areadetector.github.io/master/ADSpinnaker/ADSpinnaker.html).
+* [Release notes](RELEASE.md).

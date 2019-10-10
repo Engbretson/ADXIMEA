@@ -48,18 +48,20 @@ extern "C" {
      */
     int XIMEAConfig(const char *portName, int maxBuffers, size_t maxMemory, int priority, int stackSize, const char *id) {
         new XIMEA(portName, maxBuffers, maxMemory, priority, stackSize, id);
+printf("created configure ok \n");
         return (asynSuccess);
     }
                               
     /**
     * Callback function for exit hook
     */
-    static void exitCallbackC(void *pPvt){
-        XIMEA *pXIMEA = (XIMEA*)pPvt;
-        delete pXIMEA;
-    }
-}
+ ///   static void exitCallbackC(void *pPvt){
+ ///       XIMEA *pXIMEA = (XIMEA*)pPvt;
+ ///       delete pXIMEA;
+ ///   }
+///}
 
+}
 XIMEA::XIMEA(const char *portName, int maxBuffers, size_t maxMemory, int priority, int stackSize, const char *id) :
   //  ADDriver(portName, 1, int(NUM_XIMEA_PARAMS), maxBuffers, maxMemory, asynDrvUserMask | asynFloat64ArrayMask, 0, ASYN_CANBLOCK, 1, priority, stackSize) {
 ADDriver(portName, 1, 0, maxBuffers, maxMemory, asynDrvUserMask | asynFloat64ArrayMask, 0, ASYN_CANBLOCK, 1, priority, stackSize),imageThreadKeepAlive(true){
@@ -107,7 +109,7 @@ printf("After XIMEA_3.inc \n");
     }
     
     initializeDetector();
-    epicsAtExit(exitCallbackC, this); //this isn't working correctly at the instant
+///    epicsAtExit(exitCallbackC, this); //this isn't working correctly at the instant
         
 }
 
@@ -160,6 +162,8 @@ asynStatus XIMEA::initializeDetector() {
     double maxIntensity = 0;
     int dataType = 0;
 	
+printf("I am in initialize Detector \n");
+	
 	// Sample for XIMEA API V4.05
 	char *buffer1;
 	//HANDLE xiH = NULL;
@@ -170,6 +174,8 @@ asynStatus XIMEA::initializeDetector() {
 	stat = xiOpenDevice(0, &xiH);
 	HandleResult(stat,"xiOpenDevice");
 	
+printf("I opened the first camera \n");	
+
 // Device info parameters
 /*
 #define  XI_PRM_DEVICE_NAME                     "device_name"             // Return device name 
@@ -607,15 +613,14 @@ asynStatus XIMEA::readInt32(asynUser *pasynUser, epicsInt32 *value) {
 //	asynPrint(pasynUserSelf, ASYN_TRACE_ERROR, "*******%s:%s:%d entry %s value %d\n",
 //		driverName, functionName,function, whoami, value);
 
- //  printf("In ReadInt32 . . . %d %d \n",function, FIRST_XIMEA_PARAM);
    if(function >= FIRST_XIMEA_PARAM) 
    {
       XI_status = xiGetParamInt(xiH,whoami,&localvalue);
       *value = 0;
 //	  printf("local value %d %d:%s \n",localvalue,XI_status,XI_ERRORS[XI_status]);
       *value = (epicsInt32) localvalue;	
-	asynPrint(pasynUserSelf, ASYN_TRACE_ERROR, "*******%s:%s:%d entry %s value %d %d %d:%s\n",
-		driverName, functionName,function, whoami, localvalue, *value, XI_status, XI_ERRORS[XI_status]);
+//	asynPrint(pasynUserSelf, ASYN_TRACE_ERROR, "*******%s:%s:%d entry %s value %d %d %d:%s\n",
+//		driverName, functionName,function, whoami, localvalue, *value, XI_status, XI_ERRORS[XI_status]);
       status = setIntegerParam(function, localvalue); 
 	callParamCallbacks();	  
       status = getIntegerParam(function, value); 
@@ -731,8 +736,8 @@ asynStatus XIMEA::readFloat64(asynUser *pasynUser, epicsFloat64 *value) {
       *value = 0;
 //	  printf("local value %f %d:%s \n",localvalue,XI_status,XI_ERRORS[XI_status]);
       *value = (epicsFloat64) localvalue;	
-	asynPrint(pasynUserSelf, ASYN_TRACE_ERROR, "*******%s:%s:%d entry %s value %f %f %d:%s\n",
-		driverName, functionName,function, whoami, localvalue, *value, XI_status, XI_ERRORS[XI_status]);
+//	asynPrint(pasynUserSelf, ASYN_TRACE_ERROR, "*******%s:%s:%d entry %s value %f %f %d:%s\n",
+//		driverName, functionName,function, whoami, localvalue, *value, XI_status, XI_ERRORS[XI_status]);
      systemDouble = localvalue; 
      status = setDoubleParam(function, systemDouble); 
 	callParamCallbacks();	  

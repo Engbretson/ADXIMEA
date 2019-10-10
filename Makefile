@@ -2,10 +2,9 @@
 TOP = .
 include $(TOP)/configure/CONFIG
 DIRS := $(DIRS) configure
-DIRS := $(DIRS) vendor
+DIRS := $(DIRS) XIMEASupport
 DIRS := $(DIRS) XIMEAApp
-
-#XIMEAApp_DEPEND_DIRS += vendor
+spinnakerApp_DEPEND_DIRS += XIMEASupport
 ifeq ($(BUILD_IOCS), YES)
 DIRS := $(DIRS) $(filter-out $(DIRS), $(wildcard iocs))
 iocs_DEPEND_DIRS += XIMEAApp
@@ -21,3 +20,4 @@ realuninstall: realuninstall_iocs
 realuninstall_iocs:
 	$(MAKE) -C iocs realuninstall
 .PHONY: realuninstall realuninstall_iocs
+
