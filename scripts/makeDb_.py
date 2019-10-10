@@ -1,5 +1,5 @@
 #!/bin/env python
-import os, sys, re
+import os, sys
 from xml.dom.minidom import parseString
 from optparse import OptionParser
 
@@ -49,20 +49,9 @@ def handle_node(node):
     elif node.hasAttribute("Name"):
         name = str(node.getAttribute("Name"))
         lookup[name] = node
-        # Add a leading GC_ to the name to prevent identical record names to those in ADBase.template
-        recordName = "GC_" + name
-        if len(recordName) > 20:
-            words=re.findall('[a-zA-Z][^A-Z]*', recordName)
-            for i in range(len(words)):
-                word = words[i]
-                if (len(word) > 3):
-                    word = word[:3]
-                    words[i] = word
-                    s = ''
-                    recordName = s.join(words)
-                    if (len(recordName) <= 20): break
-        if len(recordName) > 20:                    
-            recordName = recordName[:20]
+        recordName = name
+        if len(recordName) > 16:
+            recordName = recordName[:16]
         i = 0
         while recordName in records.values():
             recordName = recordName[:-len(str(i))] + str(i)
@@ -140,10 +129,13 @@ for node in doneNodes:
     for n in elements(node):
         if str(n.nodeName) == "AccessMode" and getText(n) == "RO":
             ro = True
+        if str(n.nodeName) == "Xiapi_Par": 
+            xiapi_par = getText(n)
+            nodeName1 = xiapi_par
     if node.nodeName in ["Integer", "IntConverter", "IntSwissKnife"]:
         print 'record(longin, "$(P)$(R)%s_RBV") {' % records[nodeName]
         print '  field(DTYP, "asynInt32")'
-        print '  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_%s")' % nodeName
+        print '  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))%s")' % nodeName1
         print '  field(SCAN, "I/O Intr")'
         print '  field(DISA, "0")'        
         print '  info(autosaveFields, "%s")' % long_autosaveFields
@@ -153,7 +145,7 @@ for node in doneNodes:
             continue        
         print 'record(longout, "$(P)$(R)%s") {' % records[nodeName]
         print '  field(DTYP, "asynInt32")'
-        print '  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_%s")' % nodeName
+        print '  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))%s")' % nodeName1
         print '  field(DISA, "0")'
         print '  info(autosaveFields, "%s PINI VAL")' % long_autosaveFields
         print '}'
@@ -161,7 +153,7 @@ for node in doneNodes:
     elif node.nodeName in ["Boolean"]:
         print 'record(bi, "$(P)$(R)%s_RBV") {' % records[nodeName]
         print '  field(DTYP, "asynInt32")'
-        print '  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_B_%s")' % nodeName
+        print '  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))%s")' % nodeName1
         print '  field(SCAN, "I/O Intr")'
         print '  field(ZNAM, "No")'
         print '  field(ONAM, "Yes")'                        
@@ -173,7 +165,7 @@ for node in doneNodes:
             continue        
         print 'record(bo, "$(P)$(R)%s") {' % records[nodeName]
         print '  field(DTYP, "asynInt32")'
-        print '  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_B_%s")' % nodeName
+        print '  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))%s")' % nodeName1
         print '  field(ZNAM, "No")'
         print '  field(ONAM, "Yes")'                                
         print '  field(DISA, "0")'
@@ -183,7 +175,7 @@ for node in doneNodes:
     elif node.nodeName in ["Float", "Converter", "SwissKnife"]:
         print 'record(ai, "$(P)$(R)%s_RBV") {' % records[nodeName]
         print '  field(DTYP, "asynFloat64")'
-        print '  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_D_%s")' % nodeName
+        print '  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))%s")' % nodeName1
         print '  field(PREC, "3")'        
         print '  field(SCAN, "I/O Intr")'
         print '  field(DISA, "0")'
@@ -194,16 +186,17 @@ for node in doneNodes:
             continue    
         print 'record(ao, "$(P)$(R)%s") {' % records[nodeName]
         print '  field(DTYP, "asynFloat64")'
-        print '  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_D_%s")' % nodeName
+        print '  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))%s")' % nodeName1
         print '  field(PREC, "3")'
         print '  field(DISA, "0")'
         print '  info(autosaveFields, "%s PINI VAL")' % a_autosaveFields
         print '}'
         print
-    elif node.nodeName in ["StringReg"]:
+    elif node.nodeName in ["StringReg", "String"]:
         print 'record(stringin, "$(P)$(R)%s_RBV") {' % records[nodeName]
         print '  field(DTYP, "asynOctetRead")'
-        print '  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_S_%s")' % nodeName
+        print '  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))%s")' % nodeName
+#        print '  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))%s")' % nodeName1
         print '  field(SCAN, "I/O Intr")'
         print '  field(DISA, "0")'
         print '  info(autosaveFields, "%s")' % string_autosaveFields
@@ -212,7 +205,7 @@ for node in doneNodes:
     elif node.nodeName in ["Command"]:
         print 'record(longout, "$(P)$(R)%s") {' % records[nodeName]
         print '  field(DTYP, "asynInt32")'
-        print '  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_C_%s")' % nodeName
+        print '  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))%s")' % nodeName1
         print '  field(DISA, "0")'
         print '  info(autosaveFields, "%s")' % long_autosaveFields
         print '}'
@@ -229,7 +222,8 @@ for node in doneNodes:
                     print >> sys.stderr, "   If needed, edit the Enumeration tag for %s to select the 16 you want." % nodeName
                     break
                 name = str(n.getAttribute("Name"))
-                enumerations += '  field(%sST, "%s")\n' %(epicsId[i], name[:16])
+#                enumerations += '  field(%sST, "%s")\n' %(epicsId[i], name[:16])
+                enumerations += '  field(%sST, "%s")\n' %(epicsId[i], name)
                 value = [x for x in elements(n) if str(x.nodeName) == "Value"]
                 assert value, "EnumEntry %s in node %s doesn't have a value" %(name, nodeName)                
                 if i == 0:
@@ -238,7 +232,7 @@ for node in doneNodes:
                 i += 1                
         print 'record(mbbi, "$(P)$(R)%s_RBV") {' % records[nodeName]
         print '  field(DTYP, "asynInt32")'
-        print '  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_E_%s")' % nodeName
+        print '  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))%s")' % nodeName1
         print enumerations,
         print '  field(SCAN, "I/O Intr")'
         print '  field(DISA, "0")'
@@ -249,7 +243,7 @@ for node in doneNodes:
             continue        
         print 'record(mbbo, "$(P)$(R)%s") {' % records[nodeName]
         print '  field(DTYP, "asynInt32")'
-        print '  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_E_%s")' % nodeName
+        print '  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))%s")' % nodeName1
         print '  field(DOL,  "%s")' % defaultVal
         print enumerations,       
         print '  field(DISA, "0")'
