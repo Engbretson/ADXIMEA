@@ -10,10 +10,10 @@ epicsEnvSet("LOCATION", "HPCat")
 epicsEnvSet("GROUP", "HPCat")
 
 #epicsThreadSleep(20)
-dbLoadDatabase("$(TOP)/dbd/XIMEAApp.dbd")
-XIMEAApp_registerRecordDeviceDriver(pdbbase) 
+dbLoadDatabase("$(TOP)/dbd/MC023CGApp.dbd")
+MC023CGApp_registerRecordDeviceDriver(pdbbase) 
 
-epicsEnvSet("PREFIX", "HPCAT:XIMEA:")
+epicsEnvSet("PREFIX", "HPCAT:MC023CG:")
 epicsEnvSet("PORT",   "X1")
 epicsEnvSet("QSIZE",  "20")
 epicsEnvSet("XSIZE",  "2048")
@@ -26,14 +26,14 @@ epicsEnvSet("CBUFFS", "500")
 epicsEnvSet("EPICS_DB_INCLUDE_PATH", "$(ADCORE)/db")  
  
 
-XIMEAConfig("$(PORT)", 0, 0, 0, 0, "18880854")
+MC023CGConfig("$(PORT)", 0, 0, 0, 0, "18880854")
 epicsEnvSet("CAMERA_ID", "18880854")
 
 #asynSetTraceIOMask($(PORT), 0, 2)
 #asynSetTraceMask($(PORT),0,0xff)
 
 dbLoadRecords("$(ADCORE)/db/ADBase.template", "P=$(PREFIX),R=cam1:,PORT=$(PORT),ADDR=0,TIMEOUT=1")
-dbLoadRecords("$(ADXIMEA)/db/XIMEA.template","P=$(PREFIX),R=cam1:,PORT=$(PORT),ADDR=0,TIMEOUT=1")
+dbLoadRecords("$(ADXIMEA)/db/MC023CG_.template","P=$(PREFIX),R=cam1:,PORT=$(PORT),ADDR=0,TIMEOUT=1")
 
 # Create a standard arrays plugin, set it to get data from Driver.
 NDStdArraysConfigure("Image1", 3, 0, "$(PORT)", 0)
@@ -44,7 +44,7 @@ dbLoadRecords("$(ADCORE)/db/NDStdArrays.template", "P=$(PREFIX),R=image1:,PORT=I
 #< $(ADCORE)/iocBoot/EXAMPLE_commonPlugins.cmd
 < $(ADCORE)/iocBoot/commonPlugins.cmd
 
-set_requestfile_path("$(ADXIMEA)/XIMEAApp/Db")
+set_requestfile_path("$(ADXIMEA)/MC023CGApp/Db")
 
 ### Load alive record
 dbLoadRecords("$(ALIVE)/aliveApp/Db/alive.db", "P=$(PREFIX),RHOST=164.54.100.11")

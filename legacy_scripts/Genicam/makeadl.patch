@@ -1,0 +1,28 @@
+34c34
+< adlFile = args[1] + "-features_"
+---
+> adlFile = args[1] + "-"
+416c416
+< 			textix="%(camera_name)s Features Screen #%(fileNumber)d - $(P)$(R)"
+---
+> 			textix="%(camera_name)s Features Screen  - $(P)$(R)"
+462c462
+<             write_adl_file(adlFile + str(fileNumber) + ".adl")
+---
+> #            write_adl_file(adlFile + str(fileNumber) + ".adl")
+531a532,540
+>     oldh = h
+>     h = max(y, h) + 10	
+>     w = w + 5
+>     write_adl_file(adlFile + name + ".adl") # mse my stuff here
+>     h = oldh
+>     text = "" #mse
+>     h = 40 #mse
+>     x = 5 #mse
+>     y = 40 #mse
+534a544
+> 
+536c546
+< write_adl_file(adlFile + str(fileNumber) + ".adl")
+---
+> #write_adl_file(adlFile + str(fileNumber) + ".adl")

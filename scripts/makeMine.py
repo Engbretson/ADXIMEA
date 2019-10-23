@@ -175,7 +175,8 @@ print
 # for each node
 for node in doneNodes:
     nodeName = str(node.getAttribute("Name"))
-    nodeName0 = nodeName
+#    nodeName0 = nodeName
+#    nodeName0 = str(node.getAttribute("Description"))	
     nodeName1 = mask_name + '_' + nodeName
     
     ro = False
@@ -186,6 +187,9 @@ for node in doneNodes:
 	
     for n in elements(node):
     
+        if str(n.nodeName) == "Description":
+            nodeName0 = getText(n)
+
         if str(n.nodeName) == "CommandValue" and getText(n) == "1":
             execute = True
   

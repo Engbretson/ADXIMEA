@@ -1,0 +1,2839 @@
+<?xml version="1.0"?>
+<RegisterDescription xmlns="http://www.genicam.org/GenApi/Version_1_0">
+  <Group Comment="Basic">
+    <Integer Name="Exposure">
+      <DisplayName>Exposure</DisplayName>
+      <Xiapi_Par>exposure</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <Representation>Logarithmic</Representation>
+      <pValue>ExposureReg</pValue>
+      <pMin>ExposureMinReg</pMin>
+      <pMax>ExposureMaxReg</pMax>
+      <pInc>ExposureIncReg</pInc>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Integer>
+    <Enumeration Name="GainSelector">
+      <DisplayName>Gain selector</DisplayName>
+      <Description>Gain selector for parameter Gain allows to select different type of gains.</Description>
+      <Xiapi_Par>gain_selector</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>GainSelectorReg</pValue>
+      <EnumEntry>
+        <DisplayName>Analog</DisplayName>
+        <Value>1</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Digital</DisplayName>
+        <Value>2</Value>
+      </EnumEntry>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+      <pSelected>Gain</pSelected>
+    </Enumeration>
+    <Float Name="Gain">
+      <DisplayName>Gain</DisplayName>
+      <Xiapi_Par>gain</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>GainReg</pValue>
+      <pMin>GainMinReg</pMin>
+      <pMax>GainMaxReg</pMax>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Float>
+    <Enumeration Name="Downsampling">
+      <DisplayName>Downsampling</DisplayName>
+      <Xiapi_Par>downsampling</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>DownsamplingReg</pValue>
+      <EnumEntry>
+        <DisplayName>1 (1936x1216)</DisplayName>
+        <Value>1</Value>
+      </EnumEntry>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Enumeration>
+    <Enumeration Name="DownsamplingType">
+      <DisplayName>Downs. type</DisplayName>
+      <Xiapi_Par>downsampling_type</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>DownsamplingTypeReg</pValue>
+      <EnumEntry>
+        <DisplayName>Skipping</DisplayName>
+        <Value>1</Value>
+      </EnumEntry>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Enumeration>
+    <Enumeration Name="Imgdataformat">
+      <DisplayName>Data format</DisplayName>
+      <Xiapi_Par>imgdataformat</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>ImgdataformatReg</pValue>
+      <EnumEntry>
+        <DisplayName>Mono8</DisplayName>
+        <Value>0</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Mono16</DisplayName>
+        <Value>1</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>RGB24</DisplayName>
+        <Value>2</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>RGB32</DisplayName>
+        <Value>3</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>RAW8</DisplayName>
+        <Value>5</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>RAW16</DisplayName>
+        <Value>6</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>RGB48</DisplayName>
+        <Value>8</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>RGB64</DisplayName>
+        <Value>9</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>TRANSPORT</DisplayName>
+        <Value>7</Value>
+      </EnumEntry>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Enumeration>
+    <Enumeration Name="ShutterType">
+      <DisplayName>Shutter type</DisplayName>
+      <Xiapi_Par>shutter_type</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>ShutterTypeReg</pValue>
+      <EnumEntry>
+        <DisplayName>Global</DisplayName>
+        <Value>0</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Electronic rolling</DisplayName>
+        <Value>1</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Global reset release</DisplayName>
+        <Value>2</Value>
+      </EnumEntry>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Enumeration>
+    <Enumeration Name="SensorTaps">
+      <DisplayName>Sensor taps</DisplayName>
+      <Xiapi_Par>sensor_taps</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>SensorTapsReg</pValue>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Enumeration>
+    <Boolean Name="Aeag">
+      <DisplayName>AEAG</DisplayName>
+      <Xiapi_Par>aeag</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>AeagReg</pValue>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+      <AppDefault>1</AppDefault>
+    </Boolean>
+    <Integer Name="AeagRoiOffsetX">
+      <DisplayName>AEAG-ROI.X</DisplayName>
+      <Xiapi_Par>aeag_roi_offset_x</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>AeagRoiOffsetXReg</pValue>
+      <pMin>AeagRoiOffsetXMinReg</pMin>
+      <pMax>AeagRoiOffsetXMaxReg</pMax>
+      <pInc>AeagRoiOffsetXIncReg</pInc>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Integer>
+    <Integer Name="AeagRoiOffsetY">
+      <DisplayName>AEAG-ROI.Y</DisplayName>
+      <Xiapi_Par>aeag_roi_offset_y</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>AeagRoiOffsetYReg</pValue>
+      <pMin>AeagRoiOffsetYMinReg</pMin>
+      <pMax>AeagRoiOffsetYMaxReg</pMax>
+      <pInc>AeagRoiOffsetYIncReg</pInc>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Integer>
+    <Integer Name="AeagRoiWidth">
+      <DisplayName>AEAG-ROI.W</DisplayName>
+      <Xiapi_Par>aeag_roi_width</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>AeagRoiWidthReg</pValue>
+      <pMin>AeagRoiWidthMinReg</pMin>
+      <pMax>AeagRoiWidthMaxReg</pMax>
+      <pInc>AeagRoiWidthIncReg</pInc>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Integer>
+    <Integer Name="AeagRoiHeight">
+      <DisplayName>AEAG-ROI.H</DisplayName>
+      <Xiapi_Par>aeag_roi_height</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>AeagRoiHeightReg</pValue>
+      <pMin>AeagRoiHeightMinReg</pMin>
+      <pMax>AeagRoiHeightMaxReg</pMax>
+      <pInc>AeagRoiHeightIncReg</pInc>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Integer>
+    <Enumeration Name="BpcListSelector">
+      <DisplayName>Sensor defects corr. list</DisplayName>
+      <Xiapi_Par>bpc_list_selector</Xiapi_Par>
+      <Visibility>Expert</Visibility>
+      <pValue>BpcListSelectorReg</pValue>
+      <EnumEntry>
+        <DisplayName>Factory</DisplayName>
+        <Value>0</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>User</DisplayName>
+        <Value>1</Value>
+      </EnumEntry>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+      <pSelected>Bpc</pSelected>
+    </Enumeration>
+    <Boolean Name="Bpc">
+      <DisplayName>Sensor defects correction</DisplayName>
+      <Xiapi_Par>bpc</Xiapi_Par>
+      <Visibility>Expert</Visibility>
+      <pValue>BpcReg</pValue>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+      <AppDefault>1</AppDefault>
+    </Boolean>
+    <Boolean Name="ColumnFpnCorrection">
+      <DisplayName>Column FPN correction</DisplayName>
+      <Xiapi_Par>column_fpn_correction</Xiapi_Par>
+      <Visibility>Expert</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>ColumnFpnCorrectionReg</pValue>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+      <AppDefault>1</AppDefault>
+    </Boolean>
+    <Boolean Name="RowFpnCorrection">
+      <DisplayName>Row FPN correction</DisplayName>
+      <Xiapi_Par>row_fpn_correction</Xiapi_Par>
+      <Visibility>Expert</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>RowFpnCorrectionReg</pValue>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+      <AppDefault>1</AppDefault>
+    </Boolean>
+    <Boolean Name="AutoWb">
+      <DisplayName>AWB</DisplayName>
+      <Xiapi_Par>auto_wb</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>AutoWbReg</pValue>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+      <AppDefault>1</AppDefault>
+    </Boolean>
+    <Command Name="ManualWb">
+      <DisplayName>Manual WB</DisplayName>
+      <Xiapi_Par>manual_wb</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>ManualWbReg</pValue>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Command>
+    <Float Name="WbKr">
+      <DisplayName>WB.R</DisplayName>
+      <Xiapi_Par>wb_kr</Xiapi_Par>
+      <Visibility>Expert</Visibility>
+      <pValue>WbKrReg</pValue>
+      <pMin>WbKrMinReg</pMin>
+      <pMax>WbKrMaxReg</pMax>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Float>
+    <Float Name="WbKg">
+      <DisplayName>WB.G</DisplayName>
+      <Xiapi_Par>wb_kg</Xiapi_Par>
+      <Visibility>Expert</Visibility>
+      <pValue>WbKgReg</pValue>
+      <pMin>WbKgMinReg</pMin>
+      <pMax>WbKgMaxReg</pMax>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Float>
+    <Float Name="WbKb">
+      <DisplayName>WB.B</DisplayName>
+      <Xiapi_Par>wb_kb</Xiapi_Par>
+      <Visibility>Expert</Visibility>
+      <pValue>WbKbReg</pValue>
+      <pMin>WbKbMinReg</pMin>
+      <pMax>WbKbMaxReg</pMax>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Float>
+    <Integer Name="ImageBlackLevel">
+      <DisplayName>Image black level</DisplayName>
+      <Xiapi_Par>image_black_level</Xiapi_Par>
+      <Visibility>Invisible</Visibility>
+      <pValue>ImageBlackLevelReg</pValue>
+      <ImposedAccessMode>RO</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Integer>
+    <Integer Name="OffsetX">
+      <DisplayName>ROI offset x</DisplayName>
+      <Xiapi_Par>offsetX</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>OffsetXReg</pValue>
+      <pMin>OffsetXMinReg</pMin>
+      <pMax>OffsetXMaxReg</pMax>
+      <pInc>OffsetXIncReg</pInc>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Integer>
+    <Integer Name="OffsetY">
+      <DisplayName>ROI offset y</DisplayName>
+      <Xiapi_Par>offsetY</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>OffsetYReg</pValue>
+      <pMin>OffsetYMinReg</pMin>
+      <pMax>OffsetYMaxReg</pMax>
+      <pInc>OffsetYIncReg</pInc>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Integer>
+    <Integer Name="Width">
+      <DisplayName>ROI width</DisplayName>
+      <Xiapi_Par>width</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>WidthReg</pValue>
+      <pMin>WidthMinReg</pMin>
+      <pMax>WidthMaxReg</pMax>
+      <pInc>WidthIncReg</pInc>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Integer>
+    <Integer Name="Height">
+      <DisplayName>ROI height</DisplayName>
+      <Xiapi_Par>height</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>HeightReg</pValue>
+      <pMin>HeightMinReg</pMin>
+      <pMax>HeightMaxReg</pMax>
+      <pInc>HeightIncReg</pInc>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Integer>
+    <Integer Name="RegionSelector">
+      <DisplayName>ROI region selector</DisplayName>
+      <Xiapi_Par>region_selector</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pValue>RegionSelectorReg</pValue>
+      <pMin>RegionSelectorMinReg</pMin>
+      <pMax>RegionSelectorMaxReg</pMax>
+      <pInc>RegionSelectorIncReg</pInc>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Integer>
+    <Boolean Name="RegionMode">
+      <DisplayName>ROI reg mode</DisplayName>
+      <Xiapi_Par>region_mode</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>RegionModeReg</pValue>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Boolean>
+    <Boolean Name="Hdr">
+      <DisplayName>HDR</DisplayName>
+      <Xiapi_Par>hdr</Xiapi_Par>
+      <Visibility>Expert</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>HdrReg</pValue>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Boolean>
+    <Boolean Name="Ffc">
+      <DisplayName>Image flat field correction</DisplayName>
+      <Xiapi_Par>ffc</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>FfcReg</pValue>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Boolean>
+    <String Name="FfcFlatFieldFileName">
+      <DisplayName>FFC flat field file name</DisplayName>
+      <Xiapi_Par>ffc_flat_field_file_name</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <FileFormats>
+        <FileFormat>TIFF_Image_tif</FileFormat>
+      </FileFormats>
+      <IsPath>1</IsPath>
+      <pValue>FfcFlatFieldFileNameReg</pValue>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </String>
+    <String Name="FfcDarkFieldFileName">
+      <DisplayName>FFC dark field file name</DisplayName>
+      <Xiapi_Par>ffc_dark_field_file_name</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <FileFormats>
+        <FileFormat>TIFF_Image_tif</FileFormat>
+      </FileFormats>
+      <IsPath>1</IsPath>
+      <pValue>FfcDarkFieldFileNameReg</pValue>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </String>
+    <Boolean Name="HorizontalFlip">
+      <DisplayName>Horizontal flip</DisplayName>
+      <Xiapi_Par>horizontal_flip</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>HorizontalFlipReg</pValue>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Boolean>
+    <Boolean Name="VerticalFlip">
+      <DisplayName>Vertical flip</DisplayName>
+      <Xiapi_Par>vertical_flip</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>VerticalFlipReg</pValue>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Boolean>
+  </Group>
+  <Group Comment="AE Setup">
+    <Float Name="ExpPriority">
+      <DisplayName>AEAGExpPriority</DisplayName>
+      <Xiapi_Par>exp_priority</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>ExpPriorityReg</pValue>
+      <pMin>ExpPriorityMinReg</pMin>
+      <pMax>ExpPriorityMaxReg</pMax>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+      <AppDefault>1</AppDefault>
+    </Float>
+    <Integer Name="AeMaxLimit">
+      <DisplayName>AETopLimit</DisplayName>
+      <Xiapi_Par>ae_max_limit</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <Representation>Logarithmic</Representation>
+      <pValue>AeMaxLimitReg</pValue>
+      <pMin>AeMaxLimitMinReg</pMin>
+      <pMax>AeMaxLimitMaxReg</pMax>
+      <pInc>AeMaxLimitIncReg</pInc>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Integer>
+    <Float Name="AgMaxLimit">
+      <DisplayName>AGTopLimit</DisplayName>
+      <Xiapi_Par>ag_max_limit</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>AgMaxLimitReg</pValue>
+      <pMin>AgMaxLimitMinReg</pMin>
+      <pMax>AgMaxLimitMaxReg</pMax>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Float>
+    <Float Name="AeagLevel">
+      <DisplayName>AEAGTargetLevel</DisplayName>
+      <Xiapi_Par>aeag_level</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>AeagLevelReg</pValue>
+      <pMin>AeagLevelMinReg</pMin>
+      <pMax>AeagLevelMaxReg</pMax>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Float>
+  </Group>
+  <Group Comment="Image Format">
+    <Enumeration Name="BinningSelector">
+      <DisplayName>Binning Selector</DisplayName>
+      <Description>Binning engine selector.</Description>
+      <Xiapi_Par>binning_selector</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pValue>BinningSelectorReg</pValue>
+      <EnumEntry>
+        <DisplayName>Sensor</DisplayName>
+        <Value>0</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>FPGA</DisplayName>
+        <Value>1</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Host CPU</DisplayName>
+        <Value>2</Value>
+      </EnumEntry>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+      <pSelected>BinningVertical</pSelected>
+      <pSelected>BinningHorizontal</pSelected>
+      <pSelected>BinningVerticalMode</pSelected>
+      <pSelected>BinningHorizontalMode</pSelected>
+      <pSelected>BinningVerticalPattern</pSelected>
+      <pSelected>BinningHorizontalPattern</pSelected>
+    </Enumeration>
+    <Integer Name="BinningVertical">
+      <DisplayName>Binning Vertical</DisplayName>
+      <Description>Vertical Binning - number of vertical photo-sensitive cells to combine together.</Description>
+      <Xiapi_Par>binning_vertical</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>BinningVerticalReg</pValue>
+      <pMin>BinningVerticalMinReg</pMin>
+      <pMax>BinningVerticalMaxReg</pMax>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Integer>
+    <Integer Name="BinningHorizontal">
+      <DisplayName>Binning Horizontal</DisplayName>
+      <Description>Horizontal Binning - number of horizontal photo-sensitive cells to combine together.</Description>
+      <Xiapi_Par>binning_horizontal</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>BinningHorizontalReg</pValue>
+      <pMin>BinningHorizontalMinReg</pMin>
+      <pMax>BinningHorizontalMaxReg</pMax>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Integer>
+    <Enumeration Name="BinningVerticalMode">
+      <DisplayName>Binning Vertical Mode</DisplayName>
+      <Description>Sets the mode to use to combine vertical pixel together.</Description>
+      <Xiapi_Par>binning_vertical_mode</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>BinningVerticalModeReg</pValue>
+      <EnumEntry>
+        <DisplayName>Sum</DisplayName>
+        <Value>0</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Average</DisplayName>
+        <Value>1</Value>
+      </EnumEntry>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Enumeration>
+    <Enumeration Name="BinningHorizontalMode">
+      <DisplayName>Binning Horizontal Mode</DisplayName>
+      <Description>Sets the mode to use to combine horizontal pixel together.</Description>
+      <Xiapi_Par>binning_horizontal_mode</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>BinningHorizontalModeReg</pValue>
+      <EnumEntry>
+        <DisplayName>Sum</DisplayName>
+        <Value>0</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Average</DisplayName>
+        <Value>1</Value>
+      </EnumEntry>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Enumeration>
+    <Enumeration Name="BinningVerticalPattern">
+      <DisplayName>Binning Vertical Pattern</DisplayName>
+      <Description>Binning vertical pattern type.</Description>
+      <Xiapi_Par>binning_vertical_pattern</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>BinningVerticalPatternReg</pValue>
+      <EnumEntry>
+        <DisplayName>Bayer</DisplayName>
+        <Value>2</Value>
+      </EnumEntry>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Enumeration>
+    <Enumeration Name="BinningHorizontalPattern">
+      <DisplayName>Binning Horizontal Pattern</DisplayName>
+      <Description>Binning horizontal pattern type.</Description>
+      <Xiapi_Par>binning_horizontal_pattern</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>BinningHorizontalPatternReg</pValue>
+      <EnumEntry>
+        <DisplayName>Bayer</DisplayName>
+        <Value>2</Value>
+      </EnumEntry>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Enumeration>
+    <Enumeration Name="DecimationSelector">
+      <DisplayName>Decimation Selector</DisplayName>
+      <Description>Decimation engine selector.</Description>
+      <Xiapi_Par>decimation_selector</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pValue>DecimationSelectorReg</pValue>
+      <EnumEntry>
+        <DisplayName>Sensor</DisplayName>
+        <Value>0</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>FPGA</DisplayName>
+        <Value>1</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Host CPU</DisplayName>
+        <Value>2</Value>
+      </EnumEntry>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+      <pSelected>DecimationVertical</pSelected>
+      <pSelected>DecimationHorizontal</pSelected>
+      <pSelected>DecimationVerticalPattern</pSelected>
+      <pSelected>DecimationHorizontalPattern</pSelected>
+    </Enumeration>
+    <Integer Name="DecimationVertical">
+      <DisplayName>Decimation Vertical</DisplayName>
+      <Description>Vertical Decimation - vertical sub-sampling of the image - reduces the vertical resolution of the image by the specified vertical decimation factor.</Description>
+      <Xiapi_Par>decimation_vertical</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>DecimationVerticalReg</pValue>
+      <pMin>DecimationVerticalMinReg</pMin>
+      <pMax>DecimationVerticalMaxReg</pMax>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Integer>
+    <Integer Name="DecimationHorizontal">
+      <DisplayName>Decimation Horizontal</DisplayName>
+      <Description>Horizontal Decimation - horizontal sub-sampling of the image - reduces the horizontal resolution of the image by the specified vertical decimation factor.</Description>
+      <Xiapi_Par>decimation_horizontal</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>DecimationHorizontalReg</pValue>
+      <pMin>DecimationHorizontalMinReg</pMin>
+      <pMax>DecimationHorizontalMaxReg</pMax>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Integer>
+    <Enumeration Name="DecimationVerticalPattern">
+      <DisplayName>Decimation Vertical Pattern</DisplayName>
+      <Description>Decimation vertical pattern type.</Description>
+      <Xiapi_Par>decimation_vertical_pattern</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>DecimationVerticalPatternReg</pValue>
+      <EnumEntry>
+        <DisplayName>Bayer</DisplayName>
+        <Value>2</Value>
+      </EnumEntry>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Enumeration>
+    <Enumeration Name="DecimationHorizontalPattern">
+      <DisplayName>Decimation Horizontal Pattern</DisplayName>
+      <Description>Decimation horizontal pattern type.</Description>
+      <Xiapi_Par>decimation_horizontal_pattern</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>DecimationHorizontalPatternReg</pValue>
+      <EnumEntry>
+        <DisplayName>Bayer</DisplayName>
+        <Value>2</Value>
+      </EnumEntry>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Enumeration>
+    <Enumeration Name="TestPatternGeneratorSelector">
+      <DisplayName>Test Pattern Generator Selector</DisplayName>
+      <Description>Selects which test pattern generator is controlled by the TestPattern feature.</Description>
+      <Xiapi_Par>test_pattern_generator_selector</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pValue>TestPatternGeneratorSelectorReg</pValue>
+      <EnumEntry>
+        <DisplayName>Sensor</DisplayName>
+        <Value>0</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>FPGA</DisplayName>
+        <Value>1</Value>
+      </EnumEntry>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+      <pSelected>TestPattern</pSelected>
+    </Enumeration>
+    <Enumeration Name="TestPattern">
+      <DisplayName>Test Pattern Type</DisplayName>
+      <Description>Selects which test pattern type is generated by the selected generator.</Description>
+      <Xiapi_Par>test_pattern</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>TestPatternReg</pValue>
+      <EnumEntry>
+        <DisplayName>Off</DisplayName>
+        <Value>0</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Black</DisplayName>
+        <Value>1</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>White</DisplayName>
+        <Value>2</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Horiz. Gradient</DisplayName>
+        <Value>3</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Vert. Gradient</DisplayName>
+        <Value>4</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Horiz. Moving Gradient</DisplayName>
+        <Value>5</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Vert. Moving Gradient</DisplayName>
+        <Value>6</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Horiz. Moving Line</DisplayName>
+        <Value>7</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Vert. Moving Line</DisplayName>
+        <Value>8</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Color Bar</DisplayName>
+        <Value>9</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Frame Counter</DisplayName>
+        <Value>10</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Device Specific Counter</DisplayName>
+        <Value>11</Value>
+      </EnumEntry>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Enumeration>
+  </Group>
+  <Group Comment="Performance">
+    <Boolean Name="LimitBandwidthMode">
+      <DisplayName>BW limited</DisplayName>
+      <Xiapi_Par>limit_bandwidth_mode</Xiapi_Par>
+      <Visibility>Expert</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>LimitBandwidthModeReg</pValue>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Boolean>
+    <Integer Name="LimitBandwidth">
+      <DisplayName>Limit bandwidth</DisplayName>
+      <Xiapi_Par>limit_bandwidth</Xiapi_Par>
+      <Visibility>Expert</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>LimitBandwidthReg</pValue>
+      <pMin>LimitBandwidthMinReg</pMin>
+      <pMax>LimitBandwidthMaxReg</pMax>
+      <pInc>LimitBandwidthIncReg</pInc>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Integer>
+    <Enumeration Name="SensorBitDepth">
+      <DisplayName>Sensor bit depth</DisplayName>
+      <Xiapi_Par>sensor_bit_depth</Xiapi_Par>
+      <Visibility>Expert</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>SensorBitDepthReg</pValue>
+      <EnumEntry>
+        <DisplayName>10 Bpp</DisplayName>
+        <Value>10</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>12 Bpp</DisplayName>
+        <Value>12</Value>
+      </EnumEntry>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Enumeration>
+    <Enumeration Name="OutputBitDepth">
+      <DisplayName>Device output bit depth</DisplayName>
+      <Xiapi_Par>output_bit_depth</Xiapi_Par>
+      <Visibility>Expert</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>OutputBitDepthReg</pValue>
+      <EnumEntry>
+        <DisplayName>8 Bpp</DisplayName>
+        <Value>8</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>10 Bpp</DisplayName>
+        <Value>10</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>12 Bpp</DisplayName>
+        <Value>12</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>16 Bpp</DisplayName>
+        <Value>16</Value>
+      </EnumEntry>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Enumeration>
+    <Boolean Name="OutputBitPacking">
+      <DisplayName>Device output data packing</DisplayName>
+      <Xiapi_Par>output_bit_packing</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>OutputBitPackingReg</pValue>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Boolean>
+    <Enumeration Name="OutputBitPackingType">
+      <DisplayName>Device output data packing mode</DisplayName>
+      <Xiapi_Par>output_bit_packing_type</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>OutputBitPackingTypeReg</pValue>
+      <EnumEntry>
+        <DisplayName>SFNC Pack</DisplayName>
+        <Value>1</Value>
+      </EnumEntry>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Enumeration>
+    <Enumeration Name="ImageDataBitDepth">
+      <DisplayName>Image bit depth</DisplayName>
+      <Xiapi_Par>image_data_bit_depth</Xiapi_Par>
+      <Visibility>Expert</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>ImageDataBitDepthReg</pValue>
+      <EnumEntry>
+        <DisplayName>8 Bpp</DisplayName>
+        <Value>8</Value>
+      </EnumEntry>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Enumeration>
+    <Enumeration Name="AcqTimingMode">
+      <DisplayName>Timing mode</DisplayName>
+      <Xiapi_Par>acq_timing_mode</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>AcqTimingModeReg</pValue>
+      <EnumEntry>
+        <DisplayName>Free Run</DisplayName>
+        <Value>0</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Frame Rate Limit</DisplayName>
+        <Value>2</Value>
+      </EnumEntry>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Enumeration>
+    <Float Name="Framerate">
+      <DisplayName>Frame Rate</DisplayName>
+      <Xiapi_Par>framerate</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <Representation>Logarithmic</Representation>
+      <pValue>FramerateReg</pValue>
+      <pMin>FramerateMinReg</pMin>
+      <pMax>FramerateMaxReg</pMax>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Float>
+    <Boolean Name="LUTEnable">
+      <DisplayName>LUT Enable</DisplayName>
+      <Xiapi_Par>LUTEnable</Xiapi_Par>
+      <Visibility>Expert</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>LUTEnableReg</pValue>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Boolean>
+    <Integer Name="LUTIndex">
+      <DisplayName>LUT Index</DisplayName>
+      <Xiapi_Par>LUTIndex</Xiapi_Par>
+      <Visibility>Expert</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>LUTIndexReg</pValue>
+      <pMin>LUTIndexMinReg</pMin>
+      <pMax>LUTIndexMaxReg</pMax>
+      <pInc>LUTIndexIncReg</pInc>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+      <pSelected>LUTValue</pSelected>
+    </Integer>
+    <Integer Name="LUTValue">
+      <DisplayName>LUT Value</DisplayName>
+      <Xiapi_Par>LUTValue</Xiapi_Par>
+      <Visibility>Expert</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>LUTValueReg</pValue>
+      <pMin>LUTValueMinReg</pMin>
+      <pMax>LUTValueMaxReg</pMax>
+      <pInc>LUTValueIncReg</pInc>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Integer>
+    <Enumeration Name="SensorFeatureSelector">
+      <DisplayName>Sensor feature selector</DisplayName>
+      <Xiapi_Par>sensor_feature_selector</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pValue>SensorFeatureSelectorReg</pValue>
+      <EnumEntry>
+        <DisplayName>Sensor acquisition running status</DisplayName>
+        <Value>3</Value>
+      </EnumEntry>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Enumeration>
+    <Integer Name="SensorFeatureValue">
+      <DisplayName>Sensor feature value</DisplayName>
+      <Xiapi_Par>sensor_feature_value</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pValue>SensorFeatureValueReg</pValue>
+      <Min>0</Min>
+      <Max>1000</Max>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Integer>
+  </Group>
+  <Group Comment="Temperature">
+    <Boolean Name="Iscooled">
+      <DisplayName>Is Cooled</DisplayName>
+      <Xiapi_Par>iscooled</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>IscooledReg</pValue>
+      <ImposedAccessMode>RO</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Boolean>
+    <Boolean Name="Cooling">
+      <DisplayName>Cooling</DisplayName>
+      <Xiapi_Par>cooling</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>CoolingReg</pValue>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Boolean>
+    <Float Name="TargetTemp">
+      <DisplayName>Target</DisplayName>
+      <Xiapi_Par>target_temp</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>TargetTempReg</pValue>
+      <pMin>TargetTempMinReg</pMin>
+      <pMax>TargetTempMaxReg</pMax>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Float>
+    <Float Name="ChipTemp">
+      <DisplayName>TempSensor</DisplayName>
+      <Xiapi_Par>chip_temp</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>ChipTempReg</pValue>
+      <ImposedAccessMode>RO</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Float>
+    <Float Name="HousTemp">
+      <DisplayName>TempHousing</DisplayName>
+      <Xiapi_Par>hous_temp</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>HousTempReg</pValue>
+      <ImposedAccessMode>RO</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Float>
+    <Float Name="HousBackSideTemp">
+      <DisplayName>TempHousingBackSide</DisplayName>
+      <Xiapi_Par>hous_back_side_temp</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>HousBackSideTempReg</pValue>
+      <ImposedAccessMode>RO</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Float>
+    <Float Name="SensorBoardTemp">
+      <DisplayName>TempSensorBoard</DisplayName>
+      <Xiapi_Par>sensor_board_temp</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>SensorBoardTempReg</pValue>
+      <ImposedAccessMode>RO</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Float>
+  </Group>
+  <Group Comment="Color Correction">
+    <Enumeration Name="Cms">
+      <DisplayName>Color Management</DisplayName>
+      <Xiapi_Par>cms</Xiapi_Par>
+      <Visibility>Expert</Visibility>
+      <pValue>CmsReg</pValue>
+      <EnumEntry>
+        <DisplayName>Disable</DisplayName>
+        <Value>0</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Enable</DisplayName>
+        <Value>1</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Enable (fast)</DisplayName>
+        <Value>2</Value>
+      </EnumEntry>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Enumeration>
+    <Boolean Name="ApplyCms">
+      <DisplayName>Color management apply</DisplayName>
+      <Xiapi_Par>apply_cms</Xiapi_Par>
+      <Visibility>Expert</Visibility>
+      <pValue>ApplyCmsReg</pValue>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Boolean>
+    <String Name="InputCmsProfile">
+      <DisplayName>Color management input profile</DisplayName>
+      <Xiapi_Par>input_cms_profile</Xiapi_Par>
+      <Visibility>Expert</Visibility>
+      <IsPath>1</IsPath>
+      <pValue>InputCmsProfileReg</pValue>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </String>
+    <String Name="OutputCmsProfile">
+      <DisplayName>Color management output profile</DisplayName>
+      <Xiapi_Par>output_cms_profile</Xiapi_Par>
+      <Visibility>Expert</Visibility>
+      <IsPath>1</IsPath>
+      <pValue>OutputCmsProfileReg</pValue>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </String>
+    <Enumeration Name="CmsIntent">
+      <DisplayName>Color management Intent</DisplayName>
+      <Xiapi_Par>cms_intent</Xiapi_Par>
+      <Visibility>Expert</Visibility>
+      <pValue>CmsIntentReg</pValue>
+      <EnumEntry>
+        <DisplayName>Perceptual</DisplayName>
+        <Value>0</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Relative</DisplayName>
+        <Value>1</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Saturation</DisplayName>
+        <Value>2</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Absotute</DisplayName>
+        <Value>3</Value>
+      </EnumEntry>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Enumeration>
+    <Float Name="GammaY">
+      <DisplayName>Gamma Y</DisplayName>
+      <Xiapi_Par>gammaY</Xiapi_Par>
+      <Visibility>Expert</Visibility>
+      <pValue>GammaYReg</pValue>
+      <pMin>GammaYMinReg</pMin>
+      <pMax>GammaYMaxReg</pMax>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Float>
+    <Float Name="GammaC">
+      <DisplayName>Gamma C</DisplayName>
+      <Xiapi_Par>gammaC</Xiapi_Par>
+      <Visibility>Expert</Visibility>
+      <pValue>GammaCReg</pValue>
+      <pMin>GammaCMinReg</pMin>
+      <pMax>GammaCMaxReg</pMax>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Float>
+    <Float Name="Sharpness">
+      <DisplayName>Sharpness</DisplayName>
+      <Xiapi_Par>sharpness</Xiapi_Par>
+      <Visibility>Expert</Visibility>
+      <pValue>SharpnessReg</pValue>
+      <pMin>SharpnessMinReg</pMin>
+      <pMax>SharpnessMaxReg</pMax>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Float>
+    <Float Name="CcMTX00">
+      <DisplayName>cc00</DisplayName>
+      <Xiapi_Par>ccMTX00</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pValue>CcMTX00Reg</pValue>
+      <pMin>CcMTX00MinReg</pMin>
+      <pMax>CcMTX00MaxReg</pMax>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Float>
+    <Float Name="CcMTX01">
+      <DisplayName>cc01</DisplayName>
+      <Xiapi_Par>ccMTX01</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pValue>CcMTX01Reg</pValue>
+      <pMin>CcMTX01MinReg</pMin>
+      <pMax>CcMTX01MaxReg</pMax>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Float>
+    <Float Name="CcMTX02">
+      <DisplayName>cc02</DisplayName>
+      <Xiapi_Par>ccMTX02</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pValue>CcMTX02Reg</pValue>
+      <pMin>CcMTX02MinReg</pMin>
+      <pMax>CcMTX02MaxReg</pMax>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Float>
+    <Float Name="CcMTX03">
+      <DisplayName>cc03</DisplayName>
+      <Xiapi_Par>ccMTX03</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pValue>CcMTX03Reg</pValue>
+      <pMin>CcMTX03MinReg</pMin>
+      <pMax>CcMTX03MaxReg</pMax>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Float>
+    <Float Name="CcMTX10">
+      <DisplayName>cc10</DisplayName>
+      <Xiapi_Par>ccMTX10</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pValue>CcMTX10Reg</pValue>
+      <pMin>CcMTX10MinReg</pMin>
+      <pMax>CcMTX10MaxReg</pMax>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Float>
+    <Float Name="CcMTX11">
+      <DisplayName>cc11</DisplayName>
+      <Xiapi_Par>ccMTX11</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pValue>CcMTX11Reg</pValue>
+      <pMin>CcMTX11MinReg</pMin>
+      <pMax>CcMTX11MaxReg</pMax>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Float>
+    <Float Name="CcMTX12">
+      <DisplayName>cc12</DisplayName>
+      <Xiapi_Par>ccMTX12</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pValue>CcMTX12Reg</pValue>
+      <pMin>CcMTX12MinReg</pMin>
+      <pMax>CcMTX12MaxReg</pMax>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Float>
+    <Float Name="CcMTX13">
+      <DisplayName>cc13</DisplayName>
+      <Xiapi_Par>ccMTX13</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pValue>CcMTX13Reg</pValue>
+      <pMin>CcMTX13MinReg</pMin>
+      <pMax>CcMTX13MaxReg</pMax>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Float>
+    <Float Name="CcMTX20">
+      <DisplayName>cc20</DisplayName>
+      <Xiapi_Par>ccMTX20</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pValue>CcMTX20Reg</pValue>
+      <pMin>CcMTX20MinReg</pMin>
+      <pMax>CcMTX20MaxReg</pMax>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Float>
+    <Float Name="CcMTX21">
+      <DisplayName>cc21</DisplayName>
+      <Xiapi_Par>ccMTX21</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pValue>CcMTX21Reg</pValue>
+      <pMin>CcMTX21MinReg</pMin>
+      <pMax>CcMTX21MaxReg</pMax>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Float>
+    <Float Name="CcMTX22">
+      <DisplayName>cc22</DisplayName>
+      <Xiapi_Par>ccMTX22</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pValue>CcMTX22Reg</pValue>
+      <pMin>CcMTX22MinReg</pMin>
+      <pMax>CcMTX22MaxReg</pMax>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Float>
+    <Float Name="CcMTX23">
+      <DisplayName>cc23</DisplayName>
+      <Xiapi_Par>ccMTX23</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pValue>CcMTX23Reg</pValue>
+      <pMin>CcMTX23MinReg</pMin>
+      <pMax>CcMTX23MaxReg</pMax>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Float>
+    <Float Name="CcMTX30">
+      <DisplayName>cc30</DisplayName>
+      <Xiapi_Par>ccMTX30</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pValue>CcMTX30Reg</pValue>
+      <pMin>CcMTX30MinReg</pMin>
+      <pMax>CcMTX30MaxReg</pMax>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Float>
+    <Float Name="CcMTX31">
+      <DisplayName>cc31</DisplayName>
+      <Xiapi_Par>ccMTX31</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pValue>CcMTX31Reg</pValue>
+      <pMin>CcMTX31MinReg</pMin>
+      <pMax>CcMTX31MaxReg</pMax>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Float>
+    <Float Name="CcMTX32">
+      <DisplayName>cc32</DisplayName>
+      <Xiapi_Par>ccMTX32</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pValue>CcMTX32Reg</pValue>
+      <pMin>CcMTX32MinReg</pMin>
+      <pMax>CcMTX32MaxReg</pMax>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Float>
+    <Float Name="CcMTX33">
+      <DisplayName>cc33</DisplayName>
+      <Xiapi_Par>ccMTX33</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pValue>CcMTX33Reg</pValue>
+      <pMin>CcMTX33MinReg</pMin>
+      <pMax>CcMTX33MaxReg</pMax>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Float>
+    <Command Name="DefccMTX">
+      <DisplayName>Default CC Matrix</DisplayName>
+      <Xiapi_Par>defccMTX</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pValue>DefccMTXReg</pValue>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Command>
+  </Group>
+  <Group Comment="Device IO">
+    <Enumeration Name="TriggerSource">
+      <DisplayName>Trigger mode</DisplayName>
+      <Xiapi_Par>trigger_source</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>TriggerSourceReg</pValue>
+      <EnumEntry>
+        <DisplayName>Off</DisplayName>
+        <Value>0</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Rising edge</DisplayName>
+        <Value>1</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Falling edge</DisplayName>
+        <Value>2</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Software</DisplayName>
+        <Value>3</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Level high</DisplayName>
+        <Value>4</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Level low</DisplayName>
+        <Value>5</Value>
+      </EnumEntry>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Enumeration>
+    <Command Name="TriggerSoftware">
+      <DisplayName>SW Trigger</DisplayName>
+      <Xiapi_Par>trigger_software</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>TriggerSoftwareReg</pValue>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Command>
+    <Enumeration Name="TriggerSelector">
+      <DisplayName>Trigger what</DisplayName>
+      <Xiapi_Par>trigger_selector</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
+      <pValue>TriggerSelectorReg</pValue>
+      <EnumEntry>
+        <DisplayName>Frame start</DisplayName>
+        <Value>0</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Exposure active</DisplayName>
+        <Value>1</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Frame burst start</DisplayName>
+        <Value>2</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Exposure start</DisplayName>
+        <Value>5</Value>
+      </EnumEntry>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Enumeration>
+    <Integer Name="AcqFrameBurstCount">
+      <DisplayName>Frame burst count</DisplayName>
+      <Xiapi_Par>acq_frame_burst_count</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <Representation>Logarithmic</Representation>
+      <pValue>AcqFrameBurstCountReg</pValue>
+      <pMin>AcqFrameBurstCountMinReg</pMin>
+      <pMax>AcqFrameBurstCountMaxReg</pMax>
+      <pInc>AcqFrameBurstCountIncReg</pInc>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Integer>
+    <Integer Name="TriggerDelay">
+      <DisplayName>Trigger delay</DisplayName>
+      <Xiapi_Par>trigger_delay</Xiapi_Par>
+      <Visibility>Guru</Visibility>
+      <pValue>TriggerDelayReg</pValue>
+      <pMin>TriggerDelayMinReg</pMin>
+      <pMax>TriggerDelayMaxReg</pMax>
+      <pInc>TriggerDelayIncReg</pInc>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Integer>
+  </Group>
+  <Group Comment="GPIO Setup">
+    <Enumeration Name="GpiSelector">
+      <DisplayName>GPISelector</DisplayName>
+      <Xiapi_Par>gpi_selector</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>GpiSelectorReg</pValue>
+      <EnumEntry>
+        <DisplayName>GPI 1</DisplayName>
+        <Value>1</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>GPI 2</DisplayName>
+        <Value>2</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>GPI 3</DisplayName>
+        <Value>3</Value>
+      </EnumEntry>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+      <pSelected>GpiMode</pSelected>
+      <pSelected>GpiLevel</pSelected>
+      <pSelected>DbncEn</pSelected>
+      <pSelected>DbncT0</pSelected>
+      <pSelected>DbncT1</pSelected>
+      <pSelected>DbncPol</pSelected>
+    </Enumeration>
+    <Enumeration Name="GpiMode">
+      <DisplayName>GPI mode</DisplayName>
+      <Xiapi_Par>gpi_mode</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>GpiModeReg</pValue>
+      <EnumEntry>
+        <DisplayName>Off</DisplayName>
+        <Value>0</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Trigger</DisplayName>
+        <Value>1</Value>
+      </EnumEntry>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Enumeration>
+    <Integer Name="GpiLevel">
+      <DisplayName>GPI level</DisplayName>
+      <Xiapi_Par>gpi_level</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>GpiLevelReg</pValue>
+      <ImposedAccessMode>RO</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Integer>
+    <Enumeration Name="GpoSelector">
+      <DisplayName>GPOSelector</DisplayName>
+      <Xiapi_Par>gpo_selector</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>GpoSelectorReg</pValue>
+      <EnumEntry>
+        <DisplayName>GPO 1</DisplayName>
+        <Value>1</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>GPO 2</DisplayName>
+        <Value>2</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>GPO 3</DisplayName>
+        <Value>3</Value>
+      </EnumEntry>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+      <pSelected>GpoMode</pSelected>
+    </Enumeration>
+    <Enumeration Name="GpoMode">
+      <DisplayName>GPO mode</DisplayName>
+      <Xiapi_Par>gpo_mode</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>GpoModeReg</pValue>
+      <EnumEntry>
+        <DisplayName>Off</DisplayName>
+        <Value>0</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>On</DisplayName>
+        <Value>1</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Frame active</DisplayName>
+        <Value>2</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Frame active (neg.)</DisplayName>
+        <Value>3</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Exposure active</DisplayName>
+        <Value>4</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Exposure active (neg.)</DisplayName>
+        <Value>5</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>High Impedance (tri-state)</DisplayName>
+        <Value>12</Value>
+      </EnumEntry>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Enumeration>
+    <Enumeration Name="LedSelector">
+      <DisplayName>LEDSelector</DisplayName>
+      <Xiapi_Par>led_selector</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>LedSelectorReg</pValue>
+      <EnumEntry>
+        <DisplayName>LED 1</DisplayName>
+        <Value>1</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>LED 2</DisplayName>
+        <Value>2</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>LED 3</DisplayName>
+        <Value>3</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>LED 4</DisplayName>
+        <Value>4</Value>
+      </EnumEntry>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+      <pSelected>LedMode</pSelected>
+    </Enumeration>
+    <Enumeration Name="LedMode">
+      <DisplayName>LED mode</DisplayName>
+      <Xiapi_Par>led_mode</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>LedModeReg</pValue>
+      <EnumEntry>
+        <DisplayName>On if sensor is integrating</DisplayName>
+        <Value>5</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>On if frame active (exposure, readout)</DisplayName>
+        <Value>6</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Off</DisplayName>
+        <Value>7</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>On</DisplayName>
+        <Value>8</Value>
+      </EnumEntry>
+      <EnumEntry>
+        <DisplayName>Blinking (1 Hz)</DisplayName>
+        <Value>9</Value>
+      </EnumEntry>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Enumeration>
+  </Group>
+  <Group Comment="Debounce Setup">
+    <Boolean Name="DbncEn">
+      <DisplayName>Debounce</DisplayName>
+      <Xiapi_Par>dbnc_en</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>DbncEnReg</pValue>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Boolean>
+    <Integer Name="DbncT0">
+      <DisplayName>Debounce t0</DisplayName>
+      <Xiapi_Par>dbnc_t0</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>DbncT0Reg</pValue>
+      <pMin>DbncT0MinReg</pMin>
+      <pMax>DbncT0MaxReg</pMax>
+      <pInc>DbncT0IncReg</pInc>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Integer>
+    <Integer Name="DbncT1">
+      <DisplayName>Debounce t1</DisplayName>
+      <Xiapi_Par>dbnc_t1</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>DbncT1Reg</pValue>
+      <pMin>DbncT1MinReg</pMin>
+      <pMax>DbncT1MaxReg</pMax>
+      <pInc>DbncT1IncReg</pInc>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Integer>
+    <Boolean Name="DbncPol">
+      <DisplayName>Debounce pol</DisplayName>
+      <Xiapi_Par>dbnc_pol</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>DbncPolReg</pValue>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Boolean>
+  </Group>
+  <Group Comment="HDR Setup">
+    <Integer Name="HdrKneepointCount">
+      <DisplayName>HDR kneepoints</DisplayName>
+      <Xiapi_Par>hdr_kneepoint_count</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>HdrKneepointCountReg</pValue>
+      <pMin>HdrKneepointCountMinReg</pMin>
+      <pMax>HdrKneepointCountMaxReg</pMax>
+      <pInc>HdrKneepointCountIncReg</pInc>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Integer>
+    <Integer Name="HdrT1">
+      <DisplayName>HDR t1</DisplayName>
+      <Xiapi_Par>hdr_t1</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>HdrT1Reg</pValue>
+      <pMin>HdrT1MinReg</pMin>
+      <pMax>HdrT1MaxReg</pMax>
+      <pInc>HdrT1IncReg</pInc>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Integer>
+    <Integer Name="HdrT2">
+      <DisplayName>HDR t2</DisplayName>
+      <Xiapi_Par>hdr_t2</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>HdrT2Reg</pValue>
+      <pMin>HdrT2MinReg</pMin>
+      <pMax>HdrT2MaxReg</pMax>
+      <pInc>HdrT2IncReg</pInc>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Integer>
+    <Integer Name="HdrKneepoint1">
+      <DisplayName>HDR kneepoint1</DisplayName>
+      <Xiapi_Par>hdr_kneepoint1</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>HdrKneepoint1Reg</pValue>
+      <pMin>HdrKneepoint1MinReg</pMin>
+      <pMax>HdrKneepoint1MaxReg</pMax>
+      <pInc>HdrKneepoint1IncReg</pInc>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Integer>
+    <Integer Name="HdrKneepoint2">
+      <DisplayName>HDR kneepoint2</DisplayName>
+      <Xiapi_Par>hdr_kneepoint2</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>HdrKneepoint2Reg</pValue>
+      <pMin>HdrKneepoint2MinReg</pMin>
+      <pMax>HdrKneepoint2MaxReg</pMax>
+      <pInc>HdrKneepoint2IncReg</pInc>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Integer>
+  </Group>
+  <Group Comment="Lens Control">
+    <Boolean Name="LensMode">
+      <DisplayName>Enable</DisplayName>
+      <Xiapi_Par>lens_mode</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>LensModeReg</pValue>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Boolean>
+    <Float Name="LensApertureValue">
+      <DisplayName>Aperture</DisplayName>
+      <Xiapi_Par>lens_aperture_value</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>LensApertureValueReg</pValue>
+      <pMin>LensApertureValueMinReg</pMin>
+      <pMax>LensApertureValueMaxReg</pMax>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Float>
+    <Integer Name="LensFocusMovementValue">
+      <DisplayName>Focus movement value</DisplayName>
+      <Xiapi_Par>lens_focus_movement_value</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>LensFocusMovementValueReg</pValue>
+      <pMin>LensFocusMovementValueMinReg</pMin>
+      <pMax>LensFocusMovementValueMaxReg</pMax>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Integer>
+    <Command Name="LensFocusMove">
+      <DisplayName>Lens focus move</DisplayName>
+      <Xiapi_Par>lens_focus_move</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>LensFocusMoveReg</pValue>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Command>
+    <Float Name="LensFocusDistance">
+      <DisplayName>Focus distance</DisplayName>
+      <Xiapi_Par>lens_focus_distance</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>LensFocusDistanceReg</pValue>
+      <pMin>LensFocusDistanceMinReg</pMin>
+      <pMax>LensFocusDistanceMaxReg</pMax>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Float>
+    <Float Name="LensFocalLength">
+      <DisplayName>Focal length</DisplayName>
+      <Xiapi_Par>lens_focal_length</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>LensFocalLengthReg</pValue>
+      <ImposedAccessMode>RO</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Float>
+    <Enumeration Name="LensFeatureSelector">
+      <DisplayName>Lens feature selector</DisplayName>
+      <Xiapi_Par>lens_feature_selector</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>LensFeatureSelectorReg</pValue>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+      <pSelected>LensFeature</pSelected>
+    </Enumeration>
+    <Float Name="LensFeature">
+      <DisplayName>Lens feature</DisplayName>
+      <Xiapi_Par>lens_feature</Xiapi_Par>
+      <Visibility>Beginner</Visibility>
+      <pValue>LensFeatureReg</pValue>
+      <pMin>LensFeatureMinReg</pMin>
+      <pMax>LensFeatureMaxReg</pMax>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Float>
+  </Group>
+  <Group Comment="">
+    <Integer Name="Imgpayloadsize">
+      <Xiapi_Par>imgpayloadsize</Xiapi_Par>
+      <Visibility>Invisible</Visibility>
+      <pValue>ImgpayloadsizeReg</pValue>
+      <Min>0</Min>
+      <Max>1000</Max>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Integer>
+    <String Name="XiapiContextList">
+      <Xiapi_Par>xiapi_context_list</Xiapi_Par>
+      <Visibility>Invisible</Visibility>
+      <pValue>XiapiContextListReg</pValue>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </String>
+    <Integer Name="TransportPixelFormat">
+      <Xiapi_Par>transport_pixel_format</Xiapi_Par>
+      <Visibility>Invisible</Visibility>
+      <pValue>TransportPixelFormatReg</pValue>
+      <Min>0</Min>
+      <Max>1000</Max>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Steamable>Yes</Steamable>
+    </Integer>
+  </Group>
+  <Group Comment="Registers">
+    <IntReg Name="ExposureReg">
+      <xiApiPar>exposure</xiApiPar>
+      <pInvalidator>LimitBandwidthReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="ExposureMinReg">
+      <xiApiPar>exposure:min</xiApiPar>
+      <pInvalidator>LimitBandwidthReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="ExposureMaxReg">
+      <xiApiPar>exposure:max</xiApiPar>
+      <pInvalidator>LimitBandwidthReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="ExposureIncReg">
+      <xiApiPar>exposure:inc</xiApiPar>
+      <pInvalidator>LimitBandwidthReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="GainSelectorReg">
+      <xiApiPar>gain_selector</xiApiPar>
+    </IntReg>
+    <FloatReg Name="GainReg">
+      <xiApiPar>gain</xiApiPar>
+      <pInvalidator>GainSelectorReg</pInvalidator>
+      <pInvalidator>DownsamplingReg</pInvalidator>
+      <pInvalidator>DownsamplingTypeReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>HdrReg</pInvalidator>
+    </FloatReg>
+    <FloatReg Name="GainMinReg">
+      <xiApiPar>gain:min</xiApiPar>
+      <pInvalidator>GainSelectorReg</pInvalidator>
+      <pInvalidator>DownsamplingReg</pInvalidator>
+      <pInvalidator>DownsamplingTypeReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>HdrReg</pInvalidator>
+    </FloatReg>
+    <FloatReg Name="GainMaxReg">
+      <xiApiPar>gain:max</xiApiPar>
+      <pInvalidator>GainSelectorReg</pInvalidator>
+      <pInvalidator>DownsamplingReg</pInvalidator>
+      <pInvalidator>DownsamplingTypeReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>HdrReg</pInvalidator>
+    </FloatReg>
+    <IntReg Name="DownsamplingReg">
+      <xiApiPar>downsampling</xiApiPar>
+    </IntReg>
+    <IntReg Name="DownsamplingTypeReg">
+      <xiApiPar>downsampling_type</xiApiPar>
+      <pInvalidator>DownsamplingReg</pInvalidator>
+      <pInvalidator>SensorTapsReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="ImgdataformatReg">
+      <xiApiPar>imgdataformat</xiApiPar>
+    </IntReg>
+    <IntReg Name="ShutterTypeReg">
+      <xiApiPar>shutter_type</xiApiPar>
+      <pInvalidator>TriggerSourceReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="SensorTapsReg">
+      <xiApiPar>sensor_taps</xiApiPar>
+      <pInvalidator>DownsamplingReg</pInvalidator>
+    </IntReg>
+    <BooleanReg Name="AeagReg">
+      <xiApiPar>aeag</xiApiPar>
+    </BooleanReg>
+    <IntReg Name="AeagRoiOffsetXReg">
+      <xiApiPar>aeag_roi_offset_x</xiApiPar>
+      <pInvalidator>DownsamplingReg</pInvalidator>
+      <pInvalidator>DownsamplingTypeReg</pInvalidator>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+      <pInvalidator>WidthReg</pInvalidator>
+      <pInvalidator>HeightReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="AeagRoiOffsetXMinReg">
+      <xiApiPar>aeag_roi_offset_x:min</xiApiPar>
+      <pInvalidator>DownsamplingReg</pInvalidator>
+      <pInvalidator>DownsamplingTypeReg</pInvalidator>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+      <pInvalidator>WidthReg</pInvalidator>
+      <pInvalidator>HeightReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="AeagRoiOffsetXMaxReg">
+      <xiApiPar>aeag_roi_offset_x:max</xiApiPar>
+      <pInvalidator>DownsamplingReg</pInvalidator>
+      <pInvalidator>DownsamplingTypeReg</pInvalidator>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+      <pInvalidator>WidthReg</pInvalidator>
+      <pInvalidator>HeightReg</pInvalidator>
+      <pInvalidator>AeagRoiWidthReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="AeagRoiOffsetXIncReg">
+      <xiApiPar>aeag_roi_offset_x:inc</xiApiPar>
+    </IntReg>
+    <IntReg Name="AeagRoiOffsetYReg">
+      <xiApiPar>aeag_roi_offset_y</xiApiPar>
+      <pInvalidator>DownsamplingReg</pInvalidator>
+      <pInvalidator>DownsamplingTypeReg</pInvalidator>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+      <pInvalidator>WidthReg</pInvalidator>
+      <pInvalidator>HeightReg</pInvalidator>
+      <pInvalidator>RegionSelectorReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="AeagRoiOffsetYMinReg">
+      <xiApiPar>aeag_roi_offset_y:min</xiApiPar>
+      <pInvalidator>DownsamplingReg</pInvalidator>
+      <pInvalidator>DownsamplingTypeReg</pInvalidator>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+      <pInvalidator>WidthReg</pInvalidator>
+      <pInvalidator>HeightReg</pInvalidator>
+      <pInvalidator>RegionSelectorReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="AeagRoiOffsetYMaxReg">
+      <xiApiPar>aeag_roi_offset_y:max</xiApiPar>
+      <pInvalidator>DownsamplingReg</pInvalidator>
+      <pInvalidator>DownsamplingTypeReg</pInvalidator>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+      <pInvalidator>WidthReg</pInvalidator>
+      <pInvalidator>HeightReg</pInvalidator>
+      <pInvalidator>AeagRoiHeightReg</pInvalidator>
+      <pInvalidator>RegionSelectorReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="AeagRoiOffsetYIncReg">
+      <xiApiPar>aeag_roi_offset_y:inc</xiApiPar>
+    </IntReg>
+    <IntReg Name="AeagRoiWidthReg">
+      <xiApiPar>aeag_roi_width</xiApiPar>
+      <pInvalidator>DownsamplingReg</pInvalidator>
+      <pInvalidator>DownsamplingTypeReg</pInvalidator>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+      <pInvalidator>WidthReg</pInvalidator>
+      <pInvalidator>HeightReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="AeagRoiWidthMinReg">
+      <xiApiPar>aeag_roi_width:min</xiApiPar>
+      <pInvalidator>DownsamplingReg</pInvalidator>
+      <pInvalidator>DownsamplingTypeReg</pInvalidator>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+      <pInvalidator>WidthReg</pInvalidator>
+      <pInvalidator>HeightReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="AeagRoiWidthMaxReg">
+      <xiApiPar>aeag_roi_width:max</xiApiPar>
+      <pInvalidator>DownsamplingReg</pInvalidator>
+      <pInvalidator>DownsamplingTypeReg</pInvalidator>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+      <pInvalidator>WidthReg</pInvalidator>
+      <pInvalidator>HeightReg</pInvalidator>
+      <pInvalidator>AeagRoiWidthReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="AeagRoiWidthIncReg">
+      <xiApiPar>aeag_roi_width:inc</xiApiPar>
+    </IntReg>
+    <IntReg Name="AeagRoiHeightReg">
+      <xiApiPar>aeag_roi_height</xiApiPar>
+      <pInvalidator>DownsamplingReg</pInvalidator>
+      <pInvalidator>DownsamplingTypeReg</pInvalidator>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+      <pInvalidator>WidthReg</pInvalidator>
+      <pInvalidator>HeightReg</pInvalidator>
+      <pInvalidator>RegionSelectorReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="AeagRoiHeightMinReg">
+      <xiApiPar>aeag_roi_height:min</xiApiPar>
+      <pInvalidator>DownsamplingReg</pInvalidator>
+      <pInvalidator>DownsamplingTypeReg</pInvalidator>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+      <pInvalidator>WidthReg</pInvalidator>
+      <pInvalidator>HeightReg</pInvalidator>
+      <pInvalidator>RegionSelectorReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="AeagRoiHeightMaxReg">
+      <xiApiPar>aeag_roi_height:max</xiApiPar>
+      <pInvalidator>DownsamplingReg</pInvalidator>
+      <pInvalidator>DownsamplingTypeReg</pInvalidator>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+      <pInvalidator>WidthReg</pInvalidator>
+      <pInvalidator>HeightReg</pInvalidator>
+      <pInvalidator>AeagRoiOffsetYReg</pInvalidator>
+      <pInvalidator>RegionSelectorReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="AeagRoiHeightIncReg">
+      <xiApiPar>aeag_roi_height:inc</xiApiPar>
+    </IntReg>
+    <IntReg Name="BpcListSelectorReg">
+      <xiApiPar>bpc_list_selector</xiApiPar>
+    </IntReg>
+    <BooleanReg Name="BpcReg">
+      <xiApiPar>bpc</xiApiPar>
+      <pInvalidator>BpcListSelectorReg</pInvalidator>
+    </BooleanReg>
+    <BooleanReg Name="ColumnFpnCorrectionReg">
+      <xiApiPar>column_fpn_correction</xiApiPar>
+    </BooleanReg>
+    <BooleanReg Name="RowFpnCorrectionReg">
+      <xiApiPar>row_fpn_correction</xiApiPar>
+    </BooleanReg>
+    <BooleanReg Name="AutoWbReg">
+      <xiApiPar>auto_wb</xiApiPar>
+    </BooleanReg>
+    <IntReg Name="ManualWbReg">
+      <xiApiPar>manual_wb</xiApiPar>
+    </IntReg>
+    <FloatReg Name="WbKrReg">
+      <xiApiPar>wb_kr</xiApiPar>
+      <pInvalidator>ManualWbReg</pInvalidator>
+    </FloatReg>
+    <FloatReg Name="WbKrMinReg">
+      <xiApiPar>wb_kr:min</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="WbKrMaxReg">
+      <xiApiPar>wb_kr:max</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="WbKgReg">
+      <xiApiPar>wb_kg</xiApiPar>
+      <pInvalidator>ManualWbReg</pInvalidator>
+    </FloatReg>
+    <FloatReg Name="WbKgMinReg">
+      <xiApiPar>wb_kg:min</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="WbKgMaxReg">
+      <xiApiPar>wb_kg:max</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="WbKbReg">
+      <xiApiPar>wb_kb</xiApiPar>
+      <pInvalidator>ManualWbReg</pInvalidator>
+    </FloatReg>
+    <FloatReg Name="WbKbMinReg">
+      <xiApiPar>wb_kb:min</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="WbKbMaxReg">
+      <xiApiPar>wb_kb:max</xiApiPar>
+    </FloatReg>
+    <IntReg Name="ImageBlackLevelReg">
+      <xiApiPar>image_black_level</xiApiPar>
+    </IntReg>
+    <IntReg Name="OffsetXReg">
+      <xiApiPar>offsetX</xiApiPar>
+      <pInvalidator>DownsamplingReg</pInvalidator>
+      <pInvalidator>DownsamplingTypeReg</pInvalidator>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>DecimationHorizontalReg</pInvalidator>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="OffsetXMinReg">
+      <xiApiPar>offsetX:min</xiApiPar>
+      <pInvalidator>DownsamplingReg</pInvalidator>
+      <pInvalidator>DownsamplingTypeReg</pInvalidator>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>DecimationHorizontalReg</pInvalidator>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="OffsetXMaxReg">
+      <xiApiPar>offsetX:max</xiApiPar>
+      <pInvalidator>DownsamplingReg</pInvalidator>
+      <pInvalidator>DownsamplingTypeReg</pInvalidator>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>DecimationHorizontalReg</pInvalidator>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+      <pInvalidator>WidthReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="OffsetXIncReg">
+      <xiApiPar>offsetX:inc</xiApiPar>
+    </IntReg>
+    <IntReg Name="OffsetYReg">
+      <xiApiPar>offsetY</xiApiPar>
+      <pInvalidator>DownsamplingReg</pInvalidator>
+      <pInvalidator>DownsamplingTypeReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>DecimationVerticalReg</pInvalidator>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+      <pInvalidator>RegionSelectorReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="OffsetYMinReg">
+      <xiApiPar>offsetY:min</xiApiPar>
+      <pInvalidator>DownsamplingReg</pInvalidator>
+      <pInvalidator>DownsamplingTypeReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>DecimationVerticalReg</pInvalidator>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+      <pInvalidator>RegionSelectorReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="OffsetYMaxReg">
+      <xiApiPar>offsetY:max</xiApiPar>
+      <pInvalidator>DownsamplingReg</pInvalidator>
+      <pInvalidator>DownsamplingTypeReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>DecimationVerticalReg</pInvalidator>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+      <pInvalidator>HeightReg</pInvalidator>
+      <pInvalidator>RegionSelectorReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="OffsetYIncReg">
+      <xiApiPar>offsetY:inc</xiApiPar>
+    </IntReg>
+    <IntReg Name="WidthReg">
+      <xiApiPar>width</xiApiPar>
+      <pInvalidator>DownsamplingReg</pInvalidator>
+      <pInvalidator>DownsamplingTypeReg</pInvalidator>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>DecimationHorizontalReg</pInvalidator>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="WidthMinReg">
+      <xiApiPar>width:min</xiApiPar>
+      <pInvalidator>DownsamplingReg</pInvalidator>
+      <pInvalidator>DownsamplingTypeReg</pInvalidator>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>DecimationHorizontalReg</pInvalidator>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+      <pInvalidator>OutputBitDepthReg</pInvalidator>
+      <pInvalidator>OutputBitPackingReg</pInvalidator>
+      <pInvalidator>HeightReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="WidthMaxReg">
+      <xiApiPar>width:max</xiApiPar>
+      <pInvalidator>DownsamplingReg</pInvalidator>
+      <pInvalidator>DownsamplingTypeReg</pInvalidator>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>DecimationHorizontalReg</pInvalidator>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+      <pInvalidator>OffsetXReg</pInvalidator>
+      <pInvalidator>HeightReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="WidthIncReg">
+      <xiApiPar>width:inc</xiApiPar>
+      <pInvalidator>OutputBitDepthReg</pInvalidator>
+      <pInvalidator>OutputBitPackingReg</pInvalidator>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+      <pInvalidator>HeightReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="HeightReg">
+      <xiApiPar>height</xiApiPar>
+      <pInvalidator>DownsamplingReg</pInvalidator>
+      <pInvalidator>DownsamplingTypeReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>DecimationVerticalReg</pInvalidator>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+      <pInvalidator>RegionSelectorReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="HeightMinReg">
+      <xiApiPar>height:min</xiApiPar>
+      <pInvalidator>DownsamplingReg</pInvalidator>
+      <pInvalidator>DownsamplingTypeReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>DecimationVerticalReg</pInvalidator>
+      <pInvalidator>OutputBitDepthReg</pInvalidator>
+      <pInvalidator>OutputBitPackingReg</pInvalidator>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+      <pInvalidator>WidthReg</pInvalidator>
+      <pInvalidator>RegionSelectorReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="HeightMaxReg">
+      <xiApiPar>height:max</xiApiPar>
+      <pInvalidator>DownsamplingReg</pInvalidator>
+      <pInvalidator>DownsamplingTypeReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>DecimationVerticalReg</pInvalidator>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+      <pInvalidator>WidthReg</pInvalidator>
+      <pInvalidator>OffsetYReg</pInvalidator>
+      <pInvalidator>RegionSelectorReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="HeightIncReg">
+      <xiApiPar>height:inc</xiApiPar>
+      <pInvalidator>OutputBitDepthReg</pInvalidator>
+      <pInvalidator>OutputBitPackingReg</pInvalidator>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+      <pInvalidator>WidthReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="RegionSelectorReg">
+      <xiApiPar>region_selector</xiApiPar>
+      <pInvalidator>DownsamplingReg</pInvalidator>
+      <pInvalidator>DownsamplingTypeReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="RegionSelectorMinReg">
+      <xiApiPar>region_selector:min</xiApiPar>
+    </IntReg>
+    <IntReg Name="RegionSelectorMaxReg">
+      <xiApiPar>region_selector:max</xiApiPar>
+    </IntReg>
+    <IntReg Name="RegionSelectorIncReg">
+      <xiApiPar>region_selector:inc</xiApiPar>
+    </IntReg>
+    <BooleanReg Name="RegionModeReg">
+      <xiApiPar>region_mode</xiApiPar>
+      <pInvalidator>RegionSelectorReg</pInvalidator>
+      <pInvalidator>DownsamplingReg</pInvalidator>
+      <pInvalidator>DownsamplingTypeReg</pInvalidator>
+    </BooleanReg>
+    <BooleanReg Name="HdrReg">
+      <xiApiPar>hdr</xiApiPar>
+    </BooleanReg>
+    <BooleanReg Name="FfcReg">
+      <xiApiPar>ffc</xiApiPar>
+    </BooleanReg>
+    <StringReg Name="FfcFlatFieldFileNameReg">
+      <xiApiPar>ffc_flat_field_file_name</xiApiPar>
+    </StringReg>
+    <StringReg Name="FfcDarkFieldFileNameReg">
+      <xiApiPar>ffc_dark_field_file_name</xiApiPar>
+    </StringReg>
+    <BooleanReg Name="HorizontalFlipReg">
+      <xiApiPar>horizontal_flip</xiApiPar>
+    </BooleanReg>
+    <BooleanReg Name="VerticalFlipReg">
+      <xiApiPar>vertical_flip</xiApiPar>
+    </BooleanReg>
+    <FloatReg Name="ExpPriorityReg">
+      <xiApiPar>exp_priority</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="ExpPriorityMinReg">
+      <xiApiPar>exp_priority:min</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="ExpPriorityMaxReg">
+      <xiApiPar>exp_priority:max</xiApiPar>
+    </FloatReg>
+    <IntReg Name="AeMaxLimitReg">
+      <xiApiPar>ae_max_limit</xiApiPar>
+    </IntReg>
+    <IntReg Name="AeMaxLimitMinReg">
+      <xiApiPar>ae_max_limit:min</xiApiPar>
+    </IntReg>
+    <IntReg Name="AeMaxLimitMaxReg">
+      <xiApiPar>ae_max_limit:max</xiApiPar>
+    </IntReg>
+    <IntReg Name="AeMaxLimitIncReg">
+      <xiApiPar>ae_max_limit:inc</xiApiPar>
+    </IntReg>
+    <FloatReg Name="AgMaxLimitReg">
+      <xiApiPar>ag_max_limit</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="AgMaxLimitMinReg">
+      <xiApiPar>ag_max_limit:min</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="AgMaxLimitMaxReg">
+      <xiApiPar>ag_max_limit:max</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="AeagLevelReg">
+      <xiApiPar>aeag_level</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="AeagLevelMinReg">
+      <xiApiPar>aeag_level:min</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="AeagLevelMaxReg">
+      <xiApiPar>aeag_level:max</xiApiPar>
+    </FloatReg>
+    <IntReg Name="BinningSelectorReg">
+      <xiApiPar>binning_selector</xiApiPar>
+    </IntReg>
+    <IntReg Name="BinningVerticalReg">
+      <xiApiPar>binning_vertical</xiApiPar>
+      <pInvalidator>BinningSelectorReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>BinningVerticalPatternReg</pInvalidator>
+      <pInvalidator>BinningHorizontalPatternReg</pInvalidator>
+      <pInvalidator>DecimationVerticalReg</pInvalidator>
+      <pInvalidator>DecimationHorizontalReg</pInvalidator>
+      <pInvalidator>DecimationVerticalPatternReg</pInvalidator>
+      <pInvalidator>DecimationHorizontalPatternReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="BinningVerticalMinReg">
+      <xiApiPar>binning_vertical:min</xiApiPar>
+      <pInvalidator>BinningSelectorReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="BinningVerticalMaxReg">
+      <xiApiPar>binning_vertical:max</xiApiPar>
+      <pInvalidator>BinningSelectorReg</pInvalidator>
+      <pInvalidator>HdrReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="BinningHorizontalReg">
+      <xiApiPar>binning_horizontal</xiApiPar>
+      <pInvalidator>BinningSelectorReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>BinningVerticalPatternReg</pInvalidator>
+      <pInvalidator>BinningHorizontalPatternReg</pInvalidator>
+      <pInvalidator>DecimationVerticalReg</pInvalidator>
+      <pInvalidator>DecimationHorizontalReg</pInvalidator>
+      <pInvalidator>DecimationVerticalPatternReg</pInvalidator>
+      <pInvalidator>DecimationHorizontalPatternReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="BinningHorizontalMinReg">
+      <xiApiPar>binning_horizontal:min</xiApiPar>
+      <pInvalidator>BinningSelectorReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="BinningHorizontalMaxReg">
+      <xiApiPar>binning_horizontal:max</xiApiPar>
+      <pInvalidator>BinningSelectorReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="BinningVerticalModeReg">
+      <xiApiPar>binning_vertical_mode</xiApiPar>
+      <pInvalidator>BinningSelectorReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="BinningHorizontalModeReg">
+      <xiApiPar>binning_horizontal_mode</xiApiPar>
+      <pInvalidator>BinningSelectorReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="BinningVerticalPatternReg">
+      <xiApiPar>binning_vertical_pattern</xiApiPar>
+      <pInvalidator>BinningSelectorReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="BinningHorizontalPatternReg">
+      <xiApiPar>binning_horizontal_pattern</xiApiPar>
+      <pInvalidator>BinningSelectorReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="DecimationSelectorReg">
+      <xiApiPar>decimation_selector</xiApiPar>
+    </IntReg>
+    <IntReg Name="DecimationVerticalReg">
+      <xiApiPar>decimation_vertical</xiApiPar>
+      <pInvalidator>DecimationSelectorReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>BinningVerticalPatternReg</pInvalidator>
+      <pInvalidator>BinningHorizontalPatternReg</pInvalidator>
+      <pInvalidator>DecimationVerticalReg</pInvalidator>
+      <pInvalidator>DecimationHorizontalReg</pInvalidator>
+      <pInvalidator>DecimationVerticalPatternReg</pInvalidator>
+      <pInvalidator>DecimationHorizontalPatternReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="DecimationVerticalMinReg">
+      <xiApiPar>decimation_vertical:min</xiApiPar>
+      <pInvalidator>DecimationSelectorReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="DecimationVerticalMaxReg">
+      <xiApiPar>decimation_vertical:max</xiApiPar>
+      <pInvalidator>DecimationSelectorReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>HdrReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="DecimationHorizontalReg">
+      <xiApiPar>decimation_horizontal</xiApiPar>
+      <pInvalidator>DecimationSelectorReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>BinningVerticalPatternReg</pInvalidator>
+      <pInvalidator>BinningHorizontalPatternReg</pInvalidator>
+      <pInvalidator>DecimationVerticalReg</pInvalidator>
+      <pInvalidator>DecimationHorizontalReg</pInvalidator>
+      <pInvalidator>DecimationVerticalPatternReg</pInvalidator>
+      <pInvalidator>DecimationHorizontalPatternReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="DecimationHorizontalMinReg">
+      <xiApiPar>decimation_horizontal:min</xiApiPar>
+      <pInvalidator>DecimationSelectorReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="DecimationHorizontalMaxReg">
+      <xiApiPar>decimation_horizontal:max</xiApiPar>
+      <pInvalidator>DecimationSelectorReg</pInvalidator>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="DecimationVerticalPatternReg">
+      <xiApiPar>decimation_vertical_pattern</xiApiPar>
+      <pInvalidator>DecimationSelectorReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="DecimationHorizontalPatternReg">
+      <xiApiPar>decimation_horizontal_pattern</xiApiPar>
+      <pInvalidator>DecimationSelectorReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="TestPatternGeneratorSelectorReg">
+      <xiApiPar>test_pattern_generator_selector</xiApiPar>
+    </IntReg>
+    <IntReg Name="TestPatternReg">
+      <xiApiPar>test_pattern</xiApiPar>
+      <pInvalidator>TestPatternGeneratorSelectorReg</pInvalidator>
+    </IntReg>
+    <BooleanReg Name="LimitBandwidthModeReg">
+      <xiApiPar>limit_bandwidth_mode</xiApiPar>
+    </BooleanReg>
+    <IntReg Name="LimitBandwidthReg">
+      <xiApiPar>limit_bandwidth</xiApiPar>
+    </IntReg>
+    <IntReg Name="LimitBandwidthMinReg">
+      <xiApiPar>limit_bandwidth:min</xiApiPar>
+      <pInvalidator>OutputBitDepthReg</pInvalidator>
+      <pInvalidator>OutputBitPackingReg</pInvalidator>
+      <pInvalidator>DownsamplingReg</pInvalidator>
+      <pInvalidator>DownsamplingTypeReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="LimitBandwidthMaxReg">
+      <xiApiPar>limit_bandwidth:max</xiApiPar>
+    </IntReg>
+    <IntReg Name="LimitBandwidthIncReg">
+      <xiApiPar>limit_bandwidth:inc</xiApiPar>
+    </IntReg>
+    <IntReg Name="SensorBitDepthReg">
+      <xiApiPar>sensor_bit_depth</xiApiPar>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+      <pInvalidator>ShutterTypeReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="OutputBitDepthReg">
+      <xiApiPar>output_bit_depth</xiApiPar>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+    </IntReg>
+    <BooleanReg Name="OutputBitPackingReg">
+      <xiApiPar>output_bit_packing</xiApiPar>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+      <pInvalidator>OutputBitDepthReg</pInvalidator>
+      <pInvalidator>SensorBitDepthReg</pInvalidator>
+    </BooleanReg>
+    <IntReg Name="OutputBitPackingTypeReg">
+      <xiApiPar>output_bit_packing_type</xiApiPar>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+      <pInvalidator>OutputBitDepthReg</pInvalidator>
+      <pInvalidator>SensorBitDepthReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="ImageDataBitDepthReg">
+      <xiApiPar>image_data_bit_depth</xiApiPar>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+      <pInvalidator>OutputBitDepthReg</pInvalidator>
+      <pInvalidator>SensorBitDepthReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="AcqTimingModeReg">
+      <xiApiPar>acq_timing_mode</xiApiPar>
+    </IntReg>
+    <FloatReg Name="FramerateReg">
+      <xiApiPar>framerate</xiApiPar>
+      <pInvalidator>AcqTimingModeReg</pInvalidator>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+      <pInvalidator>ExposureReg</pInvalidator>
+      <pInvalidator>LimitBandwidthReg</pInvalidator>
+      <pInvalidator>LimitBandwidthModeReg</pInvalidator>
+      <pInvalidator>HeightReg</pInvalidator>
+    </FloatReg>
+    <FloatReg Name="FramerateMinReg">
+      <xiApiPar>framerate:min</xiApiPar>
+      <pInvalidator>AcqTimingModeReg</pInvalidator>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+      <pInvalidator>ExposureReg</pInvalidator>
+      <pInvalidator>LimitBandwidthReg</pInvalidator>
+      <pInvalidator>LimitBandwidthModeReg</pInvalidator>
+    </FloatReg>
+    <FloatReg Name="FramerateMaxReg">
+      <xiApiPar>framerate:max</xiApiPar>
+      <pInvalidator>AcqTimingModeReg</pInvalidator>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+      <pInvalidator>ExposureReg</pInvalidator>
+      <pInvalidator>LimitBandwidthReg</pInvalidator>
+      <pInvalidator>LimitBandwidthModeReg</pInvalidator>
+    </FloatReg>
+    <BooleanReg Name="LUTEnableReg">
+      <xiApiPar>LUTEnable</xiApiPar>
+    </BooleanReg>
+    <IntReg Name="LUTIndexReg">
+      <xiApiPar>LUTIndex</xiApiPar>
+    </IntReg>
+    <IntReg Name="LUTIndexMinReg">
+      <xiApiPar>LUTIndex:min</xiApiPar>
+    </IntReg>
+    <IntReg Name="LUTIndexMaxReg">
+      <xiApiPar>LUTIndex:max</xiApiPar>
+    </IntReg>
+    <IntReg Name="LUTIndexIncReg">
+      <xiApiPar>LUTIndex:inc</xiApiPar>
+    </IntReg>
+    <IntReg Name="LUTValueReg">
+      <xiApiPar>LUTValue</xiApiPar>
+      <pInvalidator>LUTIndexReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="LUTValueMinReg">
+      <xiApiPar>LUTValue:min</xiApiPar>
+    </IntReg>
+    <IntReg Name="LUTValueMaxReg">
+      <xiApiPar>LUTValue:max</xiApiPar>
+    </IntReg>
+    <IntReg Name="LUTValueIncReg">
+      <xiApiPar>LUTValue:inc</xiApiPar>
+    </IntReg>
+    <IntReg Name="SensorFeatureSelectorReg">
+      <xiApiPar>sensor_feature_selector</xiApiPar>
+    </IntReg>
+    <IntReg Name="SensorFeatureValueReg">
+      <xiApiPar>sensor_feature_value</xiApiPar>
+    </IntReg>
+    <BooleanReg Name="IscooledReg">
+      <xiApiPar>iscooled</xiApiPar>
+    </BooleanReg>
+    <BooleanReg Name="CoolingReg">
+      <xiApiPar>cooling</xiApiPar>
+    </BooleanReg>
+    <FloatReg Name="TargetTempReg">
+      <xiApiPar>target_temp</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="TargetTempMinReg">
+      <xiApiPar>target_temp:min</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="TargetTempMaxReg">
+      <xiApiPar>target_temp:max</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="ChipTempReg">
+      <xiApiPar>chip_temp</xiApiPar>
+      <PollingTime>1000</PollingTime>
+    </FloatReg>
+    <FloatReg Name="HousTempReg">
+      <xiApiPar>hous_temp</xiApiPar>
+      <PollingTime>1000</PollingTime>
+    </FloatReg>
+    <FloatReg Name="HousBackSideTempReg">
+      <xiApiPar>hous_back_side_temp</xiApiPar>
+      <PollingTime>1000</PollingTime>
+    </FloatReg>
+    <FloatReg Name="SensorBoardTempReg">
+      <xiApiPar>sensor_board_temp</xiApiPar>
+      <PollingTime>1000</PollingTime>
+    </FloatReg>
+    <IntReg Name="CmsReg">
+      <xiApiPar>cms</xiApiPar>
+    </IntReg>
+    <BooleanReg Name="ApplyCmsReg">
+      <xiApiPar>apply_cms</xiApiPar>
+    </BooleanReg>
+    <StringReg Name="InputCmsProfileReg">
+      <xiApiPar>input_cms_profile</xiApiPar>
+    </StringReg>
+    <StringReg Name="OutputCmsProfileReg">
+      <xiApiPar>output_cms_profile</xiApiPar>
+    </StringReg>
+    <IntReg Name="CmsIntentReg">
+      <xiApiPar>cms_intent</xiApiPar>
+    </IntReg>
+    <FloatReg Name="GammaYReg">
+      <xiApiPar>gammaY</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="GammaYMinReg">
+      <xiApiPar>gammaY:min</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="GammaYMaxReg">
+      <xiApiPar>gammaY:max</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="GammaCReg">
+      <xiApiPar>gammaC</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="GammaCMinReg">
+      <xiApiPar>gammaC:min</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="GammaCMaxReg">
+      <xiApiPar>gammaC:max</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="SharpnessReg">
+      <xiApiPar>sharpness</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="SharpnessMinReg">
+      <xiApiPar>sharpness:min</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="SharpnessMaxReg">
+      <xiApiPar>sharpness:max</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="CcMTX00Reg">
+      <xiApiPar>ccMTX00</xiApiPar>
+      <pInvalidator>DefccMTXReg</pInvalidator>
+    </FloatReg>
+    <FloatReg Name="CcMTX00MinReg">
+      <xiApiPar>ccMTX00:min</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="CcMTX00MaxReg">
+      <xiApiPar>ccMTX00:max</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="CcMTX01Reg">
+      <xiApiPar>ccMTX01</xiApiPar>
+      <pInvalidator>DefccMTXReg</pInvalidator>
+    </FloatReg>
+    <FloatReg Name="CcMTX01MinReg">
+      <xiApiPar>ccMTX01:min</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="CcMTX01MaxReg">
+      <xiApiPar>ccMTX01:max</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="CcMTX02Reg">
+      <xiApiPar>ccMTX02</xiApiPar>
+      <pInvalidator>DefccMTXReg</pInvalidator>
+    </FloatReg>
+    <FloatReg Name="CcMTX02MinReg">
+      <xiApiPar>ccMTX02:min</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="CcMTX02MaxReg">
+      <xiApiPar>ccMTX02:max</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="CcMTX03Reg">
+      <xiApiPar>ccMTX03</xiApiPar>
+      <pInvalidator>DefccMTXReg</pInvalidator>
+    </FloatReg>
+    <FloatReg Name="CcMTX03MinReg">
+      <xiApiPar>ccMTX03:min</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="CcMTX03MaxReg">
+      <xiApiPar>ccMTX03:max</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="CcMTX10Reg">
+      <xiApiPar>ccMTX10</xiApiPar>
+      <pInvalidator>DefccMTXReg</pInvalidator>
+    </FloatReg>
+    <FloatReg Name="CcMTX10MinReg">
+      <xiApiPar>ccMTX10:min</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="CcMTX10MaxReg">
+      <xiApiPar>ccMTX10:max</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="CcMTX11Reg">
+      <xiApiPar>ccMTX11</xiApiPar>
+      <pInvalidator>DefccMTXReg</pInvalidator>
+    </FloatReg>
+    <FloatReg Name="CcMTX11MinReg">
+      <xiApiPar>ccMTX11:min</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="CcMTX11MaxReg">
+      <xiApiPar>ccMTX11:max</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="CcMTX12Reg">
+      <xiApiPar>ccMTX12</xiApiPar>
+      <pInvalidator>DefccMTXReg</pInvalidator>
+    </FloatReg>
+    <FloatReg Name="CcMTX12MinReg">
+      <xiApiPar>ccMTX12:min</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="CcMTX12MaxReg">
+      <xiApiPar>ccMTX12:max</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="CcMTX13Reg">
+      <xiApiPar>ccMTX13</xiApiPar>
+      <pInvalidator>DefccMTXReg</pInvalidator>
+    </FloatReg>
+    <FloatReg Name="CcMTX13MinReg">
+      <xiApiPar>ccMTX13:min</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="CcMTX13MaxReg">
+      <xiApiPar>ccMTX13:max</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="CcMTX20Reg">
+      <xiApiPar>ccMTX20</xiApiPar>
+      <pInvalidator>DefccMTXReg</pInvalidator>
+    </FloatReg>
+    <FloatReg Name="CcMTX20MinReg">
+      <xiApiPar>ccMTX20:min</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="CcMTX20MaxReg">
+      <xiApiPar>ccMTX20:max</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="CcMTX21Reg">
+      <xiApiPar>ccMTX21</xiApiPar>
+      <pInvalidator>DefccMTXReg</pInvalidator>
+    </FloatReg>
+    <FloatReg Name="CcMTX21MinReg">
+      <xiApiPar>ccMTX21:min</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="CcMTX21MaxReg">
+      <xiApiPar>ccMTX21:max</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="CcMTX22Reg">
+      <xiApiPar>ccMTX22</xiApiPar>
+      <pInvalidator>DefccMTXReg</pInvalidator>
+    </FloatReg>
+    <FloatReg Name="CcMTX22MinReg">
+      <xiApiPar>ccMTX22:min</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="CcMTX22MaxReg">
+      <xiApiPar>ccMTX22:max</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="CcMTX23Reg">
+      <xiApiPar>ccMTX23</xiApiPar>
+      <pInvalidator>DefccMTXReg</pInvalidator>
+    </FloatReg>
+    <FloatReg Name="CcMTX23MinReg">
+      <xiApiPar>ccMTX23:min</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="CcMTX23MaxReg">
+      <xiApiPar>ccMTX23:max</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="CcMTX30Reg">
+      <xiApiPar>ccMTX30</xiApiPar>
+      <pInvalidator>DefccMTXReg</pInvalidator>
+    </FloatReg>
+    <FloatReg Name="CcMTX30MinReg">
+      <xiApiPar>ccMTX30:min</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="CcMTX30MaxReg">
+      <xiApiPar>ccMTX30:max</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="CcMTX31Reg">
+      <xiApiPar>ccMTX31</xiApiPar>
+      <pInvalidator>DefccMTXReg</pInvalidator>
+    </FloatReg>
+    <FloatReg Name="CcMTX31MinReg">
+      <xiApiPar>ccMTX31:min</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="CcMTX31MaxReg">
+      <xiApiPar>ccMTX31:max</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="CcMTX32Reg">
+      <xiApiPar>ccMTX32</xiApiPar>
+      <pInvalidator>DefccMTXReg</pInvalidator>
+    </FloatReg>
+    <FloatReg Name="CcMTX32MinReg">
+      <xiApiPar>ccMTX32:min</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="CcMTX32MaxReg">
+      <xiApiPar>ccMTX32:max</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="CcMTX33Reg">
+      <xiApiPar>ccMTX33</xiApiPar>
+      <pInvalidator>DefccMTXReg</pInvalidator>
+    </FloatReg>
+    <FloatReg Name="CcMTX33MinReg">
+      <xiApiPar>ccMTX33:min</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="CcMTX33MaxReg">
+      <xiApiPar>ccMTX33:max</xiApiPar>
+    </FloatReg>
+    <IntReg Name="DefccMTXReg">
+      <xiApiPar>defccMTX</xiApiPar>
+    </IntReg>
+    <IntReg Name="TriggerSourceReg">
+      <xiApiPar>trigger_source</xiApiPar>
+    </IntReg>
+    <IntReg Name="TriggerSoftwareReg">
+      <xiApiPar>trigger_software</xiApiPar>
+    </IntReg>
+    <IntReg Name="TriggerSelectorReg">
+      <xiApiPar>trigger_selector</xiApiPar>
+    </IntReg>
+    <IntReg Name="AcqFrameBurstCountReg">
+      <xiApiPar>acq_frame_burst_count</xiApiPar>
+    </IntReg>
+    <IntReg Name="AcqFrameBurstCountMinReg">
+      <xiApiPar>acq_frame_burst_count:min</xiApiPar>
+    </IntReg>
+    <IntReg Name="AcqFrameBurstCountMaxReg">
+      <xiApiPar>acq_frame_burst_count:max</xiApiPar>
+    </IntReg>
+    <IntReg Name="AcqFrameBurstCountIncReg">
+      <xiApiPar>acq_frame_burst_count:inc</xiApiPar>
+    </IntReg>
+    <IntReg Name="TriggerDelayReg">
+      <xiApiPar>trigger_delay</xiApiPar>
+      <pInvalidator>TriggerSelectorReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="TriggerDelayMinReg">
+      <xiApiPar>trigger_delay:min</xiApiPar>
+      <pInvalidator>TriggerSelectorReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="TriggerDelayMaxReg">
+      <xiApiPar>trigger_delay:max</xiApiPar>
+      <pInvalidator>TriggerSelectorReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="TriggerDelayIncReg">
+      <xiApiPar>trigger_delay:inc</xiApiPar>
+      <pInvalidator>TriggerSelectorReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="GpiSelectorReg">
+      <xiApiPar>gpi_selector</xiApiPar>
+    </IntReg>
+    <IntReg Name="GpiModeReg">
+      <xiApiPar>gpi_mode</xiApiPar>
+      <pInvalidator>GpiSelectorReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="GpiLevelReg">
+      <xiApiPar>gpi_level</xiApiPar>
+      <pInvalidator>GpiSelectorReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="GpoSelectorReg">
+      <xiApiPar>gpo_selector</xiApiPar>
+    </IntReg>
+    <IntReg Name="GpoModeReg">
+      <xiApiPar>gpo_mode</xiApiPar>
+      <pInvalidator>GpoSelectorReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="LedSelectorReg">
+      <xiApiPar>led_selector</xiApiPar>
+    </IntReg>
+    <IntReg Name="LedModeReg">
+      <xiApiPar>led_mode</xiApiPar>
+      <pInvalidator>LedSelectorReg</pInvalidator>
+    </IntReg>
+    <BooleanReg Name="DbncEnReg">
+      <xiApiPar>dbnc_en</xiApiPar>
+      <pInvalidator>GpiSelectorReg</pInvalidator>
+    </BooleanReg>
+    <IntReg Name="DbncT0Reg">
+      <xiApiPar>dbnc_t0</xiApiPar>
+      <pInvalidator>GpiSelectorReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="DbncT0MinReg">
+      <xiApiPar>dbnc_t0:min</xiApiPar>
+    </IntReg>
+    <IntReg Name="DbncT0MaxReg">
+      <xiApiPar>dbnc_t0:max</xiApiPar>
+    </IntReg>
+    <IntReg Name="DbncT0IncReg">
+      <xiApiPar>dbnc_t0:inc</xiApiPar>
+    </IntReg>
+    <IntReg Name="DbncT1Reg">
+      <xiApiPar>dbnc_t1</xiApiPar>
+      <pInvalidator>GpiSelectorReg</pInvalidator>
+    </IntReg>
+    <IntReg Name="DbncT1MinReg">
+      <xiApiPar>dbnc_t1:min</xiApiPar>
+    </IntReg>
+    <IntReg Name="DbncT1MaxReg">
+      <xiApiPar>dbnc_t1:max</xiApiPar>
+    </IntReg>
+    <IntReg Name="DbncT1IncReg">
+      <xiApiPar>dbnc_t1:inc</xiApiPar>
+    </IntReg>
+    <BooleanReg Name="DbncPolReg">
+      <xiApiPar>dbnc_pol</xiApiPar>
+      <pInvalidator>GpiSelectorReg</pInvalidator>
+    </BooleanReg>
+    <IntReg Name="HdrKneepointCountReg">
+      <xiApiPar>hdr_kneepoint_count</xiApiPar>
+    </IntReg>
+    <IntReg Name="HdrKneepointCountMinReg">
+      <xiApiPar>hdr_kneepoint_count:min</xiApiPar>
+    </IntReg>
+    <IntReg Name="HdrKneepointCountMaxReg">
+      <xiApiPar>hdr_kneepoint_count:max</xiApiPar>
+    </IntReg>
+    <IntReg Name="HdrKneepointCountIncReg">
+      <xiApiPar>hdr_kneepoint_count:inc</xiApiPar>
+    </IntReg>
+    <IntReg Name="HdrT1Reg">
+      <xiApiPar>hdr_t1</xiApiPar>
+    </IntReg>
+    <IntReg Name="HdrT1MinReg">
+      <xiApiPar>hdr_t1:min</xiApiPar>
+    </IntReg>
+    <IntReg Name="HdrT1MaxReg">
+      <xiApiPar>hdr_t1:max</xiApiPar>
+    </IntReg>
+    <IntReg Name="HdrT1IncReg">
+      <xiApiPar>hdr_t1:inc</xiApiPar>
+    </IntReg>
+    <IntReg Name="HdrT2Reg">
+      <xiApiPar>hdr_t2</xiApiPar>
+    </IntReg>
+    <IntReg Name="HdrT2MinReg">
+      <xiApiPar>hdr_t2:min</xiApiPar>
+    </IntReg>
+    <IntReg Name="HdrT2MaxReg">
+      <xiApiPar>hdr_t2:max</xiApiPar>
+    </IntReg>
+    <IntReg Name="HdrT2IncReg">
+      <xiApiPar>hdr_t2:inc</xiApiPar>
+    </IntReg>
+    <IntReg Name="HdrKneepoint1Reg">
+      <xiApiPar>hdr_kneepoint1</xiApiPar>
+    </IntReg>
+    <IntReg Name="HdrKneepoint1MinReg">
+      <xiApiPar>hdr_kneepoint1:min</xiApiPar>
+    </IntReg>
+    <IntReg Name="HdrKneepoint1MaxReg">
+      <xiApiPar>hdr_kneepoint1:max</xiApiPar>
+    </IntReg>
+    <IntReg Name="HdrKneepoint1IncReg">
+      <xiApiPar>hdr_kneepoint1:inc</xiApiPar>
+    </IntReg>
+    <IntReg Name="HdrKneepoint2Reg">
+      <xiApiPar>hdr_kneepoint2</xiApiPar>
+    </IntReg>
+    <IntReg Name="HdrKneepoint2MinReg">
+      <xiApiPar>hdr_kneepoint2:min</xiApiPar>
+    </IntReg>
+    <IntReg Name="HdrKneepoint2MaxReg">
+      <xiApiPar>hdr_kneepoint2:max</xiApiPar>
+    </IntReg>
+    <IntReg Name="HdrKneepoint2IncReg">
+      <xiApiPar>hdr_kneepoint2:inc</xiApiPar>
+    </IntReg>
+    <BooleanReg Name="LensModeReg">
+      <xiApiPar>lens_mode</xiApiPar>
+    </BooleanReg>
+    <FloatReg Name="LensApertureValueReg">
+      <xiApiPar>lens_aperture_value</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="LensApertureValueMinReg">
+      <xiApiPar>lens_aperture_value:min</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="LensApertureValueMaxReg">
+      <xiApiPar>lens_aperture_value:max</xiApiPar>
+    </FloatReg>
+    <IntReg Name="LensFocusMovementValueReg">
+      <xiApiPar>lens_focus_movement_value</xiApiPar>
+    </IntReg>
+    <IntReg Name="LensFocusMovementValueMinReg">
+      <xiApiPar>lens_focus_movement_value:min</xiApiPar>
+    </IntReg>
+    <IntReg Name="LensFocusMovementValueMaxReg">
+      <xiApiPar>lens_focus_movement_value:max</xiApiPar>
+    </IntReg>
+    <IntReg Name="LensFocusMoveReg">
+      <xiApiPar>lens_focus_move</xiApiPar>
+    </IntReg>
+    <FloatReg Name="LensFocusDistanceReg">
+      <xiApiPar>lens_focus_distance</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="LensFocusDistanceMinReg">
+      <xiApiPar>lens_focus_distance:min</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="LensFocusDistanceMaxReg">
+      <xiApiPar>lens_focus_distance:max</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="LensFocalLengthReg">
+      <xiApiPar>lens_focal_length</xiApiPar>
+    </FloatReg>
+    <IntReg Name="LensFeatureSelectorReg">
+      <xiApiPar>lens_feature_selector</xiApiPar>
+    </IntReg>
+    <FloatReg Name="LensFeatureReg">
+      <xiApiPar>lens_feature</xiApiPar>
+      <pInvalidator>LensFeatureSelectorReg</pInvalidator>
+    </FloatReg>
+    <FloatReg Name="LensFeatureMinReg">
+      <xiApiPar>lens_feature:min</xiApiPar>
+    </FloatReg>
+    <FloatReg Name="LensFeatureMaxReg">
+      <xiApiPar>lens_feature:max</xiApiPar>
+    </FloatReg>
+    <IntReg Name="ImgpayloadsizeReg">
+      <xiApiPar>imgpayloadsize</xiApiPar>
+    </IntReg>
+    <StringReg Name="XiapiContextListReg">
+      <xiApiPar>xiapi_context_list</xiApiPar>
+    </StringReg>
+    <IntReg Name="TransportPixelFormatReg">
+      <xiApiPar>transport_pixel_format</xiApiPar>
+    </IntReg>
+  </Group>
+</RegisterDescription>

@@ -1,6 +1,6 @@
 epicsEnvSet("IOC","iocXIMEA")
-epicsEnvSet("TOP","Z:/epics/synApps_6_1/support-v7/areaDetector-R3-7/ADXIMEA/iocs/ADXIMEAIOC")
-epicsEnvSet("ADXIMEA","Z:/epics/synApps_6_1/support-v7/areaDetector-R3-7/ADXIMEA/iocs/ADXIMEAIOC/../..")
+epicsEnvSet("TOP","Z:/epics/synApps_6_1/support-v7/areaDetector-R3-7/ADXIMEA/iocs/ADMC023CGIOC")
+epicsEnvSet("ADXIMEA","Z:/epics/synApps_6_1/support-v7/areaDetector-R3-7/ADXIMEA/iocs/ADMC023CGIOC/../..")
 epicsEnvSet("SUPPORT","z:/epics/synApps_6_1/support-v7")
 epicsEnvSet("ASYN","z:/epics/synApps_6_1/support-v7/asyn-R4-36")
 epicsEnvSet("AREA_DETECTOR","z:/epics/synApps_6_1/support-v7/areaDetector-R3-7")

@@ -40,7 +40,7 @@
       <pIsLocked>TLParamsLocked</pIsLocked>
       <pValue>DownsamplingReg</pValue>
       <EnumEntry>
-        <DisplayName>1 (2048x2048)</DisplayName>
+        <DisplayName>1 (2048x1088)</DisplayName>
         <Value>1</Value>
       </EnumEntry>
       <ImposedAccessMode>RW</ImposedAccessMode>
@@ -97,14 +97,6 @@
       <EnumEntry>
         <DisplayName>Global</DisplayName>
         <Value>0</Value>
-      </EnumEntry>
-      <EnumEntry>
-        <DisplayName>Electronic rolling</DisplayName>
-        <Value>1</Value>
-      </EnumEntry>
-      <EnumEntry>
-        <DisplayName>Global reset release</DisplayName>
-        <Value>2</Value>
       </EnumEntry>
       <ImposedAccessMode>RW</ImposedAccessMode>
       <Steamable>Yes</Steamable>
@@ -449,18 +441,6 @@
       <Xiapi_Par>binning_selector</Xiapi_Par>
       <Visibility>Guru</Visibility>
       <pValue>BinningSelectorReg</pValue>
-      <EnumEntry>
-        <DisplayName>Sensor</DisplayName>
-        <Value>0</Value>
-      </EnumEntry>
-      <EnumEntry>
-        <DisplayName>FPGA</DisplayName>
-        <Value>1</Value>
-      </EnumEntry>
-      <EnumEntry>
-        <DisplayName>Host CPU</DisplayName>
-        <Value>2</Value>
-      </EnumEntry>
       <ImposedAccessMode>RW</ImposedAccessMode>
       <Steamable>Yes</Steamable>
       <pSelected>BinningVertical</pSelected>
@@ -540,18 +520,6 @@
       <Xiapi_Par>decimation_selector</Xiapi_Par>
       <Visibility>Guru</Visibility>
       <pValue>DecimationSelectorReg</pValue>
-      <EnumEntry>
-        <DisplayName>Sensor</DisplayName>
-        <Value>0</Value>
-      </EnumEntry>
-      <EnumEntry>
-        <DisplayName>FPGA</DisplayName>
-        <Value>1</Value>
-      </EnumEntry>
-      <EnumEntry>
-        <DisplayName>Host CPU</DisplayName>
-        <Value>2</Value>
-      </EnumEntry>
       <ImposedAccessMode>RW</ImposedAccessMode>
       <Steamable>Yes</Steamable>
       <pSelected>DecimationVertical</pSelected>
@@ -609,14 +577,6 @@
       <Xiapi_Par>test_pattern_generator_selector</Xiapi_Par>
       <Visibility>Guru</Visibility>
       <pValue>TestPatternGeneratorSelectorReg</pValue>
-      <EnumEntry>
-        <DisplayName>Sensor</DisplayName>
-        <Value>0</Value>
-      </EnumEntry>
-      <EnumEntry>
-        <DisplayName>FPGA</DisplayName>
-        <Value>1</Value>
-      </EnumEntry>
       <ImposedAccessMode>RW</ImposedAccessMode>
       <Steamable>Yes</Steamable>
       <pSelected>TestPattern</pSelected>
@@ -628,54 +588,6 @@
       <Visibility>Guru</Visibility>
       <pIsLocked>TLParamsLocked</pIsLocked>
       <pValue>TestPatternReg</pValue>
-      <EnumEntry>
-        <DisplayName>Off</DisplayName>
-        <Value>0</Value>
-      </EnumEntry>
-      <EnumEntry>
-        <DisplayName>Black</DisplayName>
-        <Value>1</Value>
-      </EnumEntry>
-      <EnumEntry>
-        <DisplayName>White</DisplayName>
-        <Value>2</Value>
-      </EnumEntry>
-      <EnumEntry>
-        <DisplayName>Horiz. Gradient</DisplayName>
-        <Value>3</Value>
-      </EnumEntry>
-      <EnumEntry>
-        <DisplayName>Vert. Gradient</DisplayName>
-        <Value>4</Value>
-      </EnumEntry>
-      <EnumEntry>
-        <DisplayName>Horiz. Moving Gradient</DisplayName>
-        <Value>5</Value>
-      </EnumEntry>
-      <EnumEntry>
-        <DisplayName>Vert. Moving Gradient</DisplayName>
-        <Value>6</Value>
-      </EnumEntry>
-      <EnumEntry>
-        <DisplayName>Horiz. Moving Line</DisplayName>
-        <Value>7</Value>
-      </EnumEntry>
-      <EnumEntry>
-        <DisplayName>Vert. Moving Line</DisplayName>
-        <Value>8</Value>
-      </EnumEntry>
-      <EnumEntry>
-        <DisplayName>Color Bar</DisplayName>
-        <Value>9</Value>
-      </EnumEntry>
-      <EnumEntry>
-        <DisplayName>Frame Counter</DisplayName>
-        <Value>10</Value>
-      </EnumEntry>
-      <EnumEntry>
-        <DisplayName>Device Specific Counter</DisplayName>
-        <Value>11</Value>
-      </EnumEntry>
       <ImposedAccessMode>RW</ImposedAccessMode>
       <Steamable>Yes</Steamable>
     </Enumeration>
@@ -1229,6 +1141,7 @@
       <DisplayName>Trigger delay</DisplayName>
       <Xiapi_Par>trigger_delay</Xiapi_Par>
       <Visibility>Guru</Visibility>
+      <pIsLocked>TLParamsLocked</pIsLocked>
       <pValue>TriggerDelayReg</pValue>
       <pMin>TriggerDelayMinReg</pMin>
       <pMax>TriggerDelayMaxReg</pMax>
@@ -1622,18 +1535,58 @@
     <IntReg Name="ExposureReg">
       <xiApiPar>exposure</xiApiPar>
       <pInvalidator>LimitBandwidthReg</pInvalidator>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+      <pInvalidator>SensorBitDepthReg</pInvalidator>
+      <pInvalidator>SensorFeatureSelectorReg</pInvalidator>
+      <pInvalidator>SensorFeatureValueReg</pInvalidator>
+      <pInvalidator>DownsamplingReg</pInvalidator>
+      <pInvalidator>DownsamplingTypeReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>OutputBitDepthReg</pInvalidator>
+      <pInvalidator>OutputBitPackingReg</pInvalidator>
     </IntReg>
     <IntReg Name="ExposureMinReg">
       <xiApiPar>exposure:min</xiApiPar>
       <pInvalidator>LimitBandwidthReg</pInvalidator>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+      <pInvalidator>SensorBitDepthReg</pInvalidator>
+      <pInvalidator>SensorFeatureSelectorReg</pInvalidator>
+      <pInvalidator>SensorFeatureValueReg</pInvalidator>
+      <pInvalidator>DownsamplingReg</pInvalidator>
+      <pInvalidator>DownsamplingTypeReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>OutputBitDepthReg</pInvalidator>
+      <pInvalidator>OutputBitPackingReg</pInvalidator>
     </IntReg>
     <IntReg Name="ExposureMaxReg">
       <xiApiPar>exposure:max</xiApiPar>
       <pInvalidator>LimitBandwidthReg</pInvalidator>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+      <pInvalidator>SensorBitDepthReg</pInvalidator>
+      <pInvalidator>SensorFeatureSelectorReg</pInvalidator>
+      <pInvalidator>SensorFeatureValueReg</pInvalidator>
+      <pInvalidator>DownsamplingReg</pInvalidator>
+      <pInvalidator>DownsamplingTypeReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>OutputBitDepthReg</pInvalidator>
+      <pInvalidator>OutputBitPackingReg</pInvalidator>
     </IntReg>
     <IntReg Name="ExposureIncReg">
       <xiApiPar>exposure:inc</xiApiPar>
       <pInvalidator>LimitBandwidthReg</pInvalidator>
+      <pInvalidator>ImgdataformatReg</pInvalidator>
+      <pInvalidator>SensorBitDepthReg</pInvalidator>
+      <pInvalidator>SensorFeatureSelectorReg</pInvalidator>
+      <pInvalidator>SensorFeatureValueReg</pInvalidator>
+      <pInvalidator>DownsamplingReg</pInvalidator>
+      <pInvalidator>DownsamplingTypeReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>OutputBitDepthReg</pInvalidator>
+      <pInvalidator>OutputBitPackingReg</pInvalidator>
     </IntReg>
     <IntReg Name="GainSelectorReg">
       <xiApiPar>gain_selector</xiApiPar>
@@ -1646,6 +1599,7 @@
       <pInvalidator>BinningVerticalReg</pInvalidator>
       <pInvalidator>BinningHorizontalReg</pInvalidator>
       <pInvalidator>HdrReg</pInvalidator>
+      <pInvalidator>SensorBitDepthReg</pInvalidator>
     </FloatReg>
     <FloatReg Name="GainMinReg">
       <xiApiPar>gain:min</xiApiPar>
@@ -1655,6 +1609,7 @@
       <pInvalidator>BinningVerticalReg</pInvalidator>
       <pInvalidator>BinningHorizontalReg</pInvalidator>
       <pInvalidator>HdrReg</pInvalidator>
+      <pInvalidator>SensorBitDepthReg</pInvalidator>
     </FloatReg>
     <FloatReg Name="GainMaxReg">
       <xiApiPar>gain:max</xiApiPar>
@@ -1664,6 +1619,7 @@
       <pInvalidator>BinningVerticalReg</pInvalidator>
       <pInvalidator>BinningHorizontalReg</pInvalidator>
       <pInvalidator>HdrReg</pInvalidator>
+      <pInvalidator>SensorBitDepthReg</pInvalidator>
     </FloatReg>
     <IntReg Name="DownsamplingReg">
       <xiApiPar>downsampling</xiApiPar>

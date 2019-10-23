@@ -67,9 +67,9 @@ ADDriver(portName, 1, 0, maxBuffers, maxMemory, asynDrvUserMask | asynFloat64Arr
     deviceId = (char*)calloc(1, strlen(id)+1);
     memcpy(deviceId,id, strlen(id)+1);
    
-printf("Before MQ022HG_3.inc \n");
-#include "MQ022HG_3.inc"
-printf("After MQ022HG_3.inc \n");
+//printf("Before MQ022HG_3.inc \n");
+//#include "MQ022HG_3.inc"
+//printf("After MQ022HG_3.inc \n");
 /*
     createParam(SB_HardwareRevisionString, asynParamOctet, &sb_HardwareRevision);
     createParam(SB_HasLampString, asynParamInt32, &sb_HasLamp);
@@ -201,10 +201,13 @@ asynStatus MQ022HG::initializeDetector() {
      float systemFloat;
      int systemInteger;
      char  *systemString;
-	 systemString = (char *)calloc(80, sizeof(char));
+	systemString = (char *)calloc(180, sizeof(char));
+
 	XI_RETURN XI_status = XI_OK;
 
-//     #include "MQ022HG_3.inc"
+printf("Before MQ022HG_3.inc \n");
+#include "MQ022HG_3.inc"
+printf("After MQ022HG_3.inc \n");
 
  printf("Before MQ022HG_4.inc \n");
 	#include "MQ022HG_4.inc"

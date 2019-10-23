@@ -1,5 +1,5 @@
-# autosave R5.3	Automatically generated - DO NOT MODIFY - 191010-085542
-HPCAT:XIMEA:image1:NDArrayPort X1
+# autosave R5.3	Automatically generated - DO NOT MODIFY - 191014-124528
+HPCAT:XIMEA:image1:NDArrayPort X2
 HPCAT:XIMEA:image1:NDArrayAddress 0
 HPCAT:XIMEA:image1:EnableCallbacks 0
 HPCAT:XIMEA:image1:MinCallbackTime 0
@@ -13,14 +13,14 @@ HPCAT:XIMEA:image1:SortSize 20
 HPCAT:XIMEA:image1:DataType 0
 HPCAT:XIMEA:image1:ColorMode 0
 HPCAT:XIMEA:image1:ArrayCallbacks 0
-HPCAT:XIMEA:image1:NDAttributesFile 0
-HPCAT:XIMEA:image1:NDAttributesMacros 0
+HPCAT:XIMEA:image1:NDAttributesFile 
+HPCAT:XIMEA:image1:NDAttributesMacros 
 HPCAT:XIMEA:image1:PoolUsedMem.SCAN 6
-HPCAT:XIMEA:netCDF1:FilePath 0
-HPCAT:XIMEA:netCDF1:FileName 0
+HPCAT:XIMEA:netCDF1:FilePath 
+HPCAT:XIMEA:netCDF1:FileName 
 HPCAT:XIMEA:netCDF1:FileNumber 0
 HPCAT:XIMEA:netCDF1:AutoIncrement 0
-HPCAT:XIMEA:netCDF1:FileTemplate 0
+HPCAT:XIMEA:netCDF1:FileTemplate 
 HPCAT:XIMEA:netCDF1:AutoSave 0
 HPCAT:XIMEA:netCDF1:FileFormat 0
 HPCAT:XIMEA:netCDF1:FileWriteMode 0
@@ -29,7 +29,7 @@ HPCAT:XIMEA:netCDF1:DeleteDriverFile 0
 HPCAT:XIMEA:netCDF1:CreateDirectory 0
 HPCAT:XIMEA:netCDF1:LazyOpen 0
 HPCAT:XIMEA:netCDF1:TempSuffix 
-HPCAT:XIMEA:netCDF1:NDArrayPort X1
+HPCAT:XIMEA:netCDF1:NDArrayPort X2
 HPCAT:XIMEA:netCDF1:NDArrayAddress 0
 HPCAT:XIMEA:netCDF1:EnableCallbacks 0
 HPCAT:XIMEA:netCDF1:MinCallbackTime 0
@@ -43,14 +43,14 @@ HPCAT:XIMEA:netCDF1:SortSize 20
 HPCAT:XIMEA:netCDF1:DataType 0
 HPCAT:XIMEA:netCDF1:ColorMode 0
 HPCAT:XIMEA:netCDF1:ArrayCallbacks 0
-HPCAT:XIMEA:netCDF1:NDAttributesFile 0
-HPCAT:XIMEA:netCDF1:NDAttributesMacros 0
+HPCAT:XIMEA:netCDF1:NDAttributesFile 
+HPCAT:XIMEA:netCDF1:NDAttributesMacros 
 HPCAT:XIMEA:netCDF1:PoolUsedMem.SCAN 6
-HPCAT:XIMEA:TIFF1:FilePath 0
-HPCAT:XIMEA:TIFF1:FileName 0
+HPCAT:XIMEA:TIFF1:FilePath 
+HPCAT:XIMEA:TIFF1:FileName 
 HPCAT:XIMEA:TIFF1:FileNumber 0
 HPCAT:XIMEA:TIFF1:AutoIncrement 0
-HPCAT:XIMEA:TIFF1:FileTemplate 0
+HPCAT:XIMEA:TIFF1:FileTemplate 
 HPCAT:XIMEA:TIFF1:AutoSave 0
 HPCAT:XIMEA:TIFF1:FileFormat 0
 HPCAT:XIMEA:TIFF1:FileWriteMode 0
@@ -59,7 +59,7 @@ HPCAT:XIMEA:TIFF1:DeleteDriverFile 0
 HPCAT:XIMEA:TIFF1:CreateDirectory 0
 HPCAT:XIMEA:TIFF1:LazyOpen 0
 HPCAT:XIMEA:TIFF1:TempSuffix 
-HPCAT:XIMEA:TIFF1:NDArrayPort X1
+HPCAT:XIMEA:TIFF1:NDArrayPort X2
 HPCAT:XIMEA:TIFF1:NDArrayAddress 0
 HPCAT:XIMEA:TIFF1:EnableCallbacks 0
 HPCAT:XIMEA:TIFF1:MinCallbackTime 0
@@ -73,15 +73,15 @@ HPCAT:XIMEA:TIFF1:SortSize 20
 HPCAT:XIMEA:TIFF1:DataType 0
 HPCAT:XIMEA:TIFF1:ColorMode 0
 HPCAT:XIMEA:TIFF1:ArrayCallbacks 0
-HPCAT:XIMEA:TIFF1:NDAttributesFile 0
-HPCAT:XIMEA:TIFF1:NDAttributesMacros 0
+HPCAT:XIMEA:TIFF1:NDAttributesFile 
+HPCAT:XIMEA:TIFF1:NDAttributesMacros 
 HPCAT:XIMEA:TIFF1:PoolUsedMem.SCAN 6
 HPCAT:XIMEA:JPEG1:JPEGQuality 50
-HPCAT:XIMEA:JPEG1:FilePath 0
-HPCAT:XIMEA:JPEG1:FileName 0
+HPCAT:XIMEA:JPEG1:FilePath 
+HPCAT:XIMEA:JPEG1:FileName 
 HPCAT:XIMEA:JPEG1:FileNumber 0
 HPCAT:XIMEA:JPEG1:AutoIncrement 0
-HPCAT:XIMEA:JPEG1:FileTemplate 0
+HPCAT:XIMEA:JPEG1:FileTemplate 
 HPCAT:XIMEA:JPEG1:AutoSave 0
 HPCAT:XIMEA:JPEG1:FileFormat 0
 HPCAT:XIMEA:JPEG1:FileWriteMode 0
@@ -90,7 +90,7 @@ HPCAT:XIMEA:JPEG1:DeleteDriverFile 0
 HPCAT:XIMEA:JPEG1:CreateDirectory 0
 HPCAT:XIMEA:JPEG1:LazyOpen 0
 HPCAT:XIMEA:JPEG1:TempSuffix 
-HPCAT:XIMEA:JPEG1:NDArrayPort X1
+HPCAT:XIMEA:JPEG1:NDArrayPort X2
 HPCAT:XIMEA:JPEG1:NDArrayAddress 0
 HPCAT:XIMEA:JPEG1:EnableCallbacks 0
 HPCAT:XIMEA:JPEG1:MinCallbackTime 0
@@ -104,16 +104,16 @@ HPCAT:XIMEA:JPEG1:SortSize 20
 HPCAT:XIMEA:JPEG1:DataType 0
 HPCAT:XIMEA:JPEG1:ColorMode 0
 HPCAT:XIMEA:JPEG1:ArrayCallbacks 0
-HPCAT:XIMEA:JPEG1:NDAttributesFile 0
-HPCAT:XIMEA:JPEG1:NDAttributesMacros 0
+HPCAT:XIMEA:JPEG1:NDAttributesFile 
+HPCAT:XIMEA:JPEG1:NDAttributesMacros 
 HPCAT:XIMEA:JPEG1:PoolUsedMem.SCAN 6
-HPCAT:XIMEA:Nexus1:TemplateFilePath 0
-HPCAT:XIMEA:Nexus1:TemplateFileName 0
-HPCAT:XIMEA:Nexus1:FilePath 0
-HPCAT:XIMEA:Nexus1:FileName 0
+HPCAT:XIMEA:Nexus1:TemplateFilePath 
+HPCAT:XIMEA:Nexus1:TemplateFileName 
+HPCAT:XIMEA:Nexus1:FilePath 
+HPCAT:XIMEA:Nexus1:FileName 
 HPCAT:XIMEA:Nexus1:FileNumber 0
 HPCAT:XIMEA:Nexus1:AutoIncrement 0
-HPCAT:XIMEA:Nexus1:FileTemplate 0
+HPCAT:XIMEA:Nexus1:FileTemplate 
 HPCAT:XIMEA:Nexus1:AutoSave 0
 HPCAT:XIMEA:Nexus1:FileFormat 0
 HPCAT:XIMEA:Nexus1:FileWriteMode 0
@@ -122,7 +122,7 @@ HPCAT:XIMEA:Nexus1:DeleteDriverFile 0
 HPCAT:XIMEA:Nexus1:CreateDirectory 0
 HPCAT:XIMEA:Nexus1:LazyOpen 0
 HPCAT:XIMEA:Nexus1:TempSuffix 
-HPCAT:XIMEA:Nexus1:NDArrayPort X1
+HPCAT:XIMEA:Nexus1:NDArrayPort X2
 HPCAT:XIMEA:Nexus1:NDArrayAddress 0
 HPCAT:XIMEA:Nexus1:EnableCallbacks 0
 HPCAT:XIMEA:Nexus1:MinCallbackTime 0
@@ -136,17 +136,17 @@ HPCAT:XIMEA:Nexus1:SortSize 20
 HPCAT:XIMEA:Nexus1:DataType 0
 HPCAT:XIMEA:Nexus1:ColorMode 0
 HPCAT:XIMEA:Nexus1:ArrayCallbacks 0
-HPCAT:XIMEA:Nexus1:NDAttributesFile 0
-HPCAT:XIMEA:Nexus1:NDAttributesMacros 0
+HPCAT:XIMEA:Nexus1:NDAttributesFile 
+HPCAT:XIMEA:Nexus1:NDAttributesMacros 
 HPCAT:XIMEA:Nexus1:PoolUsedMem.SCAN 6
 HPCAT:XIMEA:Magick1:Quality 100
 HPCAT:XIMEA:Magick1:CompressType 0
 HPCAT:XIMEA:Magick1:BitDepth 0
-HPCAT:XIMEA:Magick1:FilePath 0
-HPCAT:XIMEA:Magick1:FileName 0
+HPCAT:XIMEA:Magick1:FilePath 
+HPCAT:XIMEA:Magick1:FileName 
 HPCAT:XIMEA:Magick1:FileNumber 0
 HPCAT:XIMEA:Magick1:AutoIncrement 0
-HPCAT:XIMEA:Magick1:FileTemplate 0
+HPCAT:XIMEA:Magick1:FileTemplate 
 HPCAT:XIMEA:Magick1:AutoSave 0
 HPCAT:XIMEA:Magick1:FileFormat 0
 HPCAT:XIMEA:Magick1:FileWriteMode 0
@@ -155,7 +155,7 @@ HPCAT:XIMEA:Magick1:DeleteDriverFile 0
 HPCAT:XIMEA:Magick1:CreateDirectory 0
 HPCAT:XIMEA:Magick1:LazyOpen 0
 HPCAT:XIMEA:Magick1:TempSuffix 
-HPCAT:XIMEA:Magick1:NDArrayPort X1
+HPCAT:XIMEA:Magick1:NDArrayPort X2
 HPCAT:XIMEA:Magick1:NDArrayAddress 0
 HPCAT:XIMEA:Magick1:EnableCallbacks 0
 HPCAT:XIMEA:Magick1:MinCallbackTime 0
@@ -169,8 +169,8 @@ HPCAT:XIMEA:Magick1:SortSize 20
 HPCAT:XIMEA:Magick1:DataType 0
 HPCAT:XIMEA:Magick1:ColorMode 0
 HPCAT:XIMEA:Magick1:ArrayCallbacks 0
-HPCAT:XIMEA:Magick1:NDAttributesFile 0
-HPCAT:XIMEA:Magick1:NDAttributesMacros 0
+HPCAT:XIMEA:Magick1:NDAttributesFile 
+HPCAT:XIMEA:Magick1:NDAttributesMacros 
 HPCAT:XIMEA:Magick1:PoolUsedMem.SCAN 6
 HPCAT:XIMEA:HDF1:ChunkSizeAuto 1
 HPCAT:XIMEA:HDF1:NumRowChunks 0
@@ -202,13 +202,13 @@ HPCAT:XIMEA:HDF1:NumExtraDims 0
 HPCAT:XIMEA:HDF1:ExtraDimSizeN 1
 HPCAT:XIMEA:HDF1:ExtraDimSizeX 1
 HPCAT:XIMEA:HDF1:ExtraDimSizeY 1
-HPCAT:XIMEA:HDF1:XMLFileName 0
+HPCAT:XIMEA:HDF1:XMLFileName 
 HPCAT:XIMEA:HDF1:SWMRMode 0
-HPCAT:XIMEA:HDF1:FilePath 0
-HPCAT:XIMEA:HDF1:FileName 0
+HPCAT:XIMEA:HDF1:FilePath 
+HPCAT:XIMEA:HDF1:FileName 
 HPCAT:XIMEA:HDF1:FileNumber 0
 HPCAT:XIMEA:HDF1:AutoIncrement 0
-HPCAT:XIMEA:HDF1:FileTemplate 0
+HPCAT:XIMEA:HDF1:FileTemplate 
 HPCAT:XIMEA:HDF1:AutoSave 0
 HPCAT:XIMEA:HDF1:FileFormat 0
 HPCAT:XIMEA:HDF1:FileWriteMode 0
@@ -217,7 +217,7 @@ HPCAT:XIMEA:HDF1:DeleteDriverFile 0
 HPCAT:XIMEA:HDF1:CreateDirectory 0
 HPCAT:XIMEA:HDF1:LazyOpen 0
 HPCAT:XIMEA:HDF1:TempSuffix 
-HPCAT:XIMEA:HDF1:NDArrayPort X1
+HPCAT:XIMEA:HDF1:NDArrayPort X2
 HPCAT:XIMEA:HDF1:NDArrayAddress 0
 HPCAT:XIMEA:HDF1:EnableCallbacks 0
 HPCAT:XIMEA:HDF1:MinCallbackTime 0
@@ -231,8 +231,8 @@ HPCAT:XIMEA:HDF1:SortSize 20
 HPCAT:XIMEA:HDF1:DataType 0
 HPCAT:XIMEA:HDF1:ColorMode 0
 HPCAT:XIMEA:HDF1:ArrayCallbacks 0
-HPCAT:XIMEA:HDF1:NDAttributesFile 0
-HPCAT:XIMEA:HDF1:NDAttributesMacros 0
+HPCAT:XIMEA:HDF1:NDAttributesFile 
+HPCAT:XIMEA:HDF1:NDAttributesMacros 
 HPCAT:XIMEA:HDF1:PoolUsedMem.SCAN 6
 HPCAT:XIMEA:ROI1:Name 
 HPCAT:XIMEA:ROI1:DataTypeOut 8
@@ -257,7 +257,7 @@ HPCAT:XIMEA:ROI1:EnableZ 1
 HPCAT:XIMEA:ROI1:EnableScale 0
 HPCAT:XIMEA:ROI1:Scale 1
 HPCAT:XIMEA:ROI1:CollapseDims 0
-HPCAT:XIMEA:ROI1:NDArrayPort X1
+HPCAT:XIMEA:ROI1:NDArrayPort X2
 HPCAT:XIMEA:ROI1:NDArrayAddress 0
 HPCAT:XIMEA:ROI1:EnableCallbacks 0
 HPCAT:XIMEA:ROI1:MinCallbackTime 0
@@ -271,8 +271,8 @@ HPCAT:XIMEA:ROI1:SortSize 20
 HPCAT:XIMEA:ROI1:DataType 0
 HPCAT:XIMEA:ROI1:ColorMode 0
 HPCAT:XIMEA:ROI1:ArrayCallbacks 1
-HPCAT:XIMEA:ROI1:NDAttributesFile 0
-HPCAT:XIMEA:ROI1:NDAttributesMacros 0
+HPCAT:XIMEA:ROI1:NDAttributesFile 
+HPCAT:XIMEA:ROI1:NDAttributesMacros 
 HPCAT:XIMEA:ROI1:PoolUsedMem.SCAN 6
 HPCAT:XIMEA:ROI2:Name 
 HPCAT:XIMEA:ROI2:DataTypeOut 8
@@ -297,7 +297,7 @@ HPCAT:XIMEA:ROI2:EnableZ 1
 HPCAT:XIMEA:ROI2:EnableScale 0
 HPCAT:XIMEA:ROI2:Scale 1
 HPCAT:XIMEA:ROI2:CollapseDims 0
-HPCAT:XIMEA:ROI2:NDArrayPort X1
+HPCAT:XIMEA:ROI2:NDArrayPort X2
 HPCAT:XIMEA:ROI2:NDArrayAddress 0
 HPCAT:XIMEA:ROI2:EnableCallbacks 0
 HPCAT:XIMEA:ROI2:MinCallbackTime 0
@@ -311,8 +311,8 @@ HPCAT:XIMEA:ROI2:SortSize 20
 HPCAT:XIMEA:ROI2:DataType 0
 HPCAT:XIMEA:ROI2:ColorMode 0
 HPCAT:XIMEA:ROI2:ArrayCallbacks 1
-HPCAT:XIMEA:ROI2:NDAttributesFile 0
-HPCAT:XIMEA:ROI2:NDAttributesMacros 0
+HPCAT:XIMEA:ROI2:NDAttributesFile 
+HPCAT:XIMEA:ROI2:NDAttributesMacros 
 HPCAT:XIMEA:ROI2:PoolUsedMem.SCAN 6
 HPCAT:XIMEA:ROI3:Name 
 HPCAT:XIMEA:ROI3:DataTypeOut 8
@@ -337,7 +337,7 @@ HPCAT:XIMEA:ROI3:EnableZ 1
 HPCAT:XIMEA:ROI3:EnableScale 0
 HPCAT:XIMEA:ROI3:Scale 1
 HPCAT:XIMEA:ROI3:CollapseDims 0
-HPCAT:XIMEA:ROI3:NDArrayPort X1
+HPCAT:XIMEA:ROI3:NDArrayPort X2
 HPCAT:XIMEA:ROI3:NDArrayAddress 0
 HPCAT:XIMEA:ROI3:EnableCallbacks 0
 HPCAT:XIMEA:ROI3:MinCallbackTime 0
@@ -351,8 +351,8 @@ HPCAT:XIMEA:ROI3:SortSize 20
 HPCAT:XIMEA:ROI3:DataType 0
 HPCAT:XIMEA:ROI3:ColorMode 0
 HPCAT:XIMEA:ROI3:ArrayCallbacks 1
-HPCAT:XIMEA:ROI3:NDAttributesFile 0
-HPCAT:XIMEA:ROI3:NDAttributesMacros 0
+HPCAT:XIMEA:ROI3:NDAttributesFile 
+HPCAT:XIMEA:ROI3:NDAttributesMacros 
 HPCAT:XIMEA:ROI3:PoolUsedMem.SCAN 6
 HPCAT:XIMEA:ROI4:Name 
 HPCAT:XIMEA:ROI4:DataTypeOut 8
@@ -377,7 +377,7 @@ HPCAT:XIMEA:ROI4:EnableZ 1
 HPCAT:XIMEA:ROI4:EnableScale 0
 HPCAT:XIMEA:ROI4:Scale 1
 HPCAT:XIMEA:ROI4:CollapseDims 0
-HPCAT:XIMEA:ROI4:NDArrayPort X1
+HPCAT:XIMEA:ROI4:NDArrayPort X2
 HPCAT:XIMEA:ROI4:NDArrayAddress 0
 HPCAT:XIMEA:ROI4:EnableCallbacks 0
 HPCAT:XIMEA:ROI4:MinCallbackTime 0
@@ -391,8 +391,8 @@ HPCAT:XIMEA:ROI4:SortSize 20
 HPCAT:XIMEA:ROI4:DataType 0
 HPCAT:XIMEA:ROI4:ColorMode 0
 HPCAT:XIMEA:ROI4:ArrayCallbacks 1
-HPCAT:XIMEA:ROI4:NDAttributesFile 0
-HPCAT:XIMEA:ROI4:NDAttributesMacros 0
+HPCAT:XIMEA:ROI4:NDAttributesFile 
+HPCAT:XIMEA:ROI4:NDAttributesMacros 
 HPCAT:XIMEA:ROI4:PoolUsedMem.SCAN 6
 HPCAT:XIMEA:Proc1:DataTypeOut 8
 HPCAT:XIMEA:Proc1:EnableBackground 0
@@ -425,7 +425,7 @@ HPCAT:XIMEA:Proc1:FC4 1
 HPCAT:XIMEA:Proc1:ROffset 0
 HPCAT:XIMEA:Proc1:RC1 0
 HPCAT:XIMEA:Proc1:RC2 1
-HPCAT:XIMEA:Proc1:NDArrayPort X1
+HPCAT:XIMEA:Proc1:NDArrayPort X2
 HPCAT:XIMEA:Proc1:NDArrayAddress 0
 HPCAT:XIMEA:Proc1:EnableCallbacks 0
 HPCAT:XIMEA:Proc1:MinCallbackTime 0
@@ -439,14 +439,14 @@ HPCAT:XIMEA:Proc1:SortSize 20
 HPCAT:XIMEA:Proc1:DataType 0
 HPCAT:XIMEA:Proc1:ColorMode 0
 HPCAT:XIMEA:Proc1:ArrayCallbacks 1
-HPCAT:XIMEA:Proc1:NDAttributesFile 0
-HPCAT:XIMEA:Proc1:NDAttributesMacros 0
+HPCAT:XIMEA:Proc1:NDAttributesFile 
+HPCAT:XIMEA:Proc1:NDAttributesMacros 
 HPCAT:XIMEA:Proc1:PoolUsedMem.SCAN 6
-HPCAT:XIMEA:Proc1:TIFF:FilePath 0
-HPCAT:XIMEA:Proc1:TIFF:FileName 0
+HPCAT:XIMEA:Proc1:TIFF:FilePath 
+HPCAT:XIMEA:Proc1:TIFF:FileName 
 HPCAT:XIMEA:Proc1:TIFF:FileNumber 0
 HPCAT:XIMEA:Proc1:TIFF:AutoIncrement 0
-HPCAT:XIMEA:Proc1:TIFF:FileTemplate 0
+HPCAT:XIMEA:Proc1:TIFF:FileTemplate 
 HPCAT:XIMEA:Proc1:TIFF:AutoSave 0
 HPCAT:XIMEA:Proc1:TIFF:FileFormat 0
 HPCAT:XIMEA:Proc1:TIFF:FileWriteMode 0
@@ -455,7 +455,7 @@ HPCAT:XIMEA:Proc1:TIFF:DeleteDriverFile 0
 HPCAT:XIMEA:Proc1:TIFF:CreateDirectory 0
 HPCAT:XIMEA:Proc1:TIFF:LazyOpen 0
 HPCAT:XIMEA:Proc1:TIFF:TempSuffix 
-HPCAT:XIMEA:Proc1:TIFF:NDArrayPort X1
+HPCAT:XIMEA:Proc1:TIFF:NDArrayPort X2
 HPCAT:XIMEA:Proc1:TIFF:NDArrayAddress 0
 HPCAT:XIMEA:Proc1:TIFF:EnableCallbacks 0
 HPCAT:XIMEA:Proc1:TIFF:MinCallbackTime 0
@@ -469,10 +469,10 @@ HPCAT:XIMEA:Proc1:TIFF:SortSize 20
 HPCAT:XIMEA:Proc1:TIFF:DataType 0
 HPCAT:XIMEA:Proc1:TIFF:ColorMode 0
 HPCAT:XIMEA:Proc1:TIFF:ArrayCallbacks 0
-HPCAT:XIMEA:Proc1:TIFF:NDAttributesFile 0
-HPCAT:XIMEA:Proc1:TIFF:NDAttributesMacros 0
+HPCAT:XIMEA:Proc1:TIFF:NDAttributesFile 
+HPCAT:XIMEA:Proc1:TIFF:NDAttributesMacros 
 HPCAT:XIMEA:Proc1:TIFF:PoolUsedMem.SCAN 6
-HPCAT:XIMEA:Scatter1:NDArrayPort X1
+HPCAT:XIMEA:Scatter1:NDArrayPort X2
 HPCAT:XIMEA:Scatter1:NDArrayAddress 0
 HPCAT:XIMEA:Scatter1:EnableCallbacks 0
 HPCAT:XIMEA:Scatter1:MinCallbackTime 0
@@ -486,10 +486,10 @@ HPCAT:XIMEA:Scatter1:SortSize 20
 HPCAT:XIMEA:Scatter1:DataType 0
 HPCAT:XIMEA:Scatter1:ColorMode 0
 HPCAT:XIMEA:Scatter1:ArrayCallbacks 1
-HPCAT:XIMEA:Scatter1:NDAttributesFile 0
-HPCAT:XIMEA:Scatter1:NDAttributesMacros 0
+HPCAT:XIMEA:Scatter1:NDAttributesFile 
+HPCAT:XIMEA:Scatter1:NDAttributesMacros 
 HPCAT:XIMEA:Scatter1:PoolUsedMem.SCAN 6
-HPCAT:XIMEA:Gather1:NDArrayPort X1
+HPCAT:XIMEA:Gather1:NDArrayPort X2
 HPCAT:XIMEA:Gather1:NDArrayAddress 0
 HPCAT:XIMEA:Gather1:EnableCallbacks 0
 HPCAT:XIMEA:Gather1:MinCallbackTime 0
@@ -503,24 +503,24 @@ HPCAT:XIMEA:Gather1:SortSize 20
 HPCAT:XIMEA:Gather1:DataType 0
 HPCAT:XIMEA:Gather1:ColorMode 0
 HPCAT:XIMEA:Gather1:ArrayCallbacks 1
-HPCAT:XIMEA:Gather1:NDAttributesFile 0
-HPCAT:XIMEA:Gather1:NDAttributesMacros 0
+HPCAT:XIMEA:Gather1:NDAttributesFile 
+HPCAT:XIMEA:Gather1:NDAttributesMacros 
 HPCAT:XIMEA:Gather1:PoolUsedMem.SCAN 6
-HPCAT:XIMEA:Gather1:NDArrayPort_1 X1
+HPCAT:XIMEA:Gather1:NDArrayPort_1 X2
 HPCAT:XIMEA:Gather1:NDArrayAddress_1 0
-HPCAT:XIMEA:Gather1:NDArrayPort_2 X1
+HPCAT:XIMEA:Gather1:NDArrayPort_2 X2
 HPCAT:XIMEA:Gather1:NDArrayAddress_2 0
-HPCAT:XIMEA:Gather1:NDArrayPort_3 X1
+HPCAT:XIMEA:Gather1:NDArrayPort_3 X2
 HPCAT:XIMEA:Gather1:NDArrayAddress_3 0
-HPCAT:XIMEA:Gather1:NDArrayPort_4 X1
+HPCAT:XIMEA:Gather1:NDArrayPort_4 X2
 HPCAT:XIMEA:Gather1:NDArrayAddress_4 0
-HPCAT:XIMEA:Gather1:NDArrayPort_5 X1
+HPCAT:XIMEA:Gather1:NDArrayPort_5 X2
 HPCAT:XIMEA:Gather1:NDArrayAddress_5 0
-HPCAT:XIMEA:Gather1:NDArrayPort_6 X1
+HPCAT:XIMEA:Gather1:NDArrayPort_6 X2
 HPCAT:XIMEA:Gather1:NDArrayAddress_6 0
-HPCAT:XIMEA:Gather1:NDArrayPort_7 X1
+HPCAT:XIMEA:Gather1:NDArrayPort_7 X2
 HPCAT:XIMEA:Gather1:NDArrayAddress_7 0
-HPCAT:XIMEA:Gather1:NDArrayPort_8 X1
+HPCAT:XIMEA:Gather1:NDArrayPort_8 X2
 HPCAT:XIMEA:Gather1:NDArrayAddress_8 0
 HPCAT:XIMEA:Stats1:BgdWidth 1
 HPCAT:XIMEA:Stats1:ComputeStatistics 1
@@ -552,10 +552,10 @@ HPCAT:XIMEA:Stats1:TS:SortSize 20
 HPCAT:XIMEA:Stats1:TS:DataType 0
 HPCAT:XIMEA:Stats1:TS:ColorMode 0
 HPCAT:XIMEA:Stats1:TS:ArrayCallbacks 1
-HPCAT:XIMEA:Stats1:TS:NDAttributesFile 0
-HPCAT:XIMEA:Stats1:TS:NDAttributesMacros 0
+HPCAT:XIMEA:Stats1:TS:NDAttributesFile 
+HPCAT:XIMEA:Stats1:TS:NDAttributesMacros 
 HPCAT:XIMEA:Stats1:TS:PoolUsedMem.SCAN 6
-HPCAT:XIMEA:Stats1:NDArrayPort X1
+HPCAT:XIMEA:Stats1:NDArrayPort X2
 HPCAT:XIMEA:Stats1:NDArrayAddress 0
 HPCAT:XIMEA:Stats1:EnableCallbacks 0
 HPCAT:XIMEA:Stats1:MinCallbackTime 0
@@ -569,8 +569,8 @@ HPCAT:XIMEA:Stats1:SortSize 20
 HPCAT:XIMEA:Stats1:DataType 0
 HPCAT:XIMEA:Stats1:ColorMode 0
 HPCAT:XIMEA:Stats1:ArrayCallbacks 1
-HPCAT:XIMEA:Stats1:NDAttributesFile 0
-HPCAT:XIMEA:Stats1:NDAttributesMacros 0
+HPCAT:XIMEA:Stats1:NDAttributesFile 
+HPCAT:XIMEA:Stats1:NDAttributesMacros 
 HPCAT:XIMEA:Stats1:PoolUsedMem.SCAN 6
 HPCAT:XIMEA:Stats1:Reset.SCAN 0
 HPCAT:XIMEA:Stats1:Reset.DESC 
@@ -803,10 +803,10 @@ HPCAT:XIMEA:Stats2:TS:SortSize 20
 HPCAT:XIMEA:Stats2:TS:DataType 0
 HPCAT:XIMEA:Stats2:TS:ColorMode 0
 HPCAT:XIMEA:Stats2:TS:ArrayCallbacks 1
-HPCAT:XIMEA:Stats2:TS:NDAttributesFile 0
-HPCAT:XIMEA:Stats2:TS:NDAttributesMacros 0
+HPCAT:XIMEA:Stats2:TS:NDAttributesFile 
+HPCAT:XIMEA:Stats2:TS:NDAttributesMacros 
 HPCAT:XIMEA:Stats2:TS:PoolUsedMem.SCAN 6
-HPCAT:XIMEA:Stats2:NDArrayPort X1
+HPCAT:XIMEA:Stats2:NDArrayPort X2
 HPCAT:XIMEA:Stats2:NDArrayAddress 0
 HPCAT:XIMEA:Stats2:EnableCallbacks 0
 HPCAT:XIMEA:Stats2:MinCallbackTime 0
@@ -820,8 +820,8 @@ HPCAT:XIMEA:Stats2:SortSize 20
 HPCAT:XIMEA:Stats2:DataType 0
 HPCAT:XIMEA:Stats2:ColorMode 0
 HPCAT:XIMEA:Stats2:ArrayCallbacks 1
-HPCAT:XIMEA:Stats2:NDAttributesFile 0
-HPCAT:XIMEA:Stats2:NDAttributesMacros 0
+HPCAT:XIMEA:Stats2:NDAttributesFile 
+HPCAT:XIMEA:Stats2:NDAttributesMacros 
 HPCAT:XIMEA:Stats2:PoolUsedMem.SCAN 6
 HPCAT:XIMEA:Stats2:Reset.SCAN 0
 HPCAT:XIMEA:Stats2:Reset.DESC 
@@ -1054,10 +1054,10 @@ HPCAT:XIMEA:Stats3:TS:SortSize 20
 HPCAT:XIMEA:Stats3:TS:DataType 0
 HPCAT:XIMEA:Stats3:TS:ColorMode 0
 HPCAT:XIMEA:Stats3:TS:ArrayCallbacks 1
-HPCAT:XIMEA:Stats3:TS:NDAttributesFile 0
-HPCAT:XIMEA:Stats3:TS:NDAttributesMacros 0
+HPCAT:XIMEA:Stats3:TS:NDAttributesFile 
+HPCAT:XIMEA:Stats3:TS:NDAttributesMacros 
 HPCAT:XIMEA:Stats3:TS:PoolUsedMem.SCAN 6
-HPCAT:XIMEA:Stats3:NDArrayPort X1
+HPCAT:XIMEA:Stats3:NDArrayPort X2
 HPCAT:XIMEA:Stats3:NDArrayAddress 0
 HPCAT:XIMEA:Stats3:EnableCallbacks 0
 HPCAT:XIMEA:Stats3:MinCallbackTime 0
@@ -1071,8 +1071,8 @@ HPCAT:XIMEA:Stats3:SortSize 20
 HPCAT:XIMEA:Stats3:DataType 0
 HPCAT:XIMEA:Stats3:ColorMode 0
 HPCAT:XIMEA:Stats3:ArrayCallbacks 1
-HPCAT:XIMEA:Stats3:NDAttributesFile 0
-HPCAT:XIMEA:Stats3:NDAttributesMacros 0
+HPCAT:XIMEA:Stats3:NDAttributesFile 
+HPCAT:XIMEA:Stats3:NDAttributesMacros 
 HPCAT:XIMEA:Stats3:PoolUsedMem.SCAN 6
 HPCAT:XIMEA:Stats3:Reset.SCAN 0
 HPCAT:XIMEA:Stats3:Reset.DESC 
@@ -1305,10 +1305,10 @@ HPCAT:XIMEA:Stats4:TS:SortSize 20
 HPCAT:XIMEA:Stats4:TS:DataType 0
 HPCAT:XIMEA:Stats4:TS:ColorMode 0
 HPCAT:XIMEA:Stats4:TS:ArrayCallbacks 1
-HPCAT:XIMEA:Stats4:TS:NDAttributesFile 0
-HPCAT:XIMEA:Stats4:TS:NDAttributesMacros 0
+HPCAT:XIMEA:Stats4:TS:NDAttributesFile 
+HPCAT:XIMEA:Stats4:TS:NDAttributesMacros 
 HPCAT:XIMEA:Stats4:TS:PoolUsedMem.SCAN 6
-HPCAT:XIMEA:Stats4:NDArrayPort X1
+HPCAT:XIMEA:Stats4:NDArrayPort X2
 HPCAT:XIMEA:Stats4:NDArrayAddress 0
 HPCAT:XIMEA:Stats4:EnableCallbacks 0
 HPCAT:XIMEA:Stats4:MinCallbackTime 0
@@ -1322,8 +1322,8 @@ HPCAT:XIMEA:Stats4:SortSize 20
 HPCAT:XIMEA:Stats4:DataType 0
 HPCAT:XIMEA:Stats4:ColorMode 0
 HPCAT:XIMEA:Stats4:ArrayCallbacks 1
-HPCAT:XIMEA:Stats4:NDAttributesFile 0
-HPCAT:XIMEA:Stats4:NDAttributesMacros 0
+HPCAT:XIMEA:Stats4:NDAttributesFile 
+HPCAT:XIMEA:Stats4:NDAttributesMacros 
 HPCAT:XIMEA:Stats4:PoolUsedMem.SCAN 6
 HPCAT:XIMEA:Stats4:Reset.SCAN 0
 HPCAT:XIMEA:Stats4:Reset.DESC 
@@ -1556,10 +1556,10 @@ HPCAT:XIMEA:Stats5:TS:SortSize 20
 HPCAT:XIMEA:Stats5:TS:DataType 0
 HPCAT:XIMEA:Stats5:TS:ColorMode 0
 HPCAT:XIMEA:Stats5:TS:ArrayCallbacks 1
-HPCAT:XIMEA:Stats5:TS:NDAttributesFile 0
-HPCAT:XIMEA:Stats5:TS:NDAttributesMacros 0
+HPCAT:XIMEA:Stats5:TS:NDAttributesFile 
+HPCAT:XIMEA:Stats5:TS:NDAttributesMacros 
 HPCAT:XIMEA:Stats5:TS:PoolUsedMem.SCAN 6
-HPCAT:XIMEA:Stats5:NDArrayPort X1
+HPCAT:XIMEA:Stats5:NDArrayPort X2
 HPCAT:XIMEA:Stats5:NDArrayAddress 0
 HPCAT:XIMEA:Stats5:EnableCallbacks 0
 HPCAT:XIMEA:Stats5:MinCallbackTime 0
@@ -1573,8 +1573,8 @@ HPCAT:XIMEA:Stats5:SortSize 20
 HPCAT:XIMEA:Stats5:DataType 0
 HPCAT:XIMEA:Stats5:ColorMode 0
 HPCAT:XIMEA:Stats5:ArrayCallbacks 1
-HPCAT:XIMEA:Stats5:NDAttributesFile 0
-HPCAT:XIMEA:Stats5:NDAttributesMacros 0
+HPCAT:XIMEA:Stats5:NDAttributesFile 
+HPCAT:XIMEA:Stats5:NDAttributesMacros 
 HPCAT:XIMEA:Stats5:PoolUsedMem.SCAN 6
 HPCAT:XIMEA:Stats5:Reset.SCAN 0
 HPCAT:XIMEA:Stats5:Reset.DESC 
@@ -1779,7 +1779,7 @@ HPCAT:XIMEA:Stats5:Reset2.SELN 1
 HPCAT:XIMEA:Stats5:Reset2.SELM 0
 HPCAT:XIMEA:ROIStat1:TSNumPoints 2048
 HPCAT:XIMEA:ROIStat1:TSRead.SCAN 6
-HPCAT:XIMEA:ROIStat1:NDArrayPort X1
+HPCAT:XIMEA:ROIStat1:NDArrayPort X2
 HPCAT:XIMEA:ROIStat1:NDArrayAddress 0
 HPCAT:XIMEA:ROIStat1:EnableCallbacks 0
 HPCAT:XIMEA:ROIStat1:MinCallbackTime 0
@@ -1793,8 +1793,8 @@ HPCAT:XIMEA:ROIStat1:SortSize 20
 HPCAT:XIMEA:ROIStat1:DataType 0
 HPCAT:XIMEA:ROIStat1:ColorMode 0
 HPCAT:XIMEA:ROIStat1:ArrayCallbacks 1
-HPCAT:XIMEA:ROIStat1:NDAttributesFile 0
-HPCAT:XIMEA:ROIStat1:NDAttributesMacros 0
+HPCAT:XIMEA:ROIStat1:NDAttributesFile 
+HPCAT:XIMEA:ROIStat1:NDAttributesMacros 
 HPCAT:XIMEA:ROIStat1:PoolUsedMem.SCAN 6
 HPCAT:XIMEA:ROIStat1:1:Name 
 HPCAT:XIMEA:ROIStat1:1:Use 0
@@ -1853,7 +1853,7 @@ HPCAT:XIMEA:ROIStat1:8:MinY 0
 HPCAT:XIMEA:ROIStat1:8:SizeX 0
 HPCAT:XIMEA:ROIStat1:8:SizeY 0
 HPCAT:XIMEA:Trans1:Type 0
-HPCAT:XIMEA:Trans1:NDArrayPort X1
+HPCAT:XIMEA:Trans1:NDArrayPort X2
 HPCAT:XIMEA:Trans1:NDArrayAddress 0
 HPCAT:XIMEA:Trans1:EnableCallbacks 0
 HPCAT:XIMEA:Trans1:MinCallbackTime 0
@@ -1867,10 +1867,10 @@ HPCAT:XIMEA:Trans1:SortSize 20
 HPCAT:XIMEA:Trans1:DataType 0
 HPCAT:XIMEA:Trans1:ColorMode 0
 HPCAT:XIMEA:Trans1:ArrayCallbacks 1
-HPCAT:XIMEA:Trans1:NDAttributesFile 0
-HPCAT:XIMEA:Trans1:NDAttributesMacros 0
+HPCAT:XIMEA:Trans1:NDAttributesFile 
+HPCAT:XIMEA:Trans1:NDAttributesMacros 
 HPCAT:XIMEA:Trans1:PoolUsedMem.SCAN 6
-HPCAT:XIMEA:Over1:NDArrayPort X1
+HPCAT:XIMEA:Over1:NDArrayPort X2
 HPCAT:XIMEA:Over1:NDArrayAddress 0
 HPCAT:XIMEA:Over1:EnableCallbacks 0
 HPCAT:XIMEA:Over1:MinCallbackTime 0
@@ -1884,8 +1884,8 @@ HPCAT:XIMEA:Over1:SortSize 20
 HPCAT:XIMEA:Over1:DataType 0
 HPCAT:XIMEA:Over1:ColorMode 0
 HPCAT:XIMEA:Over1:ArrayCallbacks 1
-HPCAT:XIMEA:Over1:NDAttributesFile 0
-HPCAT:XIMEA:Over1:NDAttributesMacros 0
+HPCAT:XIMEA:Over1:NDAttributesFile 
+HPCAT:XIMEA:Over1:NDAttributesMacros 
 HPCAT:XIMEA:Over1:PoolUsedMem.SCAN 6
 HPCAT:XIMEA:Over1:1:Name ROI1
 HPCAT:XIMEA:Over1:1:Use 0
@@ -1908,7 +1908,7 @@ HPCAT:XIMEA:Over1:1:Green 1
 HPCAT:XIMEA:Over1:1:Blue 1
 HPCAT:XIMEA:Over1:1:TimeStampFormat %Y-%m-%d %H:%M:%S.%03f
 HPCAT:XIMEA:Over1:1:Font 0
-HPCAT:XIMEA:Over1:1:DisplayText 0
+HPCAT:XIMEA:Over1:1:DisplayText 
 HPCAT:XIMEA:Over1:2:Name ROI2
 HPCAT:XIMEA:Over1:2:Use 0
 HPCAT:XIMEA:Over1:2:PositionXLink.DOL HPCAT:XIMEA:ROI2:MinX_RBV CP MS
@@ -1930,7 +1930,7 @@ HPCAT:XIMEA:Over1:2:Green 1
 HPCAT:XIMEA:Over1:2:Blue 1
 HPCAT:XIMEA:Over1:2:TimeStampFormat %Y-%m-%d %H:%M:%S.%03f
 HPCAT:XIMEA:Over1:2:Font 0
-HPCAT:XIMEA:Over1:2:DisplayText 0
+HPCAT:XIMEA:Over1:2:DisplayText 
 HPCAT:XIMEA:Over1:3:Name ROI3
 HPCAT:XIMEA:Over1:3:Use 0
 HPCAT:XIMEA:Over1:3:PositionXLink.DOL HPCAT:XIMEA:ROI3:MinX_RBV CP MS
@@ -1952,7 +1952,7 @@ HPCAT:XIMEA:Over1:3:Green 1
 HPCAT:XIMEA:Over1:3:Blue 1
 HPCAT:XIMEA:Over1:3:TimeStampFormat %Y-%m-%d %H:%M:%S.%03f
 HPCAT:XIMEA:Over1:3:Font 0
-HPCAT:XIMEA:Over1:3:DisplayText 0
+HPCAT:XIMEA:Over1:3:DisplayText 
 HPCAT:XIMEA:Over1:4:Name ROI4
 HPCAT:XIMEA:Over1:4:Use 0
 HPCAT:XIMEA:Over1:4:PositionXLink.DOL HPCAT:XIMEA:ROI4:MinX_RBV CP MS
@@ -1974,7 +1974,7 @@ HPCAT:XIMEA:Over1:4:Green 1
 HPCAT:XIMEA:Over1:4:Blue 1
 HPCAT:XIMEA:Over1:4:TimeStampFormat %Y-%m-%d %H:%M:%S.%03f
 HPCAT:XIMEA:Over1:4:Font 0
-HPCAT:XIMEA:Over1:4:DisplayText 0
+HPCAT:XIMEA:Over1:4:DisplayText 
 HPCAT:XIMEA:Over1:5:Name Cursor1
 HPCAT:XIMEA:Over1:5:Use 0
 HPCAT:XIMEA:Over1:5:PositionXLink.DOL junk CP MS
@@ -1996,7 +1996,7 @@ HPCAT:XIMEA:Over1:5:Green 1
 HPCAT:XIMEA:Over1:5:Blue 1
 HPCAT:XIMEA:Over1:5:TimeStampFormat %Y-%m-%d %H:%M:%S.%03f
 HPCAT:XIMEA:Over1:5:Font 0
-HPCAT:XIMEA:Over1:5:DisplayText 0
+HPCAT:XIMEA:Over1:5:DisplayText 
 HPCAT:XIMEA:Over1:6:Name Cursor2
 HPCAT:XIMEA:Over1:6:Use 0
 HPCAT:XIMEA:Over1:6:PositionXLink.DOL junk CP MS
@@ -2018,7 +2018,7 @@ HPCAT:XIMEA:Over1:6:Green 1
 HPCAT:XIMEA:Over1:6:Blue 1
 HPCAT:XIMEA:Over1:6:TimeStampFormat %Y-%m-%d %H:%M:%S.%03f
 HPCAT:XIMEA:Over1:6:Font 0
-HPCAT:XIMEA:Over1:6:DisplayText 0
+HPCAT:XIMEA:Over1:6:DisplayText 
 HPCAT:XIMEA:Over1:7:Name Box1
 HPCAT:XIMEA:Over1:7:Use 0
 HPCAT:XIMEA:Over1:7:PositionXLink.DOL junk CP MS
@@ -2040,7 +2040,7 @@ HPCAT:XIMEA:Over1:7:Green 1
 HPCAT:XIMEA:Over1:7:Blue 1
 HPCAT:XIMEA:Over1:7:TimeStampFormat %Y-%m-%d %H:%M:%S.%03f
 HPCAT:XIMEA:Over1:7:Font 0
-HPCAT:XIMEA:Over1:7:DisplayText 0
+HPCAT:XIMEA:Over1:7:DisplayText 
 HPCAT:XIMEA:Over1:8:Name Box2
 HPCAT:XIMEA:Over1:8:Use 0
 HPCAT:XIMEA:Over1:8:PositionXLink.DOL junk CP MS
@@ -2062,9 +2062,9 @@ HPCAT:XIMEA:Over1:8:Green 1
 HPCAT:XIMEA:Over1:8:Blue 1
 HPCAT:XIMEA:Over1:8:TimeStampFormat %Y-%m-%d %H:%M:%S.%03f
 HPCAT:XIMEA:Over1:8:Font 0
-HPCAT:XIMEA:Over1:8:DisplayText 0
+HPCAT:XIMEA:Over1:8:DisplayText 
 HPCAT:XIMEA:CC1:ColorModeOut 0
-HPCAT:XIMEA:CC1:NDArrayPort X1
+HPCAT:XIMEA:CC1:NDArrayPort X2
 HPCAT:XIMEA:CC1:NDArrayAddress 0
 HPCAT:XIMEA:CC1:EnableCallbacks 0
 HPCAT:XIMEA:CC1:MinCallbackTime 0
@@ -2078,11 +2078,11 @@ HPCAT:XIMEA:CC1:SortSize 20
 HPCAT:XIMEA:CC1:DataType 0
 HPCAT:XIMEA:CC1:ColorMode 0
 HPCAT:XIMEA:CC1:ArrayCallbacks 1
-HPCAT:XIMEA:CC1:NDAttributesFile 0
-HPCAT:XIMEA:CC1:NDAttributesMacros 0
+HPCAT:XIMEA:CC1:NDAttributesFile 
+HPCAT:XIMEA:CC1:NDAttributesMacros 
 HPCAT:XIMEA:CC1:PoolUsedMem.SCAN 6
 HPCAT:XIMEA:CC2:ColorModeOut 0
-HPCAT:XIMEA:CC2:NDArrayPort X1
+HPCAT:XIMEA:CC2:NDArrayPort X2
 HPCAT:XIMEA:CC2:NDArrayAddress 0
 HPCAT:XIMEA:CC2:EnableCallbacks 0
 HPCAT:XIMEA:CC2:MinCallbackTime 0
@@ -2096,17 +2096,17 @@ HPCAT:XIMEA:CC2:SortSize 20
 HPCAT:XIMEA:CC2:DataType 0
 HPCAT:XIMEA:CC2:ColorMode 0
 HPCAT:XIMEA:CC2:ArrayCallbacks 1
-HPCAT:XIMEA:CC2:NDAttributesFile 0
-HPCAT:XIMEA:CC2:NDAttributesMacros 0
+HPCAT:XIMEA:CC2:NDAttributesFile 
+HPCAT:XIMEA:CC2:NDAttributesMacros 
 HPCAT:XIMEA:CC2:PoolUsedMem.SCAN 6
 HPCAT:XIMEA:CB1:TriggerA 
 HPCAT:XIMEA:CB1:TriggerB 
-HPCAT:XIMEA:CB1:TriggerCalc 0
+HPCAT:XIMEA:CB1:TriggerCalc 
 HPCAT:XIMEA:CB1:PreCount 100
 HPCAT:XIMEA:CB1:PostCount 100
 HPCAT:XIMEA:CB1:PresetTriggerCount 1
 HPCAT:XIMEA:CB1:FlushOnSoftTrg 0
-HPCAT:XIMEA:CB1:NDArrayPort X1
+HPCAT:XIMEA:CB1:NDArrayPort X2
 HPCAT:XIMEA:CB1:NDArrayAddress 0
 HPCAT:XIMEA:CB1:EnableCallbacks 0
 HPCAT:XIMEA:CB1:MinCallbackTime 0
@@ -2120,8 +2120,8 @@ HPCAT:XIMEA:CB1:SortSize 20
 HPCAT:XIMEA:CB1:DataType 0
 HPCAT:XIMEA:CB1:ColorMode 0
 HPCAT:XIMEA:CB1:ArrayCallbacks 1
-HPCAT:XIMEA:CB1:NDAttributesFile 0
-HPCAT:XIMEA:CB1:NDAttributesMacros 0
+HPCAT:XIMEA:CB1:NDAttributesFile 
+HPCAT:XIMEA:CB1:NDAttributesMacros 
 HPCAT:XIMEA:CB1:PoolUsedMem.SCAN 6
 HPCAT:XIMEA:Attr1:TS:TSNumPoints 2048
 HPCAT:XIMEA:Attr1:TS:TSTimePerPointLink.DOL 0.1
@@ -2142,10 +2142,10 @@ HPCAT:XIMEA:Attr1:TS:SortSize 20
 HPCAT:XIMEA:Attr1:TS:DataType 0
 HPCAT:XIMEA:Attr1:TS:ColorMode 0
 HPCAT:XIMEA:Attr1:TS:ArrayCallbacks 1
-HPCAT:XIMEA:Attr1:TS:NDAttributesFile 0
-HPCAT:XIMEA:Attr1:TS:NDAttributesMacros 0
+HPCAT:XIMEA:Attr1:TS:NDAttributesFile 
+HPCAT:XIMEA:Attr1:TS:NDAttributesMacros 
 HPCAT:XIMEA:Attr1:TS:PoolUsedMem.SCAN 6
-HPCAT:XIMEA:Attr1:NDArrayPort X1
+HPCAT:XIMEA:Attr1:NDArrayPort X2
 HPCAT:XIMEA:Attr1:NDArrayAddress 0
 HPCAT:XIMEA:Attr1:EnableCallbacks 0
 HPCAT:XIMEA:Attr1:MinCallbackTime 0
@@ -2159,18 +2159,18 @@ HPCAT:XIMEA:Attr1:SortSize 20
 HPCAT:XIMEA:Attr1:DataType 0
 HPCAT:XIMEA:Attr1:ColorMode 0
 HPCAT:XIMEA:Attr1:ArrayCallbacks 0
-HPCAT:XIMEA:Attr1:NDAttributesFile 0
-HPCAT:XIMEA:Attr1:NDAttributesMacros 0
+HPCAT:XIMEA:Attr1:NDAttributesFile 
+HPCAT:XIMEA:Attr1:NDAttributesMacros 
 HPCAT:XIMEA:Attr1:PoolUsedMem.SCAN 6
-HPCAT:XIMEA:Attr1:1:AttrName 0
-HPCAT:XIMEA:Attr1:2:AttrName 0
-HPCAT:XIMEA:Attr1:3:AttrName 0
-HPCAT:XIMEA:Attr1:4:AttrName 0
-HPCAT:XIMEA:Attr1:5:AttrName 0
-HPCAT:XIMEA:Attr1:6:AttrName 0
-HPCAT:XIMEA:Attr1:7:AttrName 0
-HPCAT:XIMEA:Attr1:8:AttrName 0
-HPCAT:XIMEA:FFT1:NDArrayPort X1
+HPCAT:XIMEA:Attr1:1:AttrName 
+HPCAT:XIMEA:Attr1:2:AttrName 
+HPCAT:XIMEA:Attr1:3:AttrName 
+HPCAT:XIMEA:Attr1:4:AttrName 
+HPCAT:XIMEA:Attr1:5:AttrName 
+HPCAT:XIMEA:Attr1:6:AttrName 
+HPCAT:XIMEA:Attr1:7:AttrName 
+HPCAT:XIMEA:Attr1:8:AttrName 
+HPCAT:XIMEA:FFT1:NDArrayPort X2
 HPCAT:XIMEA:FFT1:NDArrayAddress 0
 HPCAT:XIMEA:FFT1:EnableCallbacks 0
 HPCAT:XIMEA:FFT1:MinCallbackTime 0
@@ -2184,8 +2184,8 @@ HPCAT:XIMEA:FFT1:SortSize 20
 HPCAT:XIMEA:FFT1:DataType 0
 HPCAT:XIMEA:FFT1:ColorMode 0
 HPCAT:XIMEA:FFT1:ArrayCallbacks 1
-HPCAT:XIMEA:FFT1:NDAttributesFile 0
-HPCAT:XIMEA:FFT1:NDAttributesMacros 0
+HPCAT:XIMEA:FFT1:NDAttributesFile 
+HPCAT:XIMEA:FFT1:NDAttributesMacros 
 HPCAT:XIMEA:FFT1:PoolUsedMem.SCAN 6
 HPCAT:XIMEA:FFT1:FFTDirection 0
 HPCAT:XIMEA:FFT1:FFTSuppressDC 0
@@ -2198,7 +2198,7 @@ HPCAT:XIMEA:Codec1:BloscCompressor 0
 HPCAT:XIMEA:Codec1:BloscCLevel 5
 HPCAT:XIMEA:Codec1:BloscShuffle 0
 HPCAT:XIMEA:Codec1:BloscNumThreads 1
-HPCAT:XIMEA:Codec1:NDArrayPort X1
+HPCAT:XIMEA:Codec1:NDArrayPort X2
 HPCAT:XIMEA:Codec1:NDArrayAddress 0
 HPCAT:XIMEA:Codec1:EnableCallbacks 0
 HPCAT:XIMEA:Codec1:MinCallbackTime 0
@@ -2212,8 +2212,8 @@ HPCAT:XIMEA:Codec1:SortSize 20
 HPCAT:XIMEA:Codec1:DataType 0
 HPCAT:XIMEA:Codec1:ColorMode 0
 HPCAT:XIMEA:Codec1:ArrayCallbacks 1
-HPCAT:XIMEA:Codec1:NDAttributesFile 0
-HPCAT:XIMEA:Codec1:NDAttributesMacros 0
+HPCAT:XIMEA:Codec1:NDAttributesFile 
+HPCAT:XIMEA:Codec1:NDAttributesMacros 
 HPCAT:XIMEA:Codec1:PoolUsedMem.SCAN 6
 HPCAT:XIMEA:Codec2:Mode 0
 HPCAT:XIMEA:Codec2:Compressor 0
@@ -2222,7 +2222,7 @@ HPCAT:XIMEA:Codec2:BloscCompressor 0
 HPCAT:XIMEA:Codec2:BloscCLevel 5
 HPCAT:XIMEA:Codec2:BloscShuffle 0
 HPCAT:XIMEA:Codec2:BloscNumThreads 1
-HPCAT:XIMEA:Codec2:NDArrayPort X1
+HPCAT:XIMEA:Codec2:NDArrayPort X2
 HPCAT:XIMEA:Codec2:NDArrayAddress 0
 HPCAT:XIMEA:Codec2:EnableCallbacks 0
 HPCAT:XIMEA:Codec2:MinCallbackTime 0
@@ -2236,10 +2236,10 @@ HPCAT:XIMEA:Codec2:SortSize 20
 HPCAT:XIMEA:Codec2:DataType 0
 HPCAT:XIMEA:Codec2:ColorMode 0
 HPCAT:XIMEA:Codec2:ArrayCallbacks 1
-HPCAT:XIMEA:Codec2:NDAttributesFile 0
-HPCAT:XIMEA:Codec2:NDAttributesMacros 0
+HPCAT:XIMEA:Codec2:NDAttributesFile 
+HPCAT:XIMEA:Codec2:NDAttributesMacros 
 HPCAT:XIMEA:Codec2:PoolUsedMem.SCAN 6
-HPCAT:XIMEA:Pva1:NDArrayPort X1
+HPCAT:XIMEA:Pva1:NDArrayPort X2
 HPCAT:XIMEA:Pva1:NDArrayAddress 0
 HPCAT:XIMEA:Pva1:EnableCallbacks 0
 HPCAT:XIMEA:Pva1:MinCallbackTime 0
@@ -2253,8 +2253,8 @@ HPCAT:XIMEA:Pva1:SortSize 20
 HPCAT:XIMEA:Pva1:DataType 0
 HPCAT:XIMEA:Pva1:ColorMode 0
 HPCAT:XIMEA:Pva1:ArrayCallbacks 1
-HPCAT:XIMEA:Pva1:NDAttributesFile 0
-HPCAT:XIMEA:Pva1:NDAttributesMacros 0
+HPCAT:XIMEA:Pva1:NDAttributesFile 
+HPCAT:XIMEA:Pva1:NDAttributesMacros 
 HPCAT:XIMEA:Pva1:PoolUsedMem.SCAN 6
 HPCAT:XIMEA:scan1.ATIME 0
 HPCAT:XIMEA:scan1.COPYTO 0

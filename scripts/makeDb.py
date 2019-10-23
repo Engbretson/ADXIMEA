@@ -200,7 +200,7 @@ for node in doneNodes:
         print '  info(autosaveFields, "%s PINI VAL")' % a_autosaveFields
         print '}'
         print
-    elif node.nodeName in ["StringReg"]:
+    elif node.nodeName in ["StringReg","String"]:
         print 'record(stringin, "$(P)$(R)%s_RBV") {' % records[nodeName]
         print '  field(DTYP, "asynOctetRead")'
         print '  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_S_%s")' % nodeName

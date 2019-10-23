@@ -204,7 +204,7 @@ asynStatus MC023CG::initializeDetector() {
 	 systemString = (char *)calloc(80, sizeof(char));
 	XI_RETURN XI_status = XI_OK;
 
-//     #include "MC023CG_3.inc"
+     #include "MC023CG_3.inc"
 
  printf("Before MC023CG_4.inc \n");
 	#include "MC023CG_4.inc"

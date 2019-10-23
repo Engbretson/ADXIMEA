@@ -164,7 +164,7 @@
       <ImposedAccessMode>RW</ImposedAccessMode>
     </Integer>
     <Integer>
-      <DisplayName>AEAG Roi widh</DisplayName>
+      <DisplayName>AEAG Roi width</DisplayName>
       <Description>Automatic exposure/gain ROI Width</Description>
       <Xiapi_Par>aeag_roi_width</Xiapi_Par>
       <Visibility>Beginner</Visibility>
@@ -275,7 +275,7 @@
   </Group>
   <Group Comment="AE Setup">
     <Float>
-      <DisplayName>AEAG Exposure pripority</DisplayName>
+      <DisplayName>AEAG Exposure priority</DisplayName>
       <Description>Exposure priority (0.8 - exposure 80%, gain 20%).</Description>
       <Xiapi_Par>exp_priority</Xiapi_Par>
       <Visibility>Expert</Visibility>
@@ -464,13 +464,13 @@
     </Integer>
     <Integer>
       <DisplayName>Black level</DisplayName>
-      <Description>Last image black level counts. Can be used for Offline processing to recall it.</Description>
+      <Description>Last image black level counts (same as in XI_IMG). Setting can be used only for Offline Processing.</Description>
       <Xiapi_Par>image_black_level</Xiapi_Par>
       <Visibility>Expert</Visibility>
       <pMax>ImageBlackLevelMaxReg</pMax>
       <pMin>ImageBlackLevelMinReg</pMin>
       <pValue>ImageBlackLevelReg</pValue>
-      <ImposedAccessMode>RW</ImposedAccessMode>
+      <ImposedAccessMode>RO</ImposedAccessMode>
     </Integer>
   </Group>
   <Group Comment="Version info">
@@ -512,7 +512,7 @@
     </String>
     <String>
       <DisplayName>FPGA1 version</DisplayName>
-      <Description>Returns version of FPGA1 firmware.</Description>
+      <Description>Returns version of FPGA firmware currently running.</Description>
       <Xiapi_Par>version_fpga1</Xiapi_Par>
       <Visibility>Invisible</Visibility>
       <FileFormats/>
@@ -642,7 +642,7 @@
     </Enumeration>
     <Enumeration>
       <DisplayName>Image data bit depth</DisplayName>
-      <Description>bitdepth of data returned by function xiGetImage</Description>
+      <Description>bit depth of data returned by function xiGetImage</Description>
       <Xiapi_Par>image_data_bit_depth</Xiapi_Par>
       <EnumEntry>
         <DisplayName>8</DisplayName>
@@ -687,7 +687,7 @@
     </Enumeration>
     <Integer>
       <DisplayName>Bandwidth limit</DisplayName>
-      <Description>Set/get bandwidth(datarate)(in Megabits)</Description>
+      <Description>Set/get bandwidth(data rate in Megabits)</Description>
       <Xiapi_Par>limit_bandwidth</Xiapi_Par>
       <Visibility>Expert</Visibility>
       <pMax>BandwidthLimitMaxReg</pMax>
@@ -1343,7 +1343,7 @@
         <Value>0</Value>
       </EnumEntry>
       <EnumEntry>
-        <DisplayName>Arm presist</DisplayName>
+        <DisplayName>Arm persist</DisplayName>
         <Value>1</Value>
       </EnumEntry>
       <ImposedAccessMode>RW</ImposedAccessMode>
@@ -1447,7 +1447,7 @@
         <Value>22</Value>
       </EnumEntry>
       <EnumEntry>
-        <DisplayName>Framme valid inverted</DisplayName>
+        <DisplayName>Frame valid inverted</DisplayName>
         <Value>23</Value>
       </EnumEntry>
       <ImposedAccessMode>RW</ImposedAccessMode>
@@ -1866,6 +1866,7 @@
       <pInvalidator>DecimationHorizontalReg</pInvalidator>
       <pInvalidator>DataPipeParamValueReg</pInvalidator>
       <pInvalidator>HDRReg</pInvalidator>
+      <pInvalidator>SensorDataBitDepthReg</pInvalidator>
     </FloatReg>
     <FloatReg Name="GainMinReg">
       <xiApiPar>gain:min</xiApiPar>
@@ -1877,6 +1878,7 @@
       <pInvalidator>DecimationHorizontalReg</pInvalidator>
       <pInvalidator>DataPipeParamValueReg</pInvalidator>
       <pInvalidator>HDRReg</pInvalidator>
+      <pInvalidator>SensorDataBitDepthReg</pInvalidator>
     </FloatReg>
     <FloatReg Name="GainReg">
       <xiApiPar>gain</xiApiPar>
@@ -1888,6 +1890,7 @@
       <pInvalidator>DecimationHorizontalReg</pInvalidator>
       <pInvalidator>DataPipeParamValueReg</pInvalidator>
       <pInvalidator>HDRReg</pInvalidator>
+      <pInvalidator>SensorDataBitDepthReg</pInvalidator>
     </FloatReg>
     <IntReg Name="DownsamplingMaxReg">
       <xiApiPar>downsampling:max</xiApiPar>

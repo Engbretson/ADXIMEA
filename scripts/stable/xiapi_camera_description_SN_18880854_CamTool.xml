@@ -37,7 +37,7 @@
       <pIsLocked>TLParamsLocked</pIsLocked>
       <pValue>DownsamplingReg</pValue>
       <EnumEntry>
-        <DisplayName>1 (1536x2048)</DisplayName>
+        <DisplayName>1 (2048x1088)</DisplayName>
         <Value>1</Value>
       </EnumEntry>
       <ImposedAccessMode>RW</ImposedAccessMode>
@@ -91,14 +91,6 @@
       <EnumEntry>
         <DisplayName>Global</DisplayName>
         <Value>0</Value>
-      </EnumEntry>
-      <EnumEntry>
-        <DisplayName>Electronic rolling</DisplayName>
-        <Value>1</Value>
-      </EnumEntry>
-      <EnumEntry>
-        <DisplayName>Global reset release</DisplayName>
-        <Value>2</Value>
       </EnumEntry>
       <ImposedAccessMode>RW</ImposedAccessMode>
     </Enumeration>
@@ -409,18 +401,6 @@
       <Xiapi_Par>binning_selector</Xiapi_Par>
       <Visibility>Guru</Visibility>
       <pValue>BinningSelectorReg</pValue>
-      <EnumEntry>
-        <DisplayName>Sensor</DisplayName>
-        <Value>0</Value>
-      </EnumEntry>
-      <EnumEntry>
-        <DisplayName>FPGA</DisplayName>
-        <Value>1</Value>
-      </EnumEntry>
-      <EnumEntry>
-        <DisplayName>Host CPU</DisplayName>
-        <Value>2</Value>
-      </EnumEntry>
       <ImposedAccessMode>RW</ImposedAccessMode>
       <pSelected>BinningVertical</pSelected>
       <pSelected>BinningHorizontal</pSelected>
@@ -493,18 +473,6 @@
       <Xiapi_Par>decimation_selector</Xiapi_Par>
       <Visibility>Guru</Visibility>
       <pValue>DecimationSelectorReg</pValue>
-      <EnumEntry>
-        <DisplayName>Sensor</DisplayName>
-        <Value>0</Value>
-      </EnumEntry>
-      <EnumEntry>
-        <DisplayName>FPGA</DisplayName>
-        <Value>1</Value>
-      </EnumEntry>
-      <EnumEntry>
-        <DisplayName>Host CPU</DisplayName>
-        <Value>2</Value>
-      </EnumEntry>
       <ImposedAccessMode>RW</ImposedAccessMode>
       <pSelected>DecimationVertical</pSelected>
       <pSelected>DecimationHorizontal</pSelected>
@@ -557,14 +525,6 @@
       <Xiapi_Par>test_pattern_generator_selector</Xiapi_Par>
       <Visibility>Guru</Visibility>
       <pValue>TestPatternGeneratorSelectorReg</pValue>
-      <EnumEntry>
-        <DisplayName>Sensor</DisplayName>
-        <Value>0</Value>
-      </EnumEntry>
-      <EnumEntry>
-        <DisplayName>FPGA</DisplayName>
-        <Value>1</Value>
-      </EnumEntry>
       <ImposedAccessMode>RW</ImposedAccessMode>
       <pSelected>TestPattern</pSelected>
     </Enumeration>
@@ -575,54 +535,6 @@
       <Visibility>Guru</Visibility>
       <pIsLocked>TLParamsLocked</pIsLocked>
       <pValue>TestPatternReg</pValue>
-      <EnumEntry>
-        <DisplayName>Off</DisplayName>
-        <Value>0</Value>
-      </EnumEntry>
-      <EnumEntry>
-        <DisplayName>Black</DisplayName>
-        <Value>1</Value>
-      </EnumEntry>
-      <EnumEntry>
-        <DisplayName>White</DisplayName>
-        <Value>2</Value>
-      </EnumEntry>
-      <EnumEntry>
-        <DisplayName>Horiz. Gradient</DisplayName>
-        <Value>3</Value>
-      </EnumEntry>
-      <EnumEntry>
-        <DisplayName>Vert. Gradient</DisplayName>
-        <Value>4</Value>
-      </EnumEntry>
-      <EnumEntry>
-        <DisplayName>Horiz. Moving Gradient</DisplayName>
-        <Value>5</Value>
-      </EnumEntry>
-      <EnumEntry>
-        <DisplayName>Vert. Moving Gradient</DisplayName>
-        <Value>6</Value>
-      </EnumEntry>
-      <EnumEntry>
-        <DisplayName>Horiz. Moving Line</DisplayName>
-        <Value>7</Value>
-      </EnumEntry>
-      <EnumEntry>
-        <DisplayName>Vert. Moving Line</DisplayName>
-        <Value>8</Value>
-      </EnumEntry>
-      <EnumEntry>
-        <DisplayName>Color Bar</DisplayName>
-        <Value>9</Value>
-      </EnumEntry>
-      <EnumEntry>
-        <DisplayName>Frame Counter</DisplayName>
-        <Value>10</Value>
-      </EnumEntry>
-      <EnumEntry>
-        <DisplayName>Device Specific Counter</DisplayName>
-        <Value>11</Value>
-      </EnumEntry>
       <ImposedAccessMode>RW</ImposedAccessMode>
     </Enumeration>
   </Group>

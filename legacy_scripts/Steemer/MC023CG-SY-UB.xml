@@ -1,0 +1,2916 @@
+
+<RegisterDescription xmlns="http://www.genicam.org/GenApi/Version_1_1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.genicam.org/GenApi/Version_1_1         http://www.genicam.org/GenApi/GenApiSchema_Version_1_1.xsd" ModelName="xiAPI" VendorName="XIMEA" ToolTip="xiAPI Camera Interface" StandardNameSpace="None" SchemaMajorVersion="1" SchemaMinorVersion="1" SchemaSubMinorVersion="1" MajorVersion="1" MinorVersion="1" SubMinorVersion="7" ProductGuid="4475E586-4038-41e2-B0E5-3247876BC976" VersionGuid="847E6651-ACD9-40a0-8EBA-816B09BD31E7">
+  <Group Comment="RootCategory">
+    <Category Name="Root">
+      <ToolTip>Root category</ToolTip>
+      <DisplayName>Camera Features</DisplayName>
+      <Visibility>Beginner</Visibility>
+      <pFeature>DeviceControl</pFeature>
+      <pFeature>ImageFormatControl</pFeature>
+      <pFeature>AcquisitionControl</pFeature>
+      <pFeature>DigitalIOControl</pFeature>
+      <pFeature>CounterAndTimerControl</pFeature>
+      <pFeature>EventControl</pFeature>
+      <pFeature>AnalogControl</pFeature>
+      <pFeature>LUTControl</pFeature>
+      <pFeature>TransportLayerControl</pFeature>
+      <pFeature>UserSetControl</pFeature>
+      <pFeature>FileAccessControl</pFeature>
+      <pFeature>ColorTransformationControl</pFeature>
+      <pFeature>ActionControl</pFeature>
+      <pFeature>LEDControl</pFeature>
+      <pFeature>LensControl</pFeature>
+    </Category>
+  </Group>
+  <Group Comment="Subcategories">
+    <Category Name="DeviceControl" NameSpace="Standard">
+      <ToolTip>Features for device information and control</ToolTip>
+      <Description>Category of features for device information and control</Description>
+      <DisplayName>Device Control</DisplayName>
+      <Visibility>Beginner</Visibility>
+      <pFeature>DeviceVendorName</pFeature>
+      <pFeature>DeviceModelName</pFeature>
+      <pFeature>DeviceManufacturerInfo</pFeature>
+      <pFeature>DeviceFirmwareVersion</pFeature>
+      <pFeature>DeviceID</pFeature>
+      <pFeature>DeviceUserID</pFeature>
+      <pFeature>DeviceTemperatureSelector</pFeature>
+      <pFeature>DeviceTemperature</pFeature>
+      <pFeature>TLParamsLocked</pFeature>
+      <pFeature>DeviceLinkThroughputLimitMode</pFeature>
+      <pFeature>DeviceLinkThroughputLimit</pFeature>
+      <pFeature>DeviceVersion</pFeature>
+    </Category>
+    <Category Name="ImageFormatControl" NameSpace="Standard">
+      <ToolTip>Features controlling image format</ToolTip>
+      <Description>Category of features controlling image format</Description>
+      <DisplayName>Image Format Control</DisplayName>
+      <Visibility>Beginner</Visibility>
+      <pFeature>SensorWidth</pFeature>
+      <pFeature>SensorHeight</pFeature>
+      <pFeature>Width</pFeature>
+      <pFeature>Height</pFeature>
+      <pFeature>PixelFormat</pFeature>
+      <pFeature>BinningHorizontal</pFeature>
+      <pFeature>BinningVertical</pFeature>
+      <pFeature>DecimationHorizontal</pFeature>
+      <pFeature>DecimationVertical</pFeature>
+      <pFeature>OffsetX</pFeature>
+      <pFeature>OffsetY</pFeature>
+      <pFeature>BinningSelector</pFeature>
+      <pFeature>DecimationSelector</pFeature>
+      <pFeature>SensorShutterMode</pFeature>
+      <pFeature>ReverseX</pFeature>
+      <pFeature>ReverseY</pFeature>
+      <pFeature>WidthMax</pFeature>
+      <pFeature>BinningHorizontalPattern</pFeature>
+      <pFeature>BinningVerticalPattern</pFeature>
+      <pFeature>DecimationHorizontalPattern</pFeature>
+      <pFeature>DecimationVerticalPattern</pFeature>
+      <pFeature>HeightMax</pFeature>
+      <pFeature>BinningHorizontalMode</pFeature>
+      <pFeature>BinningVerticalMode</pFeature>
+    </Category>
+    <Category Name="AcquisitionControl" NameSpace="Standard">
+      <ToolTip>Features for acquisition and trigger control</ToolTip>
+      <Description>Category of features for acquisition and trigger control.</Description>
+      <DisplayName>Acquisition Control</DisplayName>
+      <Visibility>Beginner</Visibility>
+      <pFeature>AcquisitionMode</pFeature>
+      <pFeature>AcquisitionStart</pFeature>
+      <pFeature>AcquisitionStop</pFeature>
+      <pFeature>ExposureMode</pFeature>
+      <pFeature>ExposureTime</pFeature>
+      <pFeature>TriggerSelector</pFeature>
+      <pFeature>TriggerMode</pFeature>
+      <pFeature>TriggerSoftware</pFeature>
+      <pFeature>TriggerSource</pFeature>
+      <pFeature>TriggerActivation</pFeature>
+      <pFeature>AcquisitionFrameRate</pFeature>
+      <pFeature>AcquisitionTimeout</pFeature>
+      <pFeature>AEAGEnable</pFeature>
+      <pFeature>AEAGExpPrio</pFeature>
+      <pFeature>AEAGExpLim</pFeature>
+      <pFeature>AEAGGainLim</pFeature>
+      <pFeature>AEAGLevel</pFeature>
+      <pFeature>BadpixelCorrection</pFeature>
+      <pFeature>AcquisitionBuffersQueueSize</pFeature>
+      <pFeature>AcquisitionBurstFrameCount</pFeature>
+      <pFeature>AcquisitionTimingMode</pFeature>
+      <pFeature>AcquisitionAbort</pFeature>
+      <pFeature>AcquisitionStatus</pFeature>
+      <pFeature>AcquisitionStatusSelector</pFeature>
+      <pFeature>TriggerDelay</pFeature>
+    </Category>
+    <Category Name="DigitalIOControl" NameSpace="Standard">
+      <ToolTip>Features controlling the digital I/O lines</ToolTip>
+      <Description>Category of features controlling the digital I/O lines.</Description>
+      <DisplayName>Digital I/O Control</DisplayName>
+      <Visibility>Beginner</Visibility>
+      <pFeature>LineSelector</pFeature>
+      <pFeature>LineMode</pFeature>
+      <pFeature>LineInverter</pFeature>
+      <pFeature>LineStatus</pFeature>
+      <pFeature>LineSource</pFeature>
+      <pFeature>LineFormat</pFeature>
+      <pFeature>UserOutputSelector</pFeature>
+      <pFeature>UserOutputValue</pFeature>
+    </Category>
+    <Category Name="CounterAndTimerControl" NameSpace="Standard">
+      <ToolTip>Features controlling counters and timers</ToolTip>
+      <Description>Category of features controlling counters and timers.</Description>
+      <DisplayName>Counter and Timer Control</DisplayName>
+      <Visibility>Expert</Visibility>
+    </Category>
+    <Category Name="EventControl" NameSpace="Standard">
+      <ToolTip>Device event related features</ToolTip>
+      <Description>Category of device event related features.</Description>
+      <DisplayName>Event Control</DisplayName>
+      <Visibility>Beginner</Visibility>
+    </Category>
+    <Category Name="AnalogControl" NameSpace="Standard">
+      <ToolTip>Features controlling analog characteristics of the video signal</ToolTip>
+      <Description>Category of features controlling analog characteristics of the video signal.</Description>
+      <DisplayName>Analog Control</DisplayName>
+      <Visibility>Beginner</Visibility>
+      <pFeature>BalanceWhiteAuto</pFeature>
+      <pFeature>GainSelector</pFeature>
+      <pFeature>Gain</pFeature>
+      <pFeature>WhiteBalanceRed</pFeature>
+      <pFeature>WhiteBalanceGreen</pFeature>
+      <pFeature>WhiteBalanceBlue</pFeature>
+      <pFeature>GammaY</pFeature>
+      <pFeature>GammaC</pFeature>
+      <pFeature>Sharpness</pFeature>
+    </Category>
+    <Category Name="LUTControl" NameSpace="Standard">
+      <ToolTip>Look-up table (LUT) control features</ToolTip>
+      <Description>Category of look-up table (LUT) control features.</Description>
+      <DisplayName>LUT Control</DisplayName>
+      <Visibility>Beginner</Visibility>
+      <pFeature>LUTEnable</pFeature>
+      <pFeature>LUTIndex</pFeature>
+      <pFeature>LUTValue</pFeature>
+    </Category>
+    <Category Name="TransportLayerControl" NameSpace="Standard">
+      <ToolTip>Transport layer specific features</ToolTip>
+      <Description>Category of transport layer specifica features.</Description>
+      <DisplayName>Transport Layer Control</DisplayName>
+      <Visibility>Beginner</Visibility>
+      <pFeature>PayloadSize</pFeature>
+    </Category>
+    <Category Name="UserSetControl" NameSpace="Standard">
+      <ToolTip>Features controlling user sets</ToolTip>
+      <Description>Category of features controlling user sets.</Description>
+      <DisplayName>User Sets</DisplayName>
+      <Visibility>Beginner</Visibility>
+    </Category>
+    <Category Name="FileAccessControl" NameSpace="Standard">
+      <ToolTip>Category that contains the File Access control features.</ToolTip>
+      <Description>Category that contains the File Access control features.</Description>
+      <DisplayName>File Access Control</DisplayName>
+      <Visibility>Guru</Visibility>
+    </Category>
+    <Category Name="ColorTransformationControl" NameSpace="Standard">
+      <ToolTip>Color matrix transformation features</ToolTip>
+      <Description>Color matrix transformation features.</Description>
+      <DisplayName>Color Transformation Control</DisplayName>
+      <Visibility>Beginner</Visibility>
+    </Category>
+    <Category Name="ActionControl" NameSpace="Standard">
+      <ToolTip>Category that contains the Action control features.</ToolTip>
+      <Description>Category that contains the Action control features.</Description>
+      <DisplayName>Action Control</DisplayName>
+      <Visibility>Guru</Visibility>
+    </Category>
+    <Category Name="LEDControl" NameSpace="Custom">
+      <ToolTip>LED Function Control</ToolTip>
+      <Description>Category of features controlling camera signalling LEDs.</Description>
+      <DisplayName>LED Function Control</DisplayName>
+      <Visibility>Beginner</Visibility>
+    </Category>
+    <Category Name="LensControl" NameSpace="Custom">
+      <ToolTip>Camera lens control features</ToolTip>
+      <Description>Camera lens control features</Description>
+      <DisplayName>Lens Control</DisplayName>
+      <Visibility>Beginner</Visibility>
+    </Category>
+  </Group>
+  <Group Comment="DeviceControl feature list">
+    <Enumeration Name="DeviceTemperatureSelector" NameSpace="Custom">
+      <ToolTip>Lists the temperature sources available for readout</ToolTip>
+      <Description>Lists the temperature sources available for readout</Description>
+      <DisplayName>Temperature Selector</DisplayName>
+      <Visibility>Expert</Visibility>
+      <Streamable/>
+      <EnumEntry Name="SensorBoard" NameSpace="Custom">
+        <ToolTip>Temperature on sensor board</ToolTip>
+        <Description>Temperature on sensor board</Description>
+        <DisplayName>SensorBoard</DisplayName>
+        <Value>2</Value>
+      </EnumEntry>
+      <pValue>DeviceTemperatureSelectorReg</pValue>
+    </Enumeration>
+    <Float Name="DeviceTemperature" NameSpace="Custom">
+      <ToolTip>Shows the current temperature of the selected target in degrees celcius</ToolTip>
+      <Description>Shows the current temperature of the selected target in degrees celcius</Description>
+      <DisplayName>Temperature</DisplayName>
+      <Visibility>Expert</Visibility>
+      <ImposedAccessMode>RO</ImposedAccessMode>
+      <Value>0</Value>
+    </Float>
+    <Integer Name="TLParamsLocked" NameSpace="Standard">
+      <ToolTip>Used by the Transport Layer to prevent critical features changes during acquisition.</ToolTip>
+      <Description>Used by the Transport Layer to prevent critical features changes during acquisition.</Description>
+      <DisplayName>TLParamsLocked</DisplayName>
+      <Visibility>Invisible</Visibility>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Value>0</Value>
+      <Representation>PureNumber</Representation>
+    </Integer>
+    <Enumeration Name="DeviceLinkThroughputLimitMode" NameSpace="Standard">
+      <ToolTip>Controls if the DeviceLinkThroughputLimit is active</ToolTip>
+      <Description>Controls if the DeviceLinkThroughputLimit is active</Description>
+      <DisplayName>DeviceLinkThroughputLimitMode</DisplayName>
+      <Visibility>Expert</Visibility>
+      <Streamable/>
+      <EnumEntry Name="Off" NameSpace="Standard">
+        <ToolTip>DeviceLinkThroughputLimit is disabled</ToolTip>
+        <Description>DeviceLinkThroughputLimit is disabled</Description>
+        <DisplayName>DeviceLinkThroughputLimit is disabled</DisplayName>
+        <Value>0</Value>
+      </EnumEntry>
+      <EnumEntry Name="On" NameSpace="Standard">
+        <ToolTip>DeviceLinkThroughputLimit is enabled</ToolTip>
+        <Description>DeviceLinkThroughputLimit is enabled</Description>
+        <DisplayName>DeviceLinkThroughputLimit is enabled</DisplayName>
+        <Value>1</Value>
+      </EnumEntry>
+      <pValue>DeviceLinkThroughputLimitModeReg</pValue>
+    </Enumeration>
+    <Integer Name="DeviceLinkThroughputLimit" NameSpace="Standard">
+      <ToolTip>Limits the maximum bandwidth (in Bytes per second) of the data that will be streamed out by the device on the selected Link. If necessary, delays will be uniformly inserted between transport layer packets in order to control the peak bandwidth.</ToolTip>
+      <Description>Limits the maximum bandwidth (in Bytes per second) of the data that will be streamed out by the device on the selected Link. If necessary, delays will be uniformly inserted between transport layer packets in order to control the peak bandwidth.</Description>
+      <DisplayName>DeviceLinkThroughputLimit</DisplayName>
+      <Visibility>Expert</Visibility>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <pValue>DeviceLinkThroughputLimitReg</pValue>
+      <pMin>DeviceLinkThroughputLimitRangeMinReg</pMin>
+      <pMax>DeviceLinkThroughputLimitRangeMaxReg</pMax>
+      <Representation>PureNumber</Representation>
+    </Integer>
+  </Group>
+  <Group Comment="ImageFormatControl feature list">
+    <Integer Name="SensorWidth" NameSpace="Standard">
+      <ToolTip>Indicates the width of the camera</ToolTip>
+      <Description>This is a read only element. It is an integer that indicates the actual width of the camera</Description>
+      <DisplayName>Sensor Width</DisplayName>
+      <Visibility>Expert</Visibility>
+      <ImposedAccessMode>RO</ImposedAccessMode>
+      <pValue>SensorWidthReg</pValue>
+      <pMin>SensorWidthRangeMinReg</pMin>
+      <pMax>SensorWidthRangeMaxReg</pMax>
+      <Inc>2</Inc>
+      <Representation>PureNumber</Representation>
+    </Integer>
+    <Integer Name="SensorHeight" NameSpace="Standard">
+      <ToolTip>Indicates the height of the camera</ToolTip>
+      <Description>This is a read only element. It is an integer that indicates the actual height of the camera</Description>
+      <DisplayName>Sensor Height</DisplayName>
+      <Visibility>Expert</Visibility>
+      <ImposedAccessMode>RO</ImposedAccessMode>
+      <pValue>SensorHeightReg</pValue>
+      <pMin>SensorHeightRangeMinReg</pMin>
+      <pMax>SensorHeightRangeMaxReg</pMax>
+      <Inc>2</Inc>
+      <Representation>PureNumber</Representation>
+    </Integer>
+    <Integer Name="Width" NameSpace="Standard">
+      <ToolTip>Sets the width of the area of interest in pixels</ToolTip>
+      <Description>This value sets the width of the area of interest in pixels.</Description>
+      <DisplayName>Width</DisplayName>
+      <Visibility>Beginner</Visibility>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Streamable>Yes</Streamable>
+      <pValue>WidthReg</pValue>
+      <pMin>WidthRangeMinReg</pMin>
+      <pMax>WidthRangeMaxReg</pMax>
+      <Inc>4</Inc>
+      <Representation>Linear</Representation>
+    </Integer>
+    <Integer Name="Height" NameSpace="Standard">
+      <ToolTip>Sets the height of the area of interest in pixels</ToolTip>
+      <Description>This value sets the height of the area of interest in pixels.</Description>
+      <DisplayName>Height</DisplayName>
+      <Visibility>Beginner</Visibility>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Streamable>Yes</Streamable>
+      <pValue>HeightReg</pValue>
+      <pMin>HeightRangeMinReg</pMin>
+      <pMax>HeightRangeMaxReg</pMax>
+      <Inc>2</Inc>
+      <Representation>Linear</Representation>
+    </Integer>
+    <Enumeration Name="PixelFormat" NameSpace="Standard">
+      <ToolTip>Sets the format of the pixel data transmitted for acquired images</ToolTip>
+      <Description>This enumeration sets the format of the pixel data transmitted for acquired images. </Description>
+      <DisplayName>Pixel Format</DisplayName>
+      <Visibility>Beginner</Visibility>
+      <Streamable/>
+      <EnumEntry Name="BayerBG10" NameSpace="Standard">
+        <ToolTip>Pixel format 'Bayer BG 10'</ToolTip>
+        <Description>Pixel format 'Bayer BG 10'</Description>
+        <DisplayName>Bayer BG 10</DisplayName>
+        <Value>0x0110000F</Value>
+      </EnumEntry>
+      <EnumEntry Name="BayerBG10p" NameSpace="Standard">
+        <ToolTip>Pixel format 10bit packed (4 pixels in 5 bytes)</ToolTip>
+        <Description>Pixel format 10bit packed (4 pixels in 5 bytes)</Description>
+        <DisplayName>Bayer BG 10 packed</DisplayName>
+        <Value>0x010A0052</Value>
+      </EnumEntry>
+      <EnumEntry Name="BayerBG12" NameSpace="Standard">
+        <ToolTip>Pixel format </ToolTip>
+        <Description>Pixel format </Description>
+        <DisplayName>Bayer BG 12</DisplayName>
+        <Value>0x01100013</Value>
+      </EnumEntry>
+      <EnumEntry Name="BayerBG12p" NameSpace="Standard">
+        <ToolTip>Pixel format 12bit packed (2 pixels in 3 bytes)</ToolTip>
+        <Description>Pixel format 12bit packed (2 pixels in 3 bytes)</Description>
+        <DisplayName>Bayer BG 12 packed</DisplayName>
+        <Value>0x010C0053</Value>
+      </EnumEntry>
+      <EnumEntry Name="BayerBG8" NameSpace="Standard">
+        <ToolTip>Pixel format 'Bayer BG 8'</ToolTip>
+        <Description>Pixel format 'Bayer BG 8'</Description>
+        <DisplayName>Bayer BG 8</DisplayName>
+        <Value>0x0108000B</Value>
+      </EnumEntry>
+      <EnumEntry Name="Mono10" NameSpace="Standard">
+        <ToolTip>Pixel format 'Mono10'</ToolTip>
+        <Description>Pixel format 'Mono10'</Description>
+        <DisplayName>Mono 10</DisplayName>
+        <Value>0x01100003</Value>
+      </EnumEntry>
+      <EnumEntry Name="Mono12" NameSpace="Standard">
+        <ToolTip>Pixel format 'Mono 12'</ToolTip>
+        <Description>Pixel format 'Mono 12'</Description>
+        <DisplayName>Mono 12</DisplayName>
+        <Value>0x01100005</Value>
+      </EnumEntry>
+      <EnumEntry Name="Mono8" NameSpace="Standard">
+        <ToolTip>Sets the pixel format to Mono 8</ToolTip>
+        <Description>This enumeration value sets the pixel format to Mono 8.</Description>
+        <DisplayName>Mono 8</DisplayName>
+        <Value>0x01080001</Value>
+      </EnumEntry>
+      <EnumEntry Name="BGRA8Packed" NameSpace="Standard">
+        <ToolTip>BGRA8Packed</ToolTip>
+        <Description>BGRA8Packed</Description>
+        <DisplayName>BGRA8Packed</DisplayName>
+        <Value>0x02200017</Value>
+      </EnumEntry>
+      <pValue>PixelFormatReg</pValue>
+    </Enumeration>
+    <Integer Name="BinningHorizontal" NameSpace="Standard">
+      <ToolTip>Sets the horizontal binning value</ToolTip>
+      <Description>This value sets the horizontal binning value.</Description>
+      <DisplayName>Horizontal Binning</DisplayName>
+      <Visibility>Expert</Visibility>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Streamable>Yes</Streamable>
+      <pValue>BinningHorizontalReg</pValue>
+      <Min>1</Min>
+      <pMax>BinningHorizontalRangeMaxReg</pMax>
+      <Representation>Linear</Representation>
+    </Integer>
+    <Integer Name="BinningVertical" NameSpace="Standard">
+      <ToolTip>Sets the vertical binning value</ToolTip>
+      <Description>This value sets the vertical binning value.</Description>
+      <DisplayName>Vertical Binning</DisplayName>
+      <Visibility>Expert</Visibility>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Streamable>Yes</Streamable>
+      <pValue>BinningVerticalReg</pValue>
+      <Min>1</Min>
+      <pMax>BinningVerticalRangeMaxReg</pMax>
+      <Representation>Linear</Representation>
+    </Integer>
+    <Integer Name="DecimationHorizontal" NameSpace="Standard">
+      <ToolTip>Sets the horizontal decimation value</ToolTip>
+      <Description>This value sets the horizontal decimation value.</Description>
+      <DisplayName>Horizontal Decimation</DisplayName>
+      <Visibility>Expert</Visibility>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Streamable>Yes</Streamable>
+      <pValue>DecimationHorizontalReg</pValue>
+      <Min>1</Min>
+      <pMax>DecimationHorizontalRangeMaxReg</pMax>
+      <Representation>Linear</Representation>
+    </Integer>
+    <Integer Name="DecimationVertical" NameSpace="Standard">
+      <ToolTip>Sets the vertical decimation value</ToolTip>
+      <Description>This value sets the vertical decimation value.</Description>
+      <DisplayName>Vertical Decimation</DisplayName>
+      <Visibility>Expert</Visibility>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Streamable>Yes</Streamable>
+      <pValue>DecimationVerticalReg</pValue>
+      <Min>1</Min>
+      <pMax>DecimationVerticalRangeMaxReg</pMax>
+      <Representation>Linear</Representation>
+    </Integer>
+    <Integer Name="OffsetX" NameSpace="Standard">
+      <ToolTip>Sets the X offset (left offset) of the area of interest in pixels</ToolTip>
+      <Description>This value sets the X offset (left offset) for the area of interest in pixels.</Description>
+      <DisplayName>X Offset</DisplayName>
+      <Visibility>Beginner</Visibility>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Streamable>Yes</Streamable>
+      <pValue>OffsetXReg</pValue>
+      <Min>0</Min>
+      <pMax>OffsetXRangeMaxReg</pMax>
+      <Inc>1</Inc>
+      <Representation>Linear</Representation>
+    </Integer>
+    <Integer Name="OffsetY" NameSpace="Standard">
+      <ToolTip>Sets the Y offset (top offset) of the area of interest in pixels</ToolTip>
+      <Description>This value sets the Y offset (top offset) for the area of interest in pixels.</Description>
+      <DisplayName>Y Offset</DisplayName>
+      <Visibility>Beginner</Visibility>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Streamable>Yes</Streamable>
+      <pValue>OffsetYReg</pValue>
+      <Min>0</Min>
+      <pMax>OffsetYRangeMaxReg</pMax>
+      <Inc>1</Inc>
+      <Representation>Linear</Representation>
+    </Integer>
+    <Enumeration Name="BinningSelector" NameSpace="Standard">
+      <ToolTip>Selects binning engine</ToolTip>
+      <Description>Selects which binning engine is controlled by the BinningHorizontal and BinningVertical features.</Description>
+      <DisplayName>Binning Selector</DisplayName>
+      <Visibility>Expert</Visibility>
+      <Streamable/>
+      <EnumEntry Name="Sensor" NameSpace="Standard">
+        <ToolTip>Select sensor binning</ToolTip>
+        <Description>Selected features will control the sensor binning</Description>
+        <DisplayName>Sensor</DisplayName>
+        <Value>0</Value>
+      </EnumEntry>
+      <pValue>BinningSelectorReg</pValue>
+    </Enumeration>
+    <Enumeration Name="DecimationSelector" NameSpace="Standard">
+      <ToolTip>Selects decimation engine</ToolTip>
+      <Description>Selects which decimation engine is controlled by the BinningHorizontal and BinningVertical features.</Description>
+      <DisplayName>Decimation Selector</DisplayName>
+      <Visibility>Expert</Visibility>
+      <Streamable/>
+      <EnumEntry Name="Sensor" NameSpace="Standard">
+        <ToolTip>Select sensor decimation </ToolTip>
+        <Description>Selected features will control the sensor decimation</Description>
+        <DisplayName>Sensor</DisplayName>
+        <Value>0</Value>
+      </EnumEntry>
+      <pValue>DecimationSelectorReg</pValue>
+    </Enumeration>
+    <Enumeration Name="SensorShutterMode" NameSpace="Standard">
+      <ToolTip>Sets the shutter mode of the device</ToolTip>
+      <Description>Sets the shutter mode of the device</Description>
+      <DisplayName>Sensor Shutter Mode</DisplayName>
+      <Visibility>Guru</Visibility>
+      <Streamable/>
+      <EnumEntry Name="Global" NameSpace="Standard">
+        <ToolTip>The shutter opens and closes at the same time for all pixels</ToolTip>
+        <Description>The shutter opens and closes at the same time for all pixels</Description>
+        <DisplayName>Global</DisplayName>
+        <Value>0</Value>
+      </EnumEntry>
+      <pValue>SensorShutterModeReg</pValue>
+    </Enumeration>
+    <Boolean Name="ReverseX" NameSpace="Standard">
+      <ToolTip>Flip horizontally the image sent by the device.</ToolTip>
+      <Description>Flip horizontally the image sent by the device.</Description>
+      <DisplayName>ReverseX</DisplayName>
+      <Visibility>Expert</Visibility>
+      <pValue>ReverseXReg</pValue>
+    </Boolean>
+    <Boolean Name="ReverseY" NameSpace="Standard">
+      <ToolTip>Flip vertically the image sent by the device.</ToolTip>
+      <Description>Flip vertically the image sent by the device.</Description>
+      <DisplayName>ReverseY</DisplayName>
+      <Visibility>Expert</Visibility>
+      <pValue>ReverseYReg</pValue>
+    </Boolean>
+    <Integer Name="WidthMax" NameSpace="Standard">
+      <ToolTip>Maximum width of the image (in pixels). The</ToolTip>
+      <Description>Maximum width of the image (in pixels). The</Description>
+      <DisplayName>WidthMax</DisplayName>
+      <Visibility>Expert</Visibility>
+      <ImposedAccessMode>RO</ImposedAccessMode>
+      <Streamable>Yes</Streamable>
+      <pValue>WidthMaxReg</pValue>
+      <Representation>Linear</Representation>
+    </Integer>
+    <Enumeration Name="BinningHorizontalPattern" NameSpace="Standard">
+      <ToolTip>Selects binning horizontal pattern format</ToolTip>
+      <Description>Selects which binning horizontal pattern is used</Description>
+      <DisplayName>Binning Horizontal Pattern</DisplayName>
+      <Visibility>Expert</Visibility>
+      <Streamable/>
+      <EnumEntry Name="Bayer" NameSpace="Standard">
+        <ToolTip>Bayer binning pattern</ToolTip>
+        <Description>Bayer binning pattern</Description>
+        <DisplayName>Bayer</DisplayName>
+        <Value>2</Value>
+      </EnumEntry>
+      <pValue>BinningHorizontalPatternReg</pValue>
+    </Enumeration>
+    <Enumeration Name="BinningVerticalPattern" NameSpace="Standard">
+      <ToolTip>Selects binning vertical pattern format</ToolTip>
+      <Description>Selects which binning vertical pattern is used</Description>
+      <DisplayName>Binning Vertical Pattern</DisplayName>
+      <Visibility>Expert</Visibility>
+      <Streamable/>
+      <EnumEntry Name="Bayer" NameSpace="Standard">
+        <ToolTip>Bayer binning pattern</ToolTip>
+        <Description>Bayer binning pattern</Description>
+        <DisplayName>Bayer</DisplayName>
+        <Value>2</Value>
+      </EnumEntry>
+      <pValue>BinningVerticalPatternReg</pValue>
+    </Enumeration>
+    <Enumeration Name="DecimationHorizontalPattern" NameSpace="Standard">
+      <ToolTip>Selects decimation horizontal pattern format</ToolTip>
+      <Description>Selects which decimation horizontal pattern is used</Description>
+      <DisplayName>Decimation Horizontal Pattern</DisplayName>
+      <Visibility>Expert</Visibility>
+      <Streamable/>
+      <EnumEntry Name="Mono" NameSpace="Standard">
+        <ToolTip>Monochrome decimation pattern</ToolTip>
+        <Description>Monochrome decimation pattern</Description>
+        <DisplayName>Mono</DisplayName>
+        <Value>1</Value>
+      </EnumEntry>
+      <pValue>DecimationHorizontalPatternReg</pValue>
+    </Enumeration>
+    <Enumeration Name="DecimationVerticalPattern" NameSpace="Standard">
+      <ToolTip>Selects decimation vertical pattern format</ToolTip>
+      <Description>Selects which decimation vertical pattern is used</Description>
+      <DisplayName>Decimation Vertical Pattern</DisplayName>
+      <Visibility>Expert</Visibility>
+      <Streamable/>
+      <EnumEntry Name="Mono" NameSpace="Standard">
+        <ToolTip>Monochrome decimation pattern</ToolTip>
+        <Description>Monochrome decimation pattern</Description>
+        <DisplayName>Mono</DisplayName>
+        <Value>1</Value>
+      </EnumEntry>
+      <pValue>DecimationVerticalPatternReg</pValue>
+    </Enumeration>
+    <Integer Name="HeightMax" NameSpace="Standard">
+      <ToolTip>Maximum height of the image (in pixels).</ToolTip>
+      <Description>Maximum height of the image (in pixels).</Description>
+      <DisplayName>HeightMax</DisplayName>
+      <Visibility>Expert</Visibility>
+      <ImposedAccessMode>RO</ImposedAccessMode>
+      <Streamable>Yes</Streamable>
+      <pValue>HeightMaxReg</pValue>
+      <Representation>Linear</Representation>
+    </Integer>
+    <Enumeration Name="BinningHorizontalMode" NameSpace="Standard">
+      <ToolTip>Sets the mode to use to combine horizontal pixels together </ToolTip>
+      <Description>Sets the mode to use to combine horizontal photo-sensitive cells together when BinningHorizontal</Description>
+      <DisplayName>Binning Horizontal Mode</DisplayName>
+      <Visibility>Expert</Visibility>
+      <Streamable/>
+      <EnumEntry Name="Sum" NameSpace="Standard">
+        <ToolTip>Select sum response</ToolTip>
+        <Description>The response from the combined cells will be added</Description>
+        <DisplayName>Sum</DisplayName>
+        <Value>0</Value>
+      </EnumEntry>
+      <pValue>BinningHorizontalModeReg</pValue>
+    </Enumeration>
+    <Enumeration Name="BinningVerticalMode" NameSpace="Standard">
+      <ToolTip>Sets the mode used to combine horizontal pixels together when BinningVertical</ToolTip>
+      <Description>Sets the mode used to combine horizontal photo-sensitive cells together when BinningVertical</Description>
+      <DisplayName>Binning Vertical Mode</DisplayName>
+      <Visibility>Expert</Visibility>
+      <Streamable/>
+      <EnumEntry Name="Sum" NameSpace="Standard">
+        <ToolTip>Select sum response</ToolTip>
+        <Description>The response from the combined cells will be added</Description>
+        <DisplayName>Sum</DisplayName>
+        <Value>0</Value>
+      </EnumEntry>
+      <pValue>BinningVerticalModeReg</pValue>
+    </Enumeration>
+  </Group>
+  <Group Comment="AcquisitionControl feature list">
+    <Enumeration Name="AcquisitionMode" NameSpace="Standard">
+      <ToolTip>Sets the image acquisition mode</ToolTip>
+      <Description>This enumeration sets the image acquisition mode. </Description>
+      <DisplayName>Acquisition Mode</DisplayName>
+      <Visibility>Beginner</Visibility>
+      <Streamable/>
+      <EnumEntry Name="Continuous" NameSpace="Standard">
+        <ToolTip>Sets the acquisition mode to continuous</ToolTip>
+        <Description>This enumeration value sets the camera's acquisition mode to continuous.</Description>
+        <DisplayName>Continuous</DisplayName>
+        <Value>2</Value>
+      </EnumEntry>
+      <pValue>AcquisitionModeReg</pValue>
+    </Enumeration>
+    <Command Name="AcquisitionStart" NameSpace="Standard">
+      <ToolTip>Starts the acquisition of images</ToolTip>
+      <Description>This command starts the acquisition of images. If the camera is set for single frame acquisition, it will start acquisition of one frame. If the camera is set for continuous frame acquisition, it will start continuous acquisition of frames.</Description>
+      <DisplayName>Acquisition Start</DisplayName>
+      <Visibility>Beginner</Visibility>
+      <ImposedAccessMode>WO</ImposedAccessMode>
+      <pValue>AcquisitionStartReg</pValue>
+      <CommandValue>1</CommandValue>
+    </Command>
+    <Command Name="AcquisitionStop" NameSpace="Standard">
+      <ToolTip>Stops the acquisition of images</ToolTip>
+      <Description>If the camera is set for continuous image acquisition and acquisition has been started, this command stops the acquisition of images.</Description>
+      <DisplayName>Acquisition Stop</DisplayName>
+      <Visibility>Beginner</Visibility>
+      <ImposedAccessMode>WO</ImposedAccessMode>
+      <pValue>AcquisitionStopReg</pValue>
+      <CommandValue>0</CommandValue>
+    </Command>
+    <Enumeration Name="ExposureMode" NameSpace="Standard">
+      <ToolTip>Sets the exposure mode</ToolTip>
+      <Description>This enumeration sets the exposure mode.</Description>
+      <DisplayName>Exposure Mode</DisplayName>
+      <Visibility>Beginner</Visibility>
+      <Streamable/>
+      <EnumEntry Name="Timed" NameSpace="Standard">
+        <ToolTip>Timed exposure. The exposure duration time is set using the ExposureTime</ToolTip>
+        <Description>Timed exposure. The exposure duration time is set using the ExposureTime</Description>
+        <DisplayName>Timed</DisplayName>
+        <Value>1</Value>
+      </EnumEntry>
+      <EnumEntry Name="TriggerWidth" NameSpace="Standard">
+        <ToolTip>Uses the width of the current Frame or Line trigger signal(s) pulse to control the exposure duration.</ToolTip>
+        <Description>Uses the width of the current Frame or Line trigger signal(s) pulse to control the exposure duration.</Description>
+        <DisplayName>Trigger Width</DisplayName>
+        <Value>2</Value>
+      </EnumEntry>
+      <pValue>ExposureModeReg</pValue>
+    </Enumeration>
+    <Integer Name="ExposureTime" NameSpace="Standard">
+      <ToolTip>Directly sets the camera exposure time</ToolTip>
+      <Description>This integer value sets the camera exposure time</Description>
+      <DisplayName>Exposure Time</DisplayName>
+      <Visibility>Beginner</Visibility>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Streamable>Yes</Streamable>
+      <pValue>ExposureTimeReg</pValue>
+      <Min>0</Min>
+      <pMax>ExposureTimeRangeMaxReg</pMax>
+      <Representation>Logarithmic</Representation>
+    </Integer>
+    <Enumeration Name="TriggerSelector" NameSpace="Standard">
+      <ToolTip>Selects the trigger type to configure. Once a trigger type has been selected, all changes to the trigger settings will be applied to the selected trigger.</ToolTip>
+      <Description>This enumeration selects the trigger type to configure. Once a trigger type has been selected, all changes to the trigger settings will be applied to the selected trigger.</Description>
+      <DisplayName>Trigger Selector</DisplayName>
+      <Visibility>Beginner</Visibility>
+      <Streamable/>
+      <EnumEntry Name="AcquisitionStart" NameSpace="Standard">
+        <ToolTip>Selects a trigger that starts the Acquisition of one or many frames according to AcquisitionMode</ToolTip>
+        <Description>Selects a trigger that starts the Acquisition of one or many frames according to AcquisitionMode</Description>
+        <DisplayName>AcquisitionStart</DisplayName>
+        <Value>4</Value>
+      </EnumEntry>
+      <EnumEntry Name="ExposureActive" NameSpace="Standard">
+        <ToolTip>Selects a trigger controlling the duration of one frame.</ToolTip>
+        <Description>This enumeration value selects the frame start trigger for configuration.</Description>
+        <DisplayName>Exposure Active</DisplayName>
+        <Value>1</Value>
+      </EnumEntry>
+      <EnumEntry Name="ExposureStart" NameSpace="Standard">
+        <ToolTip>Selects a trigger controlling the start of the exposure of one Frame.</ToolTip>
+        <Description>This enumeration value selects the exposure start trigger for configuration.</Description>
+        <DisplayName>Exposure Start</DisplayName>
+        <Value>5</Value>
+      </EnumEntry>
+      <EnumEntry Name="FrameBurstStart" NameSpace="Standard">
+        <ToolTip>Selects a trigger starting the capture of the bursts of frames in an acquisition.ng the capture of the bursts of frames in an acquisition.</ToolTip>
+        <Description>This enumeration value selects the frame start trigger for configuration.</Description>
+        <DisplayName>Frame Burst Start</DisplayName>
+        <Value>2</Value>
+      </EnumEntry>
+      <EnumEntry Name="FrameStart" NameSpace="Standard">
+        <ToolTip>Selects the frame start trigger for configuration</ToolTip>
+        <Description>This enumeration value selects the frame start trigger for configuration.</Description>
+        <DisplayName>Frame Start</DisplayName>
+        <Value>0</Value>
+      </EnumEntry>
+      <pValue>TriggerSelectorReg</pValue>
+    </Enumeration>
+    <Enumeration Name="TriggerMode" NameSpace="Standard">
+      <ToolTip>Sets the mode for the selected trigger</ToolTip>
+      <Description>This enumeration sets the trigger mode for the selected trigger.</Description>
+      <DisplayName>Trigger Mode</DisplayName>
+      <Visibility>Beginner</Visibility>
+      <Streamable/>
+      <EnumEntry Name="Off" NameSpace="Standard">
+        <ToolTip>Sets the mode for the selected trigger to off</ToolTip>
+        <Description>This enumeration value sets the mode for the selected trigger to off.</Description>
+        <DisplayName>Off</DisplayName>
+        <Value>0</Value>
+      </EnumEntry>
+      <EnumEntry Name="On" NameSpace="Standard">
+        <ToolTip>Sets the mode for the selected trigger to on</ToolTip>
+        <Description>This enumeration value sets the mode for the selected trigger to on.</Description>
+        <DisplayName>On</DisplayName>
+        <Value>1</Value>
+      </EnumEntry>
+      <pValue>TriggerModeReg</pValue>
+    </Enumeration>
+    <Command Name="TriggerSoftware" NameSpace="Standard">
+      <ToolTip>Generates a software trigger signal that is used when the trigger source is set to </ToolTip>
+      <Description>This command generates a software trigger signal. The software trigger signal will be used if the trigger source is set to </Description>
+      <DisplayName>Generate Software Trigger</DisplayName>
+      <Visibility>Beginner</Visibility>
+      <ImposedAccessMode>WO</ImposedAccessMode>
+      <pValue>TriggerSoftwareReg</pValue>
+      <CommandValue>1</CommandValue>
+    </Command>
+    <Enumeration Name="TriggerSource" NameSpace="Standard">
+      <ToolTip>Sets the signal source for the selected trigger</ToolTip>
+      <Description>This enumeration sets the signal source for the selected trigger.</Description>
+      <DisplayName>Trigger Source</DisplayName>
+      <Visibility>Beginner</Visibility>
+      <Streamable/>
+      <EnumEntry Name="Line5" NameSpace="Standard">
+        <ToolTip>Sets the signal source for the selected trigger to line 4</ToolTip>
+        <Description>This enumeration value sets the signal source for the selected trigger to line 4.</Description>
+        <DisplayName>Line 5</DisplayName>
+        <Value>5</Value>
+      </EnumEntry>
+      <EnumEntry Name="Line6" NameSpace="Standard">
+        <ToolTip>Sets the signal source for the selected trigger to line 4</ToolTip>
+        <Description>This enumeration value sets the signal source for the selected trigger to line 4.</Description>
+        <DisplayName>Line 6</DisplayName>
+        <Value>6</Value>
+      </EnumEntry>
+      <EnumEntry Name="Line7" NameSpace="Standard">
+        <ToolTip>Sets the signal source for the selected trigger to line 4</ToolTip>
+        <Description>This enumeration value sets the signal source for the selected trigger to line 4.</Description>
+        <DisplayName>Line 7</DisplayName>
+        <Value>7</Value>
+      </EnumEntry>
+      <EnumEntry Name="Software" NameSpace="Standard">
+        <ToolTip>Sets the software trigger as the signal source for the selected trigger</ToolTip>
+        <Description>This enumeration value sets the signal source for the selected trigger to software trigger.</Description>
+        <DisplayName>Software Trigger</DisplayName>
+        <Value>0</Value>
+      </EnumEntry>
+      <pValue>TriggerSourceReg</pValue>
+    </Enumeration>
+    <Enumeration Name="TriggerActivation" NameSpace="Standard">
+      <ToolTip>Trigger Activation Signal Type</ToolTip>
+      <Description>Specifies the activation mode of the trigger.</Description>
+      <DisplayName>Trigger Activation</DisplayName>
+      <Visibility>Beginner</Visibility>
+      <Streamable/>
+      <EnumEntry Name="AnyEdge" NameSpace="Standard">
+        <ToolTip>Specifies that the trigger is considered valid on the falling or rising edge of the source signal</ToolTip>
+        <Description>Specifies that the trigger is considered valid on the falling or rising edge of the source signal</Description>
+        <DisplayName>Any Edge</DisplayName>
+        <Value>2</Value>
+      </EnumEntry>
+      <EnumEntry Name="FallingEdge" NameSpace="Standard">
+        <ToolTip>Sets the selected trigger to become active on the falling edge of the source signal</ToolTip>
+        <Description>Sets the selected trigger to become active on the falling edge of the source signal</Description>
+        <DisplayName>Falling Edge</DisplayName>
+        <Value>1</Value>
+      </EnumEntry>
+      <EnumEntry Name="LevelHigh" NameSpace="Standard">
+        <ToolTip>Specifies that the trigger is considered valid as long as the level of the source signal is high</ToolTip>
+        <Description>Specifies that the trigger is considered valid as long as the level of the source signal is high</Description>
+        <DisplayName>Level High</DisplayName>
+        <Value>3</Value>
+      </EnumEntry>
+      <EnumEntry Name="LevelLow" NameSpace="Standard">
+        <ToolTip>Specifies that the trigger is considered valid as long as the level of the source signal is low</ToolTip>
+        <Description>Specifies that the trigger is considered valid as long as the level of the source signal is low</Description>
+        <DisplayName>Level Low</DisplayName>
+        <Value>4</Value>
+      </EnumEntry>
+      <EnumEntry Name="RisingEdge" NameSpace="Standard">
+        <ToolTip>Sets the selected trigger to become active on the rising edge of the source signal</ToolTip>
+        <Description>This enumeration value sets the sets the selected trigger to become active on the rising edge of the source signal.</Description>
+        <DisplayName>Rising Edge</DisplayName>
+        <Value>0</Value>
+      </EnumEntry>
+      <pValue>TriggerActivationReg</pValue>
+    </Enumeration>
+    <Float Name="AcquisitionFrameRate" NameSpace="Standard">
+      <ToolTip>Camera frame rate in Hz.</ToolTip>
+      <Description>Define framerate in Hz.</Description>
+      <DisplayName>Frame rate</DisplayName>
+      <Visibility>Beginner</Visibility>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Streamable>Yes</Streamable>
+      <pValue>AcquisitionFrameRateReg</pValue>
+      <pMin>AcquisitionFrameRateRangeMinReg</pMin>
+      <pMax>AcquisitionFrameRateRangeMaxReg</pMax>
+    </Float>
+    <Integer Name="AcquisitionTimeout" NameSpace="Custom">
+      <ToolTip>Time interval required to wait for the image (in milliseconds).</ToolTip>
+      <Description>Time interval required to wait for the image (in milliseconds).</Description>
+      <DisplayName>Acquisition Timeout</DisplayName>
+      <Visibility>Beginner</Visibility>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <pValue>AcquisitionTimeoutReg</pValue>
+      <Min>0</Min>
+      <Max>1000000</Max>
+      <Representation>PureNumber</Representation>
+    </Integer>
+    <Boolean Name="AEAGEnable" NameSpace="Custom">
+      <ToolTip>Enable/disable automatic exposure/gain</ToolTip>
+      <Description>Enable/disable automatic exposure/gain</Description>
+      <DisplayName>Enable auto exposure/gain</DisplayName>
+      <Visibility>Guru</Visibility>
+      <pValue>AEAGEnableReg</pValue>
+    </Boolean>
+    <Float Name="AEAGExpPrio" NameSpace="Custom">
+      <ToolTip>AEAG exposure priority (0.5 - exposure 50%, gain 50%).</ToolTip>
+      <Description>AEAG exposure priority (0.5 - exposure 50%, gain 50%).</Description>
+      <DisplayName>Auto exposure/gain exposure priority</DisplayName>
+      <Visibility>Guru</Visibility>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Streamable>Yes</Streamable>
+      <pValue>AEAGExpPrioReg</pValue>
+    </Float>
+    <Integer Name="AEAGExpLim" NameSpace="Custom">
+      <ToolTip>Maximum limit of exposure in AEAG procedure</ToolTip>
+      <Description>Maximum limit of exposure in AEAG procedure</Description>
+      <DisplayName>Auto exposure/gain exposure limit</DisplayName>
+      <Visibility>Guru</Visibility>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Streamable>Yes</Streamable>
+      <pValue>AEAGExpLimReg</pValue>
+      <pMin>AEAGExpLimRangeMinReg</pMin>
+      <pMax>AEAGExpLimRangeMaxReg</pMax>
+      <Representation>Linear</Representation>
+    </Integer>
+    <Float Name="AEAGGainLim" NameSpace="Custom">
+      <ToolTip>Maximum limit of gain in AEAG procedure</ToolTip>
+      <Description>Maximum limit of gain in AEAG procedure</Description>
+      <DisplayName>Auto exposure/gain gain limit</DisplayName>
+      <Visibility>Guru</Visibility>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Streamable>Yes</Streamable>
+      <pValue>AEAGGainLimReg</pValue>
+      <pMin>AEAGGainLimRangeMinReg</pMin>
+      <pMax>AEAGGainLimRangeMaxReg</pMax>
+    </Float>
+    <Integer Name="AEAGLevel" NameSpace="Custom">
+      <ToolTip>Average intensity of output signal AEAG should achieve(in %).</ToolTip>
+      <Description>Average intensity of output signal AEAG should achieve(in %).</Description>
+      <DisplayName>Auto exposure/gain intensity level</DisplayName>
+      <Visibility>Guru</Visibility>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Streamable>Yes</Streamable>
+      <pValue>AEAGLevelReg</pValue>
+      <pMin>AEAGLevelRangeMinReg</pMin>
+      <pMax>AEAGLevelRangeMaxReg</pMax>
+      <Representation>Linear</Representation>
+    </Integer>
+    <Boolean Name="BadpixelCorrection" NameSpace="Custom">
+      <ToolTip>Apply correction of bad pixels</ToolTip>
+      <Description>Apply correction of bad pixels</Description>
+      <DisplayName>Badpixel Correction</DisplayName>
+      <Visibility>Guru</Visibility>
+      <pValue>BadpixelCorrectionReg</pValue>
+    </Boolean>
+    <Integer Name="AcquisitionBuffersQueueSize" NameSpace="Custom">
+      <ToolTip>Queue of field/frame buffers.</ToolTip>
+      <Description>Queue of field/frame buffers.</Description>
+      <DisplayName>Acquisition Buffers Queue Size</DisplayName>
+      <Visibility>Guru</Visibility>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <pValue>AcquisitionBuffersQueueSizeReg</pValue>
+      <pMin>AcquisitionBuffersQueueSizeRangeMinReg</pMin>
+      <pMax>AcquisitionBuffersQueueSizeRangeMaxReg</pMax>
+      <Inc>1</Inc>
+      <Representation>Linear</Representation>
+    </Integer>
+    <Integer Name="AcquisitionBurstFrameCount" NameSpace="Custom">
+      <ToolTip>Sets number of frames acquired by burst.</ToolTip>
+      <Description>Sets number of frames acquired by burst.</Description>
+      <DisplayName>Acquisition Burst Frame Count</DisplayName>
+      <Visibility>Guru</Visibility>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Streamable>Yes</Streamable>
+      <pValue>AcquisitionBurstFrameCountReg</pValue>
+      <pMin>AcquisitionBurstFrameCountRangeMinReg</pMin>
+      <pMax>AcquisitionBurstFrameCountRangeMaxReg</pMax>
+      <Inc>1</Inc>
+      <Representation>Linear</Representation>
+    </Integer>
+    <Enumeration Name="AcquisitionTimingMode" NameSpace="Custom">
+      <ToolTip>Sets the acquisition timing</ToolTip>
+      <Description>This enumeration sets the image acquisition timing mode. </Description>
+      <DisplayName>Acquisition Timing Mode</DisplayName>
+      <Visibility>Beginner</Visibility>
+      <Streamable/>
+      <EnumEntry Name="FrameRateLimit" NameSpace="Custom">
+        <ToolTip>Acquisition frame rate is limited by FrameRate feature</ToolTip>
+        <Description>Acquisition frame rate is limited by FrameRate feature</Description>
+        <DisplayName>FrameRate</DisplayName>
+        <Value>2</Value>
+      </EnumEntry>
+      <EnumEntry Name="FreeRun" NameSpace="Custom">
+        <ToolTip>Acquisition free run - maximum frame rate at given exposure</ToolTip>
+        <Description>Acquisition free run - maximum frame rate at given exposure</Description>
+        <DisplayName>FreeRun</DisplayName>
+        <Value>0</Value>
+      </EnumEntry>
+      <pValue>AcquisitionTimingModeReg</pValue>
+    </Enumeration>
+    <Command Name="AcquisitionAbort" NameSpace="Standard">
+      <ToolTip>Aborts the acquisition of images</ToolTip>
+      <Description>Aborts the Acquisition immediately.</Description>
+      <DisplayName>Acquisition Abort</DisplayName>
+      <Visibility>Beginner</Visibility>
+      <ImposedAccessMode>WO</ImposedAccessMode>
+      <pValue>AcquisitionAbortReg</pValue>
+      <CommandValue>0</CommandValue>
+    </Command>
+    <Boolean Name="AcquisitionStatus" NameSpace="Standard">
+      <ToolTip>Reads the state of the internal acquisition signal selected using AcquisitionStatusSelector.</ToolTip>
+      <Description>Reads the state of the internal acquisition signal selected using AcquisitionStatusSelector.</Description>
+      <DisplayName>Reads the state of the internal acquisition signal selected using AcquisitionStatusSelector.</DisplayName>
+      <Visibility>Beginner</Visibility>
+      <pValue>AcquisitionStatusReg</pValue>
+    </Boolean>
+    <Enumeration Name="AcquisitionStatusSelector" NameSpace="Custom">
+      <ToolTip>Selects the internal acquisition signal to read using XI_PRM_ACQUISITION_STATUS.</ToolTip>
+      <Description>Selects the internal acquisition signal to read using XI_PRM_ACQUISITION_STATUS.</Description>
+      <DisplayName>Acquisition status selector</DisplayName>
+      <Visibility>Beginner</Visibility>
+      <Streamable/>
+      <EnumEntry Name="AcquisitionStatusActive" NameSpace="Standard">
+        <ToolTip>Device is currently doing an acquisition of one or many frames.</ToolTip>
+        <Description>Device is currently doing an acquisition of one or many frames.</Description>
+        <DisplayName>Device is currently doing an acquisition of one or many frames.</DisplayName>
+        <Value>0</Value>
+      </EnumEntry>
+      <pValue>AcquisitionStatusSelectorReg</pValue>
+    </Enumeration>
+    <Float Name="TriggerDelay" NameSpace="Standard">
+      <ToolTip>Specifies the delay in microseconds (us).</ToolTip>
+      <Description>Specifies the delay in microseconds (us) to apply after the trigger reception before activating it.</Description>
+      <DisplayName>TriggerDelay</DisplayName>
+      <Visibility>Expert</Visibility>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <pValue>TriggerDelayReg</pValue>
+      <pMin>TriggerDelayRangeMinReg</pMin>
+      <pMax>TriggerDelayRangeMaxReg</pMax>
+    </Float>
+  </Group>
+  <Group Comment="DigitalIOControl feature list">
+    <Enumeration Name="LineSelector" NameSpace="Standard">
+      <ToolTip>Selects the I/O line to configure. Once a line has been selected, all changes to the line settings will be applied to the selected line.</ToolTip>
+      <Description>This enumeration selects the I/O line to configure. Once a line has been selected, all changes to the line settings will be applied to the selected line.</Description>
+      <DisplayName>Line Selector</DisplayName>
+      <Visibility>Expert</Visibility>
+      <Streamable/>
+      <EnumEntry Name="Line1" NameSpace="Standard">
+        <ToolTip>Selects the physical line 1</ToolTip>
+        <Description>Selects the physical line 1</Description>
+        <DisplayName>Line 1</DisplayName>
+        <Value>0</Value>
+      </EnumEntry>
+      <EnumEntry Name="Line2" NameSpace="Standard">
+        <ToolTip>Selects the physical line  2</ToolTip>
+        <Description>Selects the physical line  2</Description>
+        <DisplayName>Line 2</DisplayName>
+        <Value>1</Value>
+      </EnumEntry>
+      <EnumEntry Name="Line3" NameSpace="Standard">
+        <ToolTip>Selects the physical line 3</ToolTip>
+        <Description>Selects the physical line 3.</Description>
+        <DisplayName>Line 3</DisplayName>
+        <Value>2</Value>
+      </EnumEntry>
+      <EnumEntry Name="Line4" NameSpace="Standard">
+        <ToolTip>Selects the physical line 4</ToolTip>
+        <Description>Selects the physical line 4.</Description>
+        <DisplayName>Line 4</DisplayName>
+        <Value>3</Value>
+      </EnumEntry>
+      <EnumEntry Name="Line5" NameSpace="Standard">
+        <ToolTip>Selects the physical line 5</ToolTip>
+        <Description>Selects the physical line 5.</Description>
+        <DisplayName>Line 5</DisplayName>
+        <Value>4</Value>
+      </EnumEntry>
+      <EnumEntry Name="Line6" NameSpace="Standard">
+        <ToolTip>Selects the physical line 6</ToolTip>
+        <Description>Selects the physical line 6.</Description>
+        <DisplayName>Line 6</DisplayName>
+        <Value>5</Value>
+      </EnumEntry>
+      <EnumEntry Name="Line7" NameSpace="Standard">
+        <ToolTip>Selects the physical line 7</ToolTip>
+        <Description>Selects the physical line 7.</Description>
+        <DisplayName>Line 7</DisplayName>
+        <Value>6</Value>
+      </EnumEntry>
+      <EnumEntry Name="Line8" NameSpace="Standard">
+        <ToolTip>Selects the physical line 8</ToolTip>
+        <Description>Selects the physical line 8.</Description>
+        <DisplayName>Line 8</DisplayName>
+        <Value>7</Value>
+      </EnumEntry>
+      <pValue>LineSelectorReg</pValue>
+    </Enumeration>
+    <Enumeration Name="LineMode" NameSpace="Standard">
+      <ToolTip>Controls if the physical Line is used to Input or Output a signal.</ToolTip>
+      <Description>Controls if the physical Line is used to Input or Output a signal.</Description>
+      <DisplayName>Line Mode</DisplayName>
+      <Visibility>Expert</Visibility>
+      <Streamable/>
+      <EnumEntry Name="Input" NameSpace="Standard">
+        <ToolTip>Sets the mode for the selected line to input</ToolTip>
+        <Description>This enumeration value sets the mode for the selected line to input.</Description>
+        <DisplayName>Input</DisplayName>
+        <Value>0</Value>
+      </EnumEntry>
+      <EnumEntry Name="Output" NameSpace="Standard">
+        <ToolTip>Sets the mode for the selected line to output</ToolTip>
+        <Description>This enumeration value sets the mode for the selected line to output</Description>
+        <DisplayName>Output</DisplayName>
+        <Value>1</Value>
+      </EnumEntry>
+      <pValue>LineModeReg</pValue>
+    </Enumeration>
+    <Boolean Name="LineInverter" NameSpace="Standard">
+      <ToolTip>Enables the inverter function for the selected line</ToolTip>
+      <Description>This boolean value enables the inverter function for the selected line.</Description>
+      <DisplayName>Line Inverter</DisplayName>
+      <Visibility>Beginner</Visibility>
+      <pValue>LineInverterReg</pValue>
+    </Boolean>
+    <Boolean Name="LineStatus" NameSpace="Standard">
+      <ToolTip>Status of the selected line</ToolTip>
+      <Description>Reports the current status of the selected line.</Description>
+      <DisplayName>Line Status</DisplayName>
+      <Visibility>Expert</Visibility>
+      <pValue>LineStatusReg</pValue>
+    </Boolean>
+    <Enumeration Name="LineSource" NameSpace="Standard">
+      <ToolTip>Sets the source signal for the selected line (if the selected line is an output)</ToolTip>
+      <Description>This enumeration selects the internally generated camera signal (source signal) for the selected line when the selected line is an output. </Description>
+      <DisplayName>Line Source</DisplayName>
+      <Visibility>Expert</Visibility>
+      <Streamable/>
+      <EnumEntry Name="Blink" NameSpace="Custom">
+        <ToolTip>Line output is blinking</ToolTip>
+        <Description>Line output is blinking</Description>
+        <DisplayName>Blink</DisplayName>
+        <Value>11</Value>
+      </EnumEntry>
+      <EnumEntry Name="ExposureActive" NameSpace="Standard">
+        <ToolTip>Device is doing the exposure of a Frame (or Line).</ToolTip>
+        <Description>Device is doing the exposure of a Frame (or Line).</Description>
+        <DisplayName>Exposure Active</DisplayName>
+        <Value>4</Value>
+      </EnumEntry>
+      <EnumEntry Name="FrameActive" NameSpace="Standard">
+        <ToolTip>Device is currently doing the capture of a Frame.</ToolTip>
+        <Description>Device is currently doing the capture of a Frame.</Description>
+        <DisplayName>Frame Active</DisplayName>
+        <Value>2</Value>
+      </EnumEntry>
+      <EnumEntry Name="IOStatus1" NameSpace="Custom">
+        <ToolTip>Source for selected line is IO Status of Line1</ToolTip>
+        <Description>Source for selected line is IO Status of Line1</Description>
+        <DisplayName>IOStatus1</DisplayName>
+        <Value>20</Value>
+      </EnumEntry>
+      <EnumEntry Name="IOStatus2" NameSpace="Custom">
+        <ToolTip>Source for selected line is IO Status of Line2</ToolTip>
+        <Description>Source for selected line is IO Status of Line2</Description>
+        <DisplayName>IOStatus2</DisplayName>
+        <Value>21</Value>
+      </EnumEntry>
+      <EnumEntry Name="IOStatus3" NameSpace="Custom">
+        <ToolTip>Source for selected line is IO Status of Line3</ToolTip>
+        <Description>Source for selected line is IO Status of Line3</Description>
+        <DisplayName>IOStatus3</DisplayName>
+        <Value>22</Value>
+      </EnumEntry>
+      <EnumEntry Name="IOStatus4" NameSpace="Custom">
+        <ToolTip>Source for selected line is IO Status of Line4</ToolTip>
+        <Description>Source for selected line is IO Status of Line4</Description>
+        <DisplayName>IOStatus4</DisplayName>
+        <Value>23</Value>
+      </EnumEntry>
+      <EnumEntry Name="IOStatus5" NameSpace="Custom">
+        <ToolTip>Source for selected line is IO Status of Line5</ToolTip>
+        <Description>Source for selected line is IO Status of Line5</Description>
+        <DisplayName>IOStatus5</DisplayName>
+        <Value>24</Value>
+      </EnumEntry>
+      <EnumEntry Name="IOStatus6" NameSpace="Custom">
+        <ToolTip>Source for selected line is IO Status of Line6</ToolTip>
+        <Description>Source for selected line is IO Status of Line6</Description>
+        <DisplayName>IOStatus6</DisplayName>
+        <Value>25</Value>
+      </EnumEntry>
+      <EnumEntry Name="IOStatus7" NameSpace="Custom">
+        <ToolTip>Source for selected line is IO Status of Line7</ToolTip>
+        <Description>Source for selected line is IO Status of Line7</Description>
+        <DisplayName>IOStatus7</DisplayName>
+        <Value>26</Value>
+      </EnumEntry>
+      <EnumEntry Name="IOStatus8" NameSpace="Custom">
+        <ToolTip>Source for selected line is IO Status of Line8</ToolTip>
+        <Description>Source for selected line is IO Status of Line8</Description>
+        <DisplayName>IOStatus8</DisplayName>
+        <Value>27</Value>
+      </EnumEntry>
+      <EnumEntry Name="Off" NameSpace="Standard">
+        <ToolTip>Line output is disabled. Off.</ToolTip>
+        <Description>Line output is disabled. Off.</Description>
+        <DisplayName>Off</DisplayName>
+        <Value>0</Value>
+      </EnumEntry>
+      <EnumEntry Name="On" NameSpace="Custom">
+        <ToolTip>Line output is disabled. On.</ToolTip>
+        <Description>Line output is disabled. On.</Description>
+        <DisplayName>On</DisplayName>
+        <Value>1</Value>
+      </EnumEntry>
+      <EnumEntry Name="PCIeLane" NameSpace="Custom">
+        <ToolTip>Describes number of PCIe lanes</ToolTip>
+        <Description>Describes number of PCIe lanes</Description>
+        <DisplayName>PCIeLane</DisplayName>
+        <Value>14</Value>
+      </EnumEntry>
+      <EnumEntry Name="PCIeSpeed" NameSpace="Custom">
+        <ToolTip>Describes PCIe speed</ToolTip>
+        <Description>Describes PCIe speed</Description>
+        <DisplayName>PCIeSpeed</DisplayName>
+        <Value>13</Value>
+      </EnumEntry>
+      <EnumEntry Name="Readout" NameSpace="Custom">
+        <ToolTip>Device is currently doing readout</ToolTip>
+        <Description>Device is currently doing readout</Description>
+        <DisplayName>Readout</DisplayName>
+        <Value>15</Value>
+      </EnumEntry>
+      <pValue>LineSourceReg</pValue>
+    </Enumeration>
+    <Enumeration Name="LineFormat" NameSpace="Standard">
+      <ToolTip>Sets the electrical configuration of the selected line</ToolTip>
+      <Description>Controls the current electrical format of the selected physical input or output Line.</Description>
+      <DisplayName>Line Format</DisplayName>
+      <Visibility>Expert</Visibility>
+      <Streamable/>
+      <EnumEntry Name="LED" NameSpace="Custom">
+        <ToolTip>Selected line is LED indicator</ToolTip>
+        <Description>Selected line is LED indicator</Description>
+        <DisplayName>LED</DisplayName>
+        <Value>2</Value>
+      </EnumEntry>
+      <EnumEntry Name="NonIsolated" NameSpace="Custom">
+        <ToolTip>Selected line is non isolated (e.g. bidirectional)</ToolTip>
+        <Description>Selected line is non isolated (e.g. bidirectional)</Description>
+        <DisplayName>NonIsolated</DisplayName>
+        <Value>1</Value>
+      </EnumEntry>
+      <EnumEntry Name="OptoCoupled" NameSpace="Standard">
+        <ToolTip>Sets the electrical configuration of the selected line to opto-coupled</ToolTip>
+        <Description>This enumeration value sets the electrical configuration of the selected line to opto-coupled.</Description>
+        <DisplayName>Opto Coupled</DisplayName>
+        <Value>0</Value>
+      </EnumEntry>
+      <pValue>LineFormatReg</pValue>
+    </Enumeration>
+    <Enumeration Name="UserOutputSelector" NameSpace="Standard">
+      <ToolTip>User Output Selector</ToolTip>
+      <Description>Selects which bit of the User Output register will be set by UserOutputValue.</Description>
+      <DisplayName>User Output Selector</DisplayName>
+      <Visibility>Beginner</Visibility>
+      <Streamable/>
+      <EnumEntry Name="UserOutput0" NameSpace="Standard">
+        <ToolTip>Select output 0 for logic level</ToolTip>
+        <Description>Select output 0 for logic level</Description>
+        <DisplayName>UserOutput 0</DisplayName>
+        <Value>1</Value>
+      </EnumEntry>
+      <EnumEntry Name="UserOutput1" NameSpace="Standard">
+        <ToolTip>Select output 1 for logic level</ToolTip>
+        <Description>Select output 1 for logic level</Description>
+        <DisplayName>UserOutput 1</DisplayName>
+        <Value>2</Value>
+      </EnumEntry>
+      <EnumEntry Name="UserOutput2" NameSpace="Standard">
+        <ToolTip>Select output 2 for logic level</ToolTip>
+        <Description>Select output 2 for logic level</Description>
+        <DisplayName>UserOutput 2 </DisplayName>
+        <Value>3</Value>
+      </EnumEntry>
+      <EnumEntry Name="UserOutput3" NameSpace="Standard">
+        <ToolTip>Select output 3 for logic level</ToolTip>
+        <Description>Select output 3 for logic level</Description>
+        <DisplayName>UserOutput 3</DisplayName>
+        <Value>4</Value>
+      </EnumEntry>
+      <pValue>UserOutputSelectorReg</pValue>
+    </Enumeration>
+    <Boolean Name="UserOutputValue" NameSpace="Standard">
+      <ToolTip>User Output Value</ToolTip>
+      <Description>Sets the value of the bit selected by UserOutputSelector.</Description>
+      <DisplayName>User Output Value</DisplayName>
+      <Visibility>Expert</Visibility>
+      <pValue>UserOutputValueReg</pValue>
+    </Boolean>
+  </Group>
+  <Group Comment="CounterAndTimerControl feature list"/>
+  <Group Comment="EventControl feature list"/>
+  <Group Comment="AnalogControl feature list">
+    <Enumeration Name="BalanceWhiteAuto" NameSpace="Standard">
+      <ToolTip>Auto matic WB.</ToolTip>
+      <Description>Controls the mode for automatic white balancing between the color channels.</Description>
+      <DisplayName>Balance White Auto</DisplayName>
+      <Visibility>Expert</Visibility>
+      <Streamable/>
+      <EnumEntry Name="Continuous" NameSpace="Standard">
+        <ToolTip>White balancing is constantly adjusted by the device.</ToolTip>
+        <Description>White balancing is constantly adjusted by the device.</Description>
+        <DisplayName>Continuous:</DisplayName>
+        <Value>2</Value>
+      </EnumEntry>
+      <EnumEntry Name="Off" NameSpace="Standard">
+        <ToolTip>Auto W/B off.</ToolTip>
+        <Description>Auto W/B off.</Description>
+        <DisplayName>Off</DisplayName>
+        <Value>0</Value>
+      </EnumEntry>
+      <EnumEntry Name="Once" NameSpace="Standard">
+        <ToolTip>Run auto W/B once.</ToolTip>
+        <Description>Run auto W/B once.</Description>
+        <DisplayName>Once</DisplayName>
+        <Value>1</Value>
+      </EnumEntry>
+      <pValue>BalanceWhiteAutoReg</pValue>
+    </Enumeration>
+    <Enumeration Name="GainSelector" NameSpace="Standard">
+      <ToolTip>Selects the gain control to configure. Once a gain control has been selected, all changes to the gain settings will be applied to the selected control.</ToolTip>
+      <Description>This enumeration selects the gain control to configure. Once a gain control has been selected, all changes to the gain settings will be applied to the selected control.</Description>
+      <DisplayName>Gain Selector</DisplayName>
+      <Visibility>Beginner</Visibility>
+      <Streamable/>
+      <EnumEntry Name="All" NameSpace="Standard">
+        <ToolTip>Gain will be applied to all channels or taps.</ToolTip>
+        <Description>Gain will be applied to all channels or taps.</Description>
+        <DisplayName>All</DisplayName>
+        <Value>0</Value>
+      </EnumEntry>
+      <EnumEntry Name="AnalogAll" NameSpace="Standard">
+        <ToolTip>Gain will be applied to all analog channels or taps.</ToolTip>
+        <Description>Gain will be applied to all analog channels or taps.</Description>
+        <DisplayName>AnalogAll</DisplayName>
+        <Value>1</Value>
+      </EnumEntry>
+      <EnumEntry Name="DigitalAll" NameSpace="Standard">
+        <ToolTip>Gain will be applied to all digital channels or taps.</ToolTip>
+        <Description>Gain will be applied to all digital channels or taps.</Description>
+        <DisplayName>DigitalAll</DisplayName>
+        <Value>2</Value>
+      </EnumEntry>
+      <pValue>GainSelectorReg</pValue>
+    </Enumeration>
+    <Float Name="Gain" NameSpace="Standard">
+      <ToolTip>Gain value (in dB).</ToolTip>
+      <Description>Controls the selected gain (in dB) as an absolute physical value. This is an amplification factor applied to the video signal.</Description>
+      <DisplayName>Gain</DisplayName>
+      <Visibility>Beginner</Visibility>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <Streamable>Yes</Streamable>
+      <pValue>GainReg</pValue>
+      <pMin>GainRangeMinReg</pMin>
+      <pMax>GainRangeMaxReg</pMax>
+    </Float>
+    <Float Name="WhiteBalanceRed" NameSpace="Custom">
+      <ToolTip>White balance red coefficient.</ToolTip>
+      <Description>White balance red coefficient.</Description>
+      <DisplayName>White Balance Red</DisplayName>
+      <Visibility>Guru</Visibility>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <pValue>WhiteBalanceRedReg</pValue>
+      <pMin>WhiteBalanceRedRangeMinReg</pMin>
+      <pMax>WhiteBalanceRedRangeMaxReg</pMax>
+    </Float>
+    <Float Name="WhiteBalanceGreen" NameSpace="Custom">
+      <ToolTip>White balance green coefficient.</ToolTip>
+      <Description>White balance green coefficient.</Description>
+      <DisplayName>White Balance Green</DisplayName>
+      <Visibility>Guru</Visibility>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <pValue>WhiteBalanceGreenReg</pValue>
+      <Min>0</Min>
+      <Max>8</Max>
+    </Float>
+    <Float Name="WhiteBalanceBlue" NameSpace="Custom">
+      <ToolTip>White balance green coefficient.</ToolTip>
+      <Description>White balance green coefficient.</Description>
+      <DisplayName>White Balance Blue</DisplayName>
+      <Visibility>Guru</Visibility>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <pValue>WhiteBalanceBlueReg</pValue>
+      <Min>0</Min>
+      <Max>8</Max>
+    </Float>
+    <Float Name="GammaY" NameSpace="Custom">
+      <ToolTip>Luminosity gamma.</ToolTip>
+      <Description>Luminosity gamma.</Description>
+      <DisplayName>GammaY</DisplayName>
+      <Visibility>Guru</Visibility>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <pValue>GammaYReg</pValue>
+      <pMin>GammaYRangeMinReg</pMin>
+      <pMax>GammaYRangeMaxReg</pMax>
+    </Float>
+    <Float Name="GammaC" NameSpace="Custom">
+      <ToolTip>Chromaticity gamma.</ToolTip>
+      <Description>Chromaticity gamma.</Description>
+      <DisplayName>GammaC</DisplayName>
+      <Visibility>Guru</Visibility>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <pValue>GammaCReg</pValue>
+      <pMin>GammaCRangeMinReg</pMin>
+      <pMax>GammaCRangeMaxReg</pMax>
+    </Float>
+    <Float Name="Sharpness" NameSpace="Custom">
+      <ToolTip>Sharpness Strenght.</ToolTip>
+      <Description>Sharpness Strenght.</Description>
+      <DisplayName>Sharpness</DisplayName>
+      <Visibility>Guru</Visibility>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <pValue>SharpnessReg</pValue>
+      <Min>-4</Min>
+      <Max>4</Max>
+    </Float>
+  </Group>
+  <Group Comment="LUTControl feature list">
+    <Boolean Name="LUTEnable" NameSpace="Standard">
+      <ToolTip>Enables the selected LUT</ToolTip>
+      <Description>This boolean value enables the selected LUT.</Description>
+      <DisplayName>LUT Enable</DisplayName>
+      <Visibility>Expert</Visibility>
+      <pValue>LUTEnableReg</pValue>
+    </Boolean>
+    <Integer Name="LUTIndex" NameSpace="Standard">
+      <ToolTip>Sets the LUT element to access </ToolTip>
+      <Description>This value sets the LUT element to access. This value is used to index into a LUT array.</Description>
+      <DisplayName>LUT Index</DisplayName>
+      <Visibility>Guru</Visibility>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <pValue>LUTIndexReg</pValue>
+      <Min>0</Min>
+      <pMax>LUTIndexRangeMaxReg</pMax>
+      <Representation>Linear</Representation>
+    </Integer>
+    <Integer Name="LUTValue" NameSpace="Standard">
+      <ToolTip>Sets the value of the LUT element at the LUT index</ToolTip>
+      <Description>This value sets the value of the LUT element at the LUT index.</Description>
+      <DisplayName>LUT Value</DisplayName>
+      <Visibility>Guru</Visibility>
+      <ImposedAccessMode>RW</ImposedAccessMode>
+      <pValue>LUTValueReg</pValue>
+      <Min>0</Min>
+      <pMax>LUTValueRangeMaxReg</pMax>
+      <Representation>Linear</Representation>
+    </Integer>
+  </Group>
+  <Group Comment="TransportLayerControl feature list">
+    <Integer Name="PayloadSize" NameSpace="Standard">
+      <ToolTip>Size of the payload in bytes</ToolTip>
+      <Description>Size of the payload in bytes. This is the total number of bytes sent in the payload. Image data + chunk data if present. No packet headers.</Description>
+      <DisplayName>Payload Size</DisplayName>
+      <Visibility>Expert</Visibility>
+      <ImposedAccessMode>RO</ImposedAccessMode>
+      <pValue>PayloadSizeReg</pValue>
+      <Representation>PureNumber</Representation>
+    </Integer>
+  </Group>
+  <Group Comment="UserSetControl feature list"/>
+  <Group Comment="FileAccessControl feature list"/>
+  <Group Comment="ColorTransformationControl feature list"/>
+  <Group Comment="ActionControl feature list"/>
+  <Group Comment="LEDControl feature list"/>
+  <Group Comment="LensControl feature list"/>
+  <Group Comment="DeviceControl register list">
+    <StringReg Name="DeviceVendorName" NameSpace="Standard">
+      <ToolTip>Indicates the name of the device vendor</ToolTip>
+      <Description>Vendor Name</Description>
+      <Visibility>Invisible</Visibility>
+      <Address>0x100800</Address>
+      <Length>32</Length>
+      <AccessMode>RO</AccessMode>
+      <pPort>Device</pPort>
+    </StringReg>
+    <StringReg Name="DeviceModelName" NameSpace="Standard">
+      <ToolTip>Indicates the model name of the device</ToolTip>
+      <Description>Model Name</Description>
+      <Visibility>Invisible</Visibility>
+      <Address>0x100900</Address>
+      <Length>32</Length>
+      <AccessMode>RO</AccessMode>
+      <pPort>Device</pPort>
+    </StringReg>
+    <StringReg Name="DeviceManufacturerInfo" NameSpace="Standard">
+      <ToolTip>Provides additional information from the vendor about the device</ToolTip>
+      <Description>Manufacturer Info</Description>
+      <Visibility>Invisible</Visibility>
+      <Address>0x101000</Address>
+      <Length>48</Length>
+      <AccessMode>RO</AccessMode>
+      <pPort>Device</pPort>
+    </StringReg>
+    <StringReg Name="DeviceFirmwareVersion" NameSpace="Standard">
+      <ToolTip>Indicates the version of the device</ToolTip>
+      <Description>Device Firmware Version</Description>
+      <Visibility>Invisible</Visibility>
+      <Address>0x101100</Address>
+      <Length>32</Length>
+      <AccessMode>RO</AccessMode>
+      <pPort>Device</pPort>
+    </StringReg>
+    <StringReg Name="DeviceID" NameSpace="Standard">
+      <ToolTip>A unique identifier for the device such as a serial number or a GUID</ToolTip>
+      <Description>Device ID</Description>
+      <Visibility>Invisible</Visibility>
+      <Address>0x101200</Address>
+      <Length>48</Length>
+      <AccessMode>RO</AccessMode>
+      <pPort>Device</pPort>
+    </StringReg>
+    <StringReg Name="DeviceUserID" NameSpace="Standard">
+      <ToolTip>A device ID that is user programmable</ToolTip>
+      <Description>Device User ID</Description>
+      <Visibility>Invisible</Visibility>
+      <Address>0x101300</Address>
+      <Length>48</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+    </StringReg>
+    <IntReg Name="DeviceTemperatureSelectorReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x101400</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <FloatReg Name="DeviceTemperatureReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x101600</Address>
+      <Length>4</Length>
+      <AccessMode>RO</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>DeviceTemperatureSelectorReg</pInvalidator>
+      <Endianess>LittleEndian</Endianess>
+    </FloatReg>
+    <IntReg Name="TLParamsLockedReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x110900</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="DeviceLinkThroughputLimitModeReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x111300</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>DeviceLinkThroughputLimitReg</pInvalidator>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="DeviceLinkThroughputLimitRangeMaxReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <pIsAvailable>DeviceLinkThroughputLimit_AvailCalc</pIsAvailable>
+      <Address>0x311400</Address>
+      <Length>8</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="DeviceLinkThroughputLimitRangeMinReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <pIsAvailable>DeviceLinkThroughputLimit_AvailCalc</pIsAvailable>
+      <Address>0x211400</Address>
+      <Length>8</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="DeviceLinkThroughputLimitReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <pIsAvailable>DeviceLinkThroughputLimit_AvailCalc</pIsAvailable>
+      <Address>0x111400</Address>
+      <Length>8</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntSwissKnife Name="DeviceLinkThroughputLimit_AvailCalc" NameSpace="Custom"><Visibility>Invisible</Visibility><pVariable Name="DEVLINKTHRMODE">DeviceLinkThroughputLimitModeReg</pVariable><Formula><![CDATA[DEVLINKTHRMODE=1]]></Formula></IntSwissKnife>
+    <StringReg Name="DeviceVersion" NameSpace="Standard">
+      <ToolTip>Indicates the version of device (hardware)</ToolTip>
+      <Description>Device Version</Description>
+      <Visibility>Invisible</Visibility>
+      <Address>0x113000</Address>
+      <Length>32</Length>
+      <AccessMode>RO</AccessMode>
+      <pPort>Device</pPort>
+    </StringReg>
+  </Group>
+  <Group Comment="ImageFormatControl register list">
+    <IntReg Name="SensorWidthRangeMaxReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x301700</Address>
+      <Length>4</Length>
+      <AccessMode>RO</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="SensorWidthRangeMinReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x201700</Address>
+      <Length>4</Length>
+      <AccessMode>RO</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="SensorWidthReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x101700</Address>
+      <Length>4</Length>
+      <AccessMode>RO</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="SensorHeightRangeMaxReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x301800</Address>
+      <Length>4</Length>
+      <AccessMode>RO</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="SensorHeightRangeMinReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x201800</Address>
+      <Length>4</Length>
+      <AccessMode>RO</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="SensorHeightReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x101800</Address>
+      <Length>4</Length>
+      <AccessMode>RO</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="WidthRangeMaxReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x302100</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>DecimationHorizontalReg</pInvalidator>
+      <pInvalidator>DecimationVerticalReg</pInvalidator>
+      <pInvalidator>HeightReg</pInvalidator>
+      <pInvalidator>PayloadSizeReg</pInvalidator>
+      <pInvalidator>PixelFormatReg</pInvalidator>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="WidthRangeMinReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x202100</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>DecimationHorizontalReg</pInvalidator>
+      <pInvalidator>DecimationVerticalReg</pInvalidator>
+      <pInvalidator>HeightReg</pInvalidator>
+      <pInvalidator>PayloadSizeReg</pInvalidator>
+      <pInvalidator>PixelFormatReg</pInvalidator>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="WidthReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x102100</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>DecimationHorizontalReg</pInvalidator>
+      <pInvalidator>DecimationVerticalReg</pInvalidator>
+      <pInvalidator>HeightReg</pInvalidator>
+      <pInvalidator>PayloadSizeReg</pInvalidator>
+      <pInvalidator>PixelFormatReg</pInvalidator>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="HeightRangeMaxReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x302200</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>DecimationHorizontalReg</pInvalidator>
+      <pInvalidator>DecimationVerticalReg</pInvalidator>
+      <pInvalidator>PayloadSizeReg</pInvalidator>
+      <pInvalidator>PixelFormatReg</pInvalidator>
+      <pInvalidator>WidthReg</pInvalidator>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="HeightRangeMinReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x202200</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>DecimationHorizontalReg</pInvalidator>
+      <pInvalidator>DecimationVerticalReg</pInvalidator>
+      <pInvalidator>PayloadSizeReg</pInvalidator>
+      <pInvalidator>PixelFormatReg</pInvalidator>
+      <pInvalidator>WidthReg</pInvalidator>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="HeightReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x102200</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>DecimationHorizontalReg</pInvalidator>
+      <pInvalidator>DecimationVerticalReg</pInvalidator>
+      <pInvalidator>PayloadSizeReg</pInvalidator>
+      <pInvalidator>PixelFormatReg</pInvalidator>
+      <pInvalidator>WidthReg</pInvalidator>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="PixelFormatReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x102300</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>PayloadSizeReg</pInvalidator>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="BinningHorizontalRangeMaxReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x302400</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>DecimationHorizontalReg</pInvalidator>
+      <pInvalidator>DecimationVerticalReg</pInvalidator>
+      <pInvalidator>HeightReg</pInvalidator>
+      <pInvalidator>OffsetXReg</pInvalidator>
+      <pInvalidator>OffsetYReg</pInvalidator>
+      <pInvalidator>PayloadSizeReg</pInvalidator>
+      <pInvalidator>WidthReg</pInvalidator>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="BinningHorizontalReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x102400</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>DecimationHorizontalReg</pInvalidator>
+      <pInvalidator>DecimationVerticalReg</pInvalidator>
+      <pInvalidator>HeightReg</pInvalidator>
+      <pInvalidator>OffsetXReg</pInvalidator>
+      <pInvalidator>OffsetYReg</pInvalidator>
+      <pInvalidator>PayloadSizeReg</pInvalidator>
+      <pInvalidator>WidthReg</pInvalidator>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="BinningVerticalRangeMaxReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x302500</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>HeightReg</pInvalidator>
+      <pInvalidator>OffsetXReg</pInvalidator>
+      <pInvalidator>OffsetYReg</pInvalidator>
+      <pInvalidator>PayloadSizeReg</pInvalidator>
+      <pInvalidator>WidthReg</pInvalidator>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="BinningVerticalReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x102500</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>HeightReg</pInvalidator>
+      <pInvalidator>OffsetXReg</pInvalidator>
+      <pInvalidator>OffsetYReg</pInvalidator>
+      <pInvalidator>PayloadSizeReg</pInvalidator>
+      <pInvalidator>WidthReg</pInvalidator>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="DecimationHorizontalRangeMaxReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x302600</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>DecimationVerticalReg</pInvalidator>
+      <pInvalidator>HeightReg</pInvalidator>
+      <pInvalidator>OffsetXReg</pInvalidator>
+      <pInvalidator>OffsetYReg</pInvalidator>
+      <pInvalidator>PayloadSizeReg</pInvalidator>
+      <pInvalidator>WidthReg</pInvalidator>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="DecimationHorizontalReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x102600</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>DecimationVerticalReg</pInvalidator>
+      <pInvalidator>HeightReg</pInvalidator>
+      <pInvalidator>OffsetXReg</pInvalidator>
+      <pInvalidator>OffsetYReg</pInvalidator>
+      <pInvalidator>PayloadSizeReg</pInvalidator>
+      <pInvalidator>WidthReg</pInvalidator>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="DecimationVerticalRangeMaxReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x302700</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>DecimationHorizontalReg</pInvalidator>
+      <pInvalidator>HeightReg</pInvalidator>
+      <pInvalidator>OffsetXReg</pInvalidator>
+      <pInvalidator>OffsetYReg</pInvalidator>
+      <pInvalidator>PayloadSizeReg</pInvalidator>
+      <pInvalidator>WidthReg</pInvalidator>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="DecimationVerticalReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x102700</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>DecimationHorizontalReg</pInvalidator>
+      <pInvalidator>HeightReg</pInvalidator>
+      <pInvalidator>OffsetXReg</pInvalidator>
+      <pInvalidator>OffsetYReg</pInvalidator>
+      <pInvalidator>PayloadSizeReg</pInvalidator>
+      <pInvalidator>WidthReg</pInvalidator>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="OffsetXRangeMaxReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x302800</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>DecimationHorizontalReg</pInvalidator>
+      <pInvalidator>DecimationVerticalReg</pInvalidator>
+      <pInvalidator>PayloadSizeReg</pInvalidator>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="OffsetXReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x102800</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>DecimationHorizontalReg</pInvalidator>
+      <pInvalidator>DecimationVerticalReg</pInvalidator>
+      <pInvalidator>PayloadSizeReg</pInvalidator>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="OffsetYRangeMaxReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x302900</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>DecimationHorizontalReg</pInvalidator>
+      <pInvalidator>DecimationVerticalReg</pInvalidator>
+      <pInvalidator>PayloadSizeReg</pInvalidator>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="OffsetYReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x102900</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>DecimationHorizontalReg</pInvalidator>
+      <pInvalidator>DecimationVerticalReg</pInvalidator>
+      <pInvalidator>PayloadSizeReg</pInvalidator>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="BinningSelectorReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x815300</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="DecimationSelectorReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x815400</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="SensorShutterModeReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x823100</Address>
+      <Length>4</Length>
+      <AccessMode>RO</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="ReverseXReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x823700</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="ReverseYReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x823800</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="WidthMaxReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x826100</Address>
+      <Length>4</Length>
+      <AccessMode>RO</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>DecimationHorizontalReg</pInvalidator>
+      <pInvalidator>DecimationVerticalReg</pInvalidator>
+      <pInvalidator>HeightReg</pInvalidator>
+      <pInvalidator>PayloadSizeReg</pInvalidator>
+      <pInvalidator>PixelFormatReg</pInvalidator>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="BinningHorizontalPatternRangeMaxReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x1024600</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="BinningHorizontalPatternRangeMinReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x924600</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="BinningHorizontalPatternReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x824600</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="BinningVerticalPatternRangeMaxReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x1024700</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="BinningVerticalPatternRangeMinReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x924700</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="BinningVerticalPatternReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x824700</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="DecimationHorizontalPatternRangeMaxReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x1024800</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="DecimationHorizontalPatternRangeMinReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x924800</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="DecimationHorizontalPatternReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x824800</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="DecimationVerticalPatternRangeMaxReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x1024900</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="DecimationVerticalPatternRangeMinReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x924900</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="DecimationVerticalPatternReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x824900</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="HeightMaxReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x826200</Address>
+      <Length>4</Length>
+      <AccessMode>RO</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>DecimationHorizontalReg</pInvalidator>
+      <pInvalidator>DecimationVerticalReg</pInvalidator>
+      <pInvalidator>PayloadSizeReg</pInvalidator>
+      <pInvalidator>PixelFormatReg</pInvalidator>
+      <pInvalidator>WidthReg</pInvalidator>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="BinningHorizontalModeRangeMaxReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x1026400</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="BinningHorizontalModeRangeMinReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x926400</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="BinningHorizontalModeReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x826400</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="BinningVerticalModeRangeMaxReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x1026500</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="BinningVerticalModeRangeMinReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x926500</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="BinningVerticalModeReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x826500</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+  </Group>
+  <Group Comment="AcquisitionControl register list">
+    <IntReg Name="AcquisitionModeReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x103000</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="AcquisitionStartReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x103100</Address>
+      <Length>4</Length>
+      <AccessMode>WO</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="AcquisitionStopReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x103200</Address>
+      <Length>4</Length>
+      <AccessMode>WO</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="ExposureModeReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x103300</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="ExposureTimeRangeMaxReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x303400</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>AcquisitionFrameRateReg</pInvalidator>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="ExposureTimeReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x103400</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>AcquisitionFrameRateReg</pInvalidator>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="TriggerSelectorReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x103600</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="TriggerModeReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x103700</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="TriggerSoftwareReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x103800</Address>
+      <Length>4</Length>
+      <AccessMode>WO</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="TriggerSourceReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x103900</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="TriggerActivationReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x104000</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <FloatReg Name="AcquisitionFrameRateRangeMaxReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x311900</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>AcquisitionTimingModeReg</pInvalidator>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>DecimationHorizontalReg</pInvalidator>
+      <pInvalidator>DecimationVerticalReg</pInvalidator>
+      <pInvalidator>DeviceLinkThroughputLimitReg</pInvalidator>
+      <pInvalidator>ExposureTimeReg</pInvalidator>
+      <pInvalidator>HeightReg</pInvalidator>
+      <pInvalidator>WidthReg</pInvalidator>
+      <Endianess>LittleEndian</Endianess>
+    </FloatReg>
+    <FloatReg Name="AcquisitionFrameRateRangeMinReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x211900</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>AcquisitionTimingModeReg</pInvalidator>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>DecimationHorizontalReg</pInvalidator>
+      <pInvalidator>DecimationVerticalReg</pInvalidator>
+      <pInvalidator>DeviceLinkThroughputLimitReg</pInvalidator>
+      <pInvalidator>ExposureTimeReg</pInvalidator>
+      <pInvalidator>HeightReg</pInvalidator>
+      <pInvalidator>WidthReg</pInvalidator>
+      <Endianess>LittleEndian</Endianess>
+    </FloatReg>
+    <FloatReg Name="AcquisitionFrameRateReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x111900</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>AcquisitionTimingModeReg</pInvalidator>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>DecimationHorizontalReg</pInvalidator>
+      <pInvalidator>DecimationVerticalReg</pInvalidator>
+      <pInvalidator>DeviceLinkThroughputLimitReg</pInvalidator>
+      <pInvalidator>ExposureTimeReg</pInvalidator>
+      <pInvalidator>HeightReg</pInvalidator>
+      <pInvalidator>WidthReg</pInvalidator>
+      <Endianess>LittleEndian</Endianess>
+    </FloatReg>
+    <IntReg Name="AcquisitionTimeoutReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x107800</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="AEAGEnableReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x108400</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <FloatReg Name="AEAGExpPrioReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <pIsAvailable>AEAGExpPrio_AvailCalc</pIsAvailable>
+      <Address>0x108500</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Endianess>LittleEndian</Endianess>
+    </FloatReg>
+    <IntSwissKnife Name="AEAGExpPrio_AvailCalc" NameSpace="Custom"><Visibility>Invisible</Visibility><pVariable Name="AEAGEN">AEAGEnableReg</pVariable><Formula><![CDATA[AEAGEN=1]]></Formula></IntSwissKnife>
+    <IntReg Name="AEAGExpLimRangeMaxReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <pIsAvailable>AEAGExpLim_AvailCalc</pIsAvailable>
+      <Address>0x308600</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="AEAGExpLimRangeMinReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <pIsAvailable>AEAGExpLim_AvailCalc</pIsAvailable>
+      <Address>0x208600</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="AEAGExpLimReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <pIsAvailable>AEAGExpLim_AvailCalc</pIsAvailable>
+      <Address>0x108600</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntSwissKnife Name="AEAGExpLim_AvailCalc" NameSpace="Custom"><Visibility>Invisible</Visibility><pVariable Name="AEAGEN">AEAGEnableReg</pVariable><Formula><![CDATA[AEAGEN=1]]></Formula></IntSwissKnife>
+    <FloatReg Name="AEAGGainLimRangeMaxReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <pIsAvailable>AEAGGainLim_AvailCalc</pIsAvailable>
+      <Address>0x308700</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Endianess>LittleEndian</Endianess>
+    </FloatReg>
+    <FloatReg Name="AEAGGainLimRangeMinReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <pIsAvailable>AEAGGainLim_AvailCalc</pIsAvailable>
+      <Address>0x208700</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Endianess>LittleEndian</Endianess>
+    </FloatReg>
+    <FloatReg Name="AEAGGainLimReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <pIsAvailable>AEAGGainLim_AvailCalc</pIsAvailable>
+      <Address>0x108700</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Endianess>LittleEndian</Endianess>
+    </FloatReg>
+    <IntSwissKnife Name="AEAGGainLim_AvailCalc" NameSpace="Custom"><Visibility>Invisible</Visibility><pVariable Name="AEAGEN">AEAGEnableReg</pVariable><Formula><![CDATA[AEAGEN=1]]></Formula></IntSwissKnife>
+    <IntReg Name="AEAGLevelRangeMaxReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <pIsAvailable>AEAGLevel_AvailCalc</pIsAvailable>
+      <Address>0x308800</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="AEAGLevelRangeMinReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <pIsAvailable>AEAGLevel_AvailCalc</pIsAvailable>
+      <Address>0x208800</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="AEAGLevelReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <pIsAvailable>AEAGLevel_AvailCalc</pIsAvailable>
+      <Address>0x108800</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntSwissKnife Name="AEAGLevel_AvailCalc" NameSpace="Custom"><Visibility>Invisible</Visibility><pVariable Name="AEAGEN">AEAGEnableReg</pVariable><Formula><![CDATA[AEAGEN=1]]></Formula></IntSwissKnife>
+    <IntReg Name="BadpixelCorrectionReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x109100</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="AcquisitionBuffersQueueSizeRangeMaxReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x312100</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="AcquisitionBuffersQueueSizeRangeMinReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x212100</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="AcquisitionBuffersQueueSizeReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x112100</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="AcquisitionBurstFrameCountRangeMaxReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x312200</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="AcquisitionBurstFrameCountRangeMinReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x212200</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="AcquisitionBurstFrameCountReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x112200</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="AcquisitionTimingModeReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x112300</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="AcquisitionAbortReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x113700</Address>
+      <Length>4</Length>
+      <AccessMode>WO</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="AcquisitionStatusReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x823000</Address>
+      <Length>4</Length>
+      <AccessMode>RO</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>UserOutputSelectorReg</pInvalidator>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="AcquisitionStatusSelectorReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x822500</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <FloatReg Name="TriggerDelayRangeMaxReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x1024100</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Endianess>LittleEndian</Endianess>
+    </FloatReg>
+    <FloatReg Name="TriggerDelayRangeMinReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x924100</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Endianess>LittleEndian</Endianess>
+    </FloatReg>
+    <FloatReg Name="TriggerDelayReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x824100</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Endianess>LittleEndian</Endianess>
+    </FloatReg>
+  </Group>
+  <Group Comment="DigitalIOControl register list">
+    <IntReg Name="LineSelectorReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x104200</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="LineModeReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x104300</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>LineSelectorReg</pInvalidator>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="LineInverterReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x104400</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>LineSelectorReg</pInvalidator>
+      <pInvalidator>UserOutputSelectorReg</pInvalidator>
+      <pInvalidator>UserOutputValueReg</pInvalidator>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="LineStatusReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x104500</Address>
+      <Length>4</Length>
+      <AccessMode>RO</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>LineInverterReg</pInvalidator>
+      <pInvalidator>LineModeReg</pInvalidator>
+      <pInvalidator>LineSelectorReg</pInvalidator>
+      <pInvalidator>LineSourceReg</pInvalidator>
+      <pInvalidator>UserOutputSelectorReg</pInvalidator>
+      <pInvalidator>UserOutputValueReg</pInvalidator>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="LineSourceReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x104700</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="LineFormatReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x104800</Address>
+      <Length>4</Length>
+      <AccessMode>RO</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>LineSelectorReg</pInvalidator>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="UserOutputSelectorReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x104900</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>UserOutputValueReg</pInvalidator>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="UserOutputValueReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x105000</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>UserOutputSelectorReg</pInvalidator>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+  </Group>
+  <Group Comment="CounterAndTimerControl register list"/>
+  <Group Comment="EventControl register list"/>
+  <Group Comment="AnalogControl register list">
+    <IntReg Name="BalanceWhiteAutoReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <pIsAvailable>BalanceWhiteAuto_AvailCalc</pIsAvailable>
+      <Address>0x109400</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntSwissKnife Name="BalanceWhiteAuto_AvailCalc" NameSpace="Custom"><Visibility>Invisible</Visibility><pVariable Name="PIXELFORMAT">PixelFormatReg</pVariable><Formula><![CDATA[PIXELFORMAT=0x02200017]]></Formula></IntSwissKnife>
+    <IntReg Name="GainSelectorReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x105300</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <FloatReg Name="GainRangeMaxReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x305400</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Endianess>LittleEndian</Endianess>
+    </FloatReg>
+    <FloatReg Name="GainRangeMinReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x205400</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Endianess>LittleEndian</Endianess>
+    </FloatReg>
+    <FloatReg Name="GainReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x105400</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Endianess>LittleEndian</Endianess>
+    </FloatReg>
+    <FloatReg Name="WhiteBalanceRedRangeMaxReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <pIsAvailable>WhiteBalanceRed_AvailCalc</pIsAvailable>
+      <Address>0x305500</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Endianess>LittleEndian</Endianess>
+    </FloatReg>
+    <FloatReg Name="WhiteBalanceRedRangeMinReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <pIsAvailable>WhiteBalanceRed_AvailCalc</pIsAvailable>
+      <Address>0x205500</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Endianess>LittleEndian</Endianess>
+    </FloatReg>
+    <FloatReg Name="WhiteBalanceRedReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <pIsAvailable>WhiteBalanceRed_AvailCalc</pIsAvailable>
+      <Address>0x105500</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Endianess>LittleEndian</Endianess>
+    </FloatReg>
+    <IntSwissKnife Name="WhiteBalanceRed_AvailCalc" NameSpace="Custom"><Visibility>Invisible</Visibility><pVariable Name="PIXELFORMAT">PixelFormatReg</pVariable><Formula><![CDATA[PIXELFORMAT=0x02200017]]></Formula></IntSwissKnife>
+    <FloatReg Name="WhiteBalanceGreenRangeMaxReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <pIsAvailable>WhiteBalanceGreen_AvailCalc</pIsAvailable>
+      <Address>0x305600</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Endianess>LittleEndian</Endianess>
+    </FloatReg>
+    <FloatReg Name="WhiteBalanceGreenRangeMinReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <pIsAvailable>WhiteBalanceGreen_AvailCalc</pIsAvailable>
+      <Address>0x205600</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Endianess>LittleEndian</Endianess>
+    </FloatReg>
+    <FloatReg Name="WhiteBalanceGreenReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <pIsAvailable>WhiteBalanceGreen_AvailCalc</pIsAvailable>
+      <Address>0x105600</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Endianess>LittleEndian</Endianess>
+    </FloatReg>
+    <IntSwissKnife Name="WhiteBalanceGreen_AvailCalc" NameSpace="Custom"><Visibility>Invisible</Visibility><pVariable Name="PIXELFORMAT">PixelFormatReg</pVariable><Formula><![CDATA[PIXELFORMAT=0x02200017]]></Formula></IntSwissKnife>
+    <FloatReg Name="WhiteBalanceBlueRangeMaxReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <pIsAvailable>WhiteBalanceBlue_AvailCalc</pIsAvailable>
+      <Address>0x305700</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Endianess>LittleEndian</Endianess>
+    </FloatReg>
+    <FloatReg Name="WhiteBalanceBlueRangeMinReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <pIsAvailable>WhiteBalanceBlue_AvailCalc</pIsAvailable>
+      <Address>0x205700</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Endianess>LittleEndian</Endianess>
+    </FloatReg>
+    <FloatReg Name="WhiteBalanceBlueReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <pIsAvailable>WhiteBalanceBlue_AvailCalc</pIsAvailable>
+      <Address>0x105700</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Endianess>LittleEndian</Endianess>
+    </FloatReg>
+    <IntSwissKnife Name="WhiteBalanceBlue_AvailCalc" NameSpace="Custom"><Visibility>Invisible</Visibility><pVariable Name="PIXELFORMAT">PixelFormatReg</pVariable><Formula><![CDATA[PIXELFORMAT=0x02200017]]></Formula></IntSwissKnife>
+    <FloatReg Name="GammaYRangeMaxReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <pIsAvailable>GammaY_AvailCalc</pIsAvailable>
+      <Address>0x305800</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Endianess>LittleEndian</Endianess>
+    </FloatReg>
+    <FloatReg Name="GammaYRangeMinReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <pIsAvailable>GammaY_AvailCalc</pIsAvailable>
+      <Address>0x205800</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Endianess>LittleEndian</Endianess>
+    </FloatReg>
+    <FloatReg Name="GammaYReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <pIsAvailable>GammaY_AvailCalc</pIsAvailable>
+      <Address>0x105800</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Endianess>LittleEndian</Endianess>
+    </FloatReg>
+    <IntSwissKnife Name="GammaY_AvailCalc" NameSpace="Custom"><Visibility>Invisible</Visibility><pVariable Name="PIXELFORMAT">PixelFormatReg</pVariable><Formula><![CDATA[PIXELFORMAT=0x02200017]]></Formula></IntSwissKnife>
+    <FloatReg Name="GammaCRangeMaxReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <pIsAvailable>GammaC_AvailCalc</pIsAvailable>
+      <Address>0x305900</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Endianess>LittleEndian</Endianess>
+    </FloatReg>
+    <FloatReg Name="GammaCRangeMinReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <pIsAvailable>GammaC_AvailCalc</pIsAvailable>
+      <Address>0x205900</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Endianess>LittleEndian</Endianess>
+    </FloatReg>
+    <FloatReg Name="GammaCReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <pIsAvailable>GammaC_AvailCalc</pIsAvailable>
+      <Address>0x105900</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Endianess>LittleEndian</Endianess>
+    </FloatReg>
+    <IntSwissKnife Name="GammaC_AvailCalc" NameSpace="Custom"><Visibility>Invisible</Visibility><pVariable Name="PIXELFORMAT">PixelFormatReg</pVariable><Formula><![CDATA[PIXELFORMAT=0x02200017]]></Formula></IntSwissKnife>
+    <FloatReg Name="SharpnessRangeMaxReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <pIsAvailable>Sharpness_AvailCalc</pIsAvailable>
+      <Address>0x306000</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Endianess>LittleEndian</Endianess>
+    </FloatReg>
+    <FloatReg Name="SharpnessRangeMinReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <pIsAvailable>Sharpness_AvailCalc</pIsAvailable>
+      <Address>0x206000</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Endianess>LittleEndian</Endianess>
+    </FloatReg>
+    <FloatReg Name="SharpnessReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <pIsAvailable>Sharpness_AvailCalc</pIsAvailable>
+      <Address>0x106000</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Endianess>LittleEndian</Endianess>
+    </FloatReg>
+    <IntSwissKnife Name="Sharpness_AvailCalc" NameSpace="Custom"><Visibility>Invisible</Visibility><pVariable Name="PIXELFORMAT">PixelFormatReg</pVariable><Formula><![CDATA[PIXELFORMAT=0x02200017]]></Formula></IntSwissKnife>
+  </Group>
+  <Group Comment="LUTControl register list">
+    <IntReg Name="LUTEnableReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x106100</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="LUTIndexRangeMaxReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x306200</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="LUTIndexReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x106200</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="LUTValueRangeMaxReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x306300</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>LUTIndexReg</pInvalidator>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+    <IntReg Name="LUTValueReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x106300</Address>
+      <Length>4</Length>
+      <AccessMode>RW</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>LUTIndexReg</pInvalidator>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+  </Group>
+  <Group Comment="TransportLayerControl register list">
+    <IntReg Name="PayloadSizeReg" NameSpace="Custom">
+      <Visibility>Invisible</Visibility>
+      <Address>0x106600</Address>
+      <Length>4</Length>
+      <AccessMode>RO</AccessMode>
+      <pPort>Device</pPort>
+      <pInvalidator>BinningHorizontalReg</pInvalidator>
+      <pInvalidator>BinningVerticalReg</pInvalidator>
+      <pInvalidator>DecimationHorizontalReg</pInvalidator>
+      <pInvalidator>DecimationVerticalReg</pInvalidator>
+      <pInvalidator>HeightReg</pInvalidator>
+      <pInvalidator>OffsetXReg</pInvalidator>
+      <pInvalidator>OffsetYReg</pInvalidator>
+      <pInvalidator>PixelFormatReg</pInvalidator>
+      <pInvalidator>WidthReg</pInvalidator>
+      <Sign>Unsigned</Sign>
+      <Endianess>LittleEndian</Endianess>
+    </IntReg>
+  </Group>
+  <Group Comment="UserSetControl register list"/>
+  <Group Comment="FileAccessControl register list"/>
+  <Group Comment="ColorTransformationControl register list"/>
+  <Group Comment="ActionControl register list"/>
+  <Group Comment="LEDControl register list"/>
+  <Group Comment="LensControl register list"/>
+  <Group Comment="Ports">
+    <Port Name="Device" NameSpace="Standard">
+      <ToolTip>Port giving access to the camera.</ToolTip>
+    </Port>
+  </Group>
+</RegisterDescription>
