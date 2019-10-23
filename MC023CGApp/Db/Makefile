@@ -10,7 +10,7 @@ include $(TOP)/configure/CONFIG
 #----------------------------------------------------
 # Create and install (or just install)
 # databases, templates, substitutions like this
-DB += MC023CG_.template
+DB += MC023CG.template
 
 #----------------------------------------------------
 # If <anyname>.db template is not named <anyname>*.template add

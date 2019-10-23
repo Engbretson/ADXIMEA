@@ -278,8 +278,8 @@ private:
 	
 	#include "MQ022HG_1.inc"
 	
-#define FIRST_MQ022HG_PARAM GC_S_DeviceVendorName
-#define LAST_MQ022HG_PARAMint GC_E_LEDSource; 
+#define FIRST_MQ022HG_PARAM GC_I_exposure
+#define LAST_MQ022HG_PARAMint GC_I_transport_pixel_format; 
 
 };
 

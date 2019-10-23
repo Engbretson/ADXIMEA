@@ -278,8 +278,8 @@ private:
 	
 	#include "MC023CG_1.inc"
 	
-#define FIRST_MC023CG_PARAM GC_S_DeviceVendorName
-#define LAST_MC023CG_PARAM GC_I_PayloadSize; 
+#define FIRST_MC023CG_PARAM GC_I_exposure
+#define LAST_MC023CG_PARAM GC_I_transport_pixel_format; 
 
 };
 
