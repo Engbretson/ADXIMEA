@@ -1,13 +1,10 @@
-ADSeaBreeze
+ADXIMEA
 =============
 An 
 [EPICS](http://www.aps.anl.gov/epics/) 
 [areaDetector](http://cars.uchicago.edu/software/epics/areaDetector.html) 
-driver for Spectrometers from OceanOptics that are supported by the SeaBreeze library.
+driver for Spectrometers from Ximea using the Ximea 4.18.02 SDK and using the xiapi, 
+not the genicam or UsbVision firmware options.
 
-[SeaBreeze](https://sourceforge.net/p/seabreeze/wiki/Home)
-This driver is based on the SeaBreeze Library, which is included in the SeaBreezeSupport directory in version 3.0.11.
+This uses variations on the Mark Rivers Genican scripts to parse a corrected xml file
 
-Additional information:
-* [Documentation](https://oceanoptics.com/api/seabreeze)
-* [Release notes and links to source and binary releases](RELEASE.md).

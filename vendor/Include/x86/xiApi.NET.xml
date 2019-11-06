@@ -394,27 +394,27 @@
         </member>
         <member name="F:xiApi.XI_IMG_FORMAT.MONO8">
             <summary>
-            8 bits per pixel. 	[Intensity] (Note1,Note2)
+            8 bits per pixel. 	[Intensity] (see Note1,Note2)
             </summary>
         </member>
         <member name="F:xiApi.XI_IMG_FORMAT.MONO16">
             <summary>
-            16 bits per pixel. [Intensity LSB] [Intensity MSB] (Note1,Note2)
+            16 bits per pixel. [Intensity LSB] [Intensity MSB] (see Note1,Note2)
             </summary>
         </member>
         <member name="F:xiApi.XI_IMG_FORMAT.RGB24">
             <summary>
-            RGB data format. [Blue][Green][Red] (Note1)
+            RGB data format. [Blue][Green][Red] (see Note1)
             </summary>
         </member>
         <member name="F:xiApi.XI_IMG_FORMAT.RGB32">
             <summary>
-            RGBA data format. 	[Blue][Green][Red][0]* (Note1)
+            RGBA data format. 	[Blue][Green][Red][0] (see Note1)
             </summary>
         </member>
         <member name="F:xiApi.XI_IMG_FORMAT.RGBPLANAR">
             <summary>
-            RGB planar data format. [Red][Red]...[Green][Green]...[Blue][Blue]... (Note1)
+            RGB planar data format. [Red][Red]...[Green][Green]...[Blue][Blue]... (see Note1)
             </summary>
         </member>
         <member name="F:xiApi.XI_IMG_FORMAT.RAW8">
@@ -429,12 +429,12 @@
         </member>
         <member name="F:xiApi.XI_IMG_FORMAT.FRM_TRANSPORT_DATA">
             <summary>
-            Data from transport layer (e.g. packed). Depends on data on the transport layer (Note3)
+            Data from transport layer (e.g. packed). Depends on data on the transport layer (see Note3)
             </summary>
         </member>
         <member name="F:xiApi.XI_IMG_FORMAT.RGB48">
             <summary>
-            RGB data format. [Blue low byte][Blue high byte][Green low][Green high][Red low][Red high] (Note1)
+            RGB data format. [Blue low byte][Blue high byte][Green low][Green high][Red low][Red high] (see Note1)
             </summary>
         </member>
         <member name="F:xiApi.XI_IMG_FORMAT.RGB64">
@@ -674,12 +674,12 @@
         </member>
         <member name="F:xiApi.XI_IMG.bp">
             <summary>
-            Pointer to data. (see Note5*)
+            Pointer to data. (see Note1)
             </summary>
         </member>
         <member name="F:xiApi.XI_IMG.bp_size">
             <summary>
-            Filled buffer size. (see Note6*)
+            Filled buffer size. (see Note2)
             </summary>
         </member>
         <member name="F:xiApi.XI_IMG.frm">
@@ -704,12 +704,12 @@
         </member>
         <member name="F:xiApi.XI_IMG.tsSec">
             <summary>
-            Seconds part of timestamp delivered by camera (at start of read-out phase). Typical range: 0-4294 sec. (See Note1*)
+            Seconds part of timestamp delivered by camera (at start of read-out phase). Typical range: 0-4294 sec. (see Note3)
             </summary>
         </member>
         <member name="F:xiApi.XI_IMG.tsUSec">
             <summary>
-            Micro-seconds part of timestamp delivered by camera (at start of read-out phase). Range 0-999999 us. (See Note1*)
+            Micro-seconds part of timestamp delivered by camera (at start of read-out phase). Range 0-999999 us. (see Note3)
             </summary>
         </member>
         <member name="F:xiApi.XI_IMG.GPI_level">
@@ -719,7 +719,7 @@
         </member>
         <member name="F:xiApi.XI_IMG.black_level">
             <summary>
-            Black level of image (ONLY for MONO and RAW formats). (See Note2*)
+            Black level of image (ONLY for MONO and RAW formats). (see Note4)
             </summary>
         </member>
         <member name="F:xiApi.XI_IMG.padding_x">
@@ -764,12 +764,12 @@
         </member>
         <member name="F:xiApi.XI_IMG.exposure_time_us">
             <summary>
-            Exposure time of this image in microseconds. (See Note3*)
+            Exposure time of this image in microseconds. (see Note5)
             </summary>
         </member>
         <member name="F:xiApi.XI_IMG.gain_db">
             <summary>
-            Gain used for this image in deci-bells. (see Note4*)
+            Gain used for this image in deci-bells. (see Note6)
             </summary>
         </member>
         <member name="F:xiApi.XI_IMG.acq_nframe">
@@ -779,12 +779,12 @@
         </member>
         <member name="F:xiApi.XI_IMG.image_user_data">
             <summary>
-            See Note7*
+            (see Note7)
             </summary>
         </member>
         <member name="F:xiApi.XI_IMG.exposure_sub_times_us">
             <summary>
-            See note8*
+            (see Note8)
             </summary>
         </member>
         <member name="F:xiApi.XI_IMG.data_saturation">
@@ -1963,7 +1963,7 @@
         </member>
         <member name="F:xiApi.NET.DEBUG_LEVEL.DETAIL">
             Debug level enumerator.
-            See Note3*
+            (see Note1)
         </member>
         <member name="F:xiApi.NET.DEBUG_LEVEL.TRACE">
             Prints errors, warnings and important informations
@@ -1984,19 +1984,19 @@
             Image output format enumerator.
         </member>
         <member name="F:xiApi.NET.IMG_FORMAT.MONO8">
-            8 bits per pixel. 	[Intensity] (Note1,Note2)
+            8 bits per pixel. 	[Intensity] (see Note1,Note2)
         </member>
         <member name="F:xiApi.NET.IMG_FORMAT.MONO16">
-            16 bits per pixel. [Intensity LSB] [Intensity MSB] (Note1,Note2)
+            16 bits per pixel. [Intensity LSB] [Intensity MSB] (see Note1,Note2)
         </member>
         <member name="F:xiApi.NET.IMG_FORMAT.RGB24">
-            RGB data format. [Blue][Green][Red] (Note1)
+            RGB data format. [Blue][Green][Red] (see Note1)
         </member>
         <member name="F:xiApi.NET.IMG_FORMAT.RGB32">
-            RGBA data format. 	[Blue][Green][Red][0]* (Note1)
+            RGBA data format. 	[Blue][Green][Red][0] (see Note1)
         </member>
         <member name="F:xiApi.NET.IMG_FORMAT.RGBPLANAR">
-            RGB planar data format. [Red][Red]...[Green][Green]...[Blue][Blue]... (Note1)
+            RGB planar data format. [Red][Red]...[Green][Green]...[Blue][Blue]... (see Note1)
         </member>
         <member name="F:xiApi.NET.IMG_FORMAT.RAW8">
             8 bits per pixel raw data from sensor. 	[pixel byte] raw data from transport (camera output)
@@ -2005,10 +2005,10 @@
             16 bits per pixel raw data from sensor. 	[pixel byte low] [pixel byte high] 16 bits (depacked) raw data
         </member>
         <member name="F:xiApi.NET.IMG_FORMAT.FRM_TRANSPORT_DATA">
-            Data from transport layer (e.g. packed). Depends on data on the transport layer (Note3)
+            Data from transport layer (e.g. packed). Depends on data on the transport layer (see Note3)
         </member>
         <member name="F:xiApi.NET.IMG_FORMAT.RGB48">
-            RGB data format. [Blue low byte][Blue high byte][Green low][Green high][Red low][Red high] (Note1)
+            RGB data format. [Blue low byte][Blue high byte][Green low][Green high][Red low][Red high] (see Note1)
         </member>
         <member name="F:xiApi.NET.IMG_FORMAT.RGB64">
             RGBA data format. [Blue low byte][Blue high byte][Green low][Green high][Red low][Red high][0][0] (Note1)
@@ -2133,7 +2133,7 @@
             No trigger overlap is permitted. If camera is in read-out phase, all triggers are rejected.
         </member>
         <member name="F:xiApi.NET.TRG_OVERLAP.READ_OUT">
-            Trigger is accepted only when sensor is ready to start next exposure with defined exposure time. Trigger is rejected when sensor is not ready for new exposure with defined exposure time. Note: This mode is planned and not yet supported by cameras.
+            Trigger is accepted only when sensor is ready to start next exposure with defined exposure time. Trigger is rejected when sensor is not ready for new exposure with defined exposure time. (see Note1)
         </member>
         <member name="F:xiApi.NET.TRG_OVERLAP.PREV_FRAME">
             Trigger is accepted by camera any time. If sensor is not ready for the next exposure – the trigger is latched and sensor starts exposure as soon as exposure can be started with defined exposure time.

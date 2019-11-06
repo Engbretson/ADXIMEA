@@ -461,7 +461,7 @@ typedef enum
 // Debug level enumerator.
 typedef enum
 {
-	XI_DL_DETAIL                 =0, // See Note3*
+	XI_DL_DETAIL                 =0, // (see Note1)
 	XI_DL_TRACE                  =1, // Prints errors, warnings and important informations
 	XI_DL_WARNING                =2, // Prints all errors and warnings
 	XI_DL_ERROR                  =3, // Prints all errors
@@ -473,15 +473,15 @@ typedef enum
 // Image output format enumerator.
 typedef enum
 {
-	XI_MONO8                     =0, // 8 bits per pixel. 	[Intensity] (Note1,Note2)
-	XI_MONO16                    =1, // 16 bits per pixel. [Intensity LSB] [Intensity MSB] (Note1,Note2)
-	XI_RGB24                     =2, // RGB data format. [Blue][Green][Red] (Note1)
-	XI_RGB32                     =3, // RGBA data format. 	[Blue][Green][Red][0]* (Note1)
-	XI_RGB_PLANAR                =4, // RGB planar data format. [Red][Red]...[Green][Green]...[Blue][Blue]... (Note1)
+	XI_MONO8                     =0, // 8 bits per pixel. 	[Intensity] (see Note1,Note2)
+	XI_MONO16                    =1, // 16 bits per pixel. [Intensity LSB] [Intensity MSB] (see Note1,Note2)
+	XI_RGB24                     =2, // RGB data format. [Blue][Green][Red] (see Note1)
+	XI_RGB32                     =3, // RGBA data format. 	[Blue][Green][Red][0] (see Note1)
+	XI_RGB_PLANAR                =4, // RGB planar data format. [Red][Red]...[Green][Green]...[Blue][Blue]... (see Note1)
 	XI_RAW8                      =5, // 8 bits per pixel raw data from sensor. 	[pixel byte] raw data from transport (camera output)
 	XI_RAW16                     =6, // 16 bits per pixel raw data from sensor. 	[pixel byte low] [pixel byte high] 16 bits (depacked) raw data
-	XI_FRM_TRANSPORT_DATA        =7, // Data from transport layer (e.g. packed). Depends on data on the transport layer (Note3)
-	XI_RGB48                     =8, // RGB data format. [Blue low byte][Blue high byte][Green low][Green high][Red low][Red high] (Note1)
+	XI_FRM_TRANSPORT_DATA        =7, // Data from transport layer (e.g. packed). Depends on data on the transport layer (see Note3)
+	XI_RGB48                     =8, // RGB data format. [Blue low byte][Blue high byte][Green low][Green high][Red low][Red high] (see Note1)
 	XI_RGB64                     =9, // RGBA data format. [Blue low byte][Blue high byte][Green low][Green high][Red low][Red high][0][0] (Note1)
 	XI_RGB16_PLANAR              =10, // RGB16 planar data format
 	XI_RAW8X2                    =11, // 8 bits per pixel raw data from sensor(2 components in a row). [ch1 pixel byte] [ch2 pixel byte] 8 bits raw data from 2 channels (e.g. high gain and low gain channels of sCMOS cameras)
@@ -546,7 +546,7 @@ typedef enum
 typedef enum
 {
 	XI_TRG_OVERLAP_OFF           =0, // No trigger overlap is permitted. If camera is in read-out phase, all triggers are rejected.
-	XI_TRG_OVERLAP_READ_OUT      =1, // Trigger is accepted only when sensor is ready to start next exposure with defined exposure time. Trigger is rejected when sensor is not ready for new exposure with defined exposure time. Note: This mode is planned and not yet supported by cameras.
+	XI_TRG_OVERLAP_READ_OUT      =1, // Trigger is accepted only when sensor is ready to start next exposure with defined exposure time. Trigger is rejected when sensor is not ready for new exposure with defined exposure time. (see Note1)
 	XI_TRG_OVERLAP_PREV_FRAME    =2, // Trigger is accepted by camera any time. If sensor is not ready for the next exposure – the trigger is latched and sensor starts exposure as soon as exposure can be started with defined exposure time.
 	
 } XI_TRG_OVERLAP;
@@ -1309,16 +1309,16 @@ typedef struct
 typedef struct
 {
 	DWORD         size;      // Size of current structure on application side. When xiGetImage is called and size>=SIZE_XI_IMG_V2 then GPI_level, tsSec and tsUSec are filled.
-	LPVOID        bp;        // Pointer to data. (see Note5*)
-	DWORD         bp_size;   // Filled buffer size. (see Note6*)
+	LPVOID        bp;        // Pointer to data. (see Note1)
+	DWORD         bp_size;   // Filled buffer size. (see Note2)
 	XI_IMG_FORMAT frm;       // Format of image data get from GetImage.
 	DWORD         width;     // width of incoming image.
 	DWORD         height;    // height of incoming image.
 	DWORD         nframe;    // Frame number. On some cameras it is reset by exposure, gain, downsampling change, auto exposure (AEAG).
-	DWORD         tsSec;     // Seconds part of timestamp delivered by camera (at start of read-out phase). Typical range: 0-4294 sec. (See Note1*)
-	DWORD         tsUSec;    // Micro-seconds part of timestamp delivered by camera (at start of read-out phase). Range 0-999999 us. (See Note1*)
+	DWORD         tsSec;     // Seconds part of timestamp delivered by camera (at start of read-out phase). Typical range: 0-4294 sec. (see Note3)
+	DWORD         tsUSec;    // Micro-seconds part of timestamp delivered by camera (at start of read-out phase). Range 0-999999 us. (see Note3)
 	DWORD         GPI_level; // Levels of digital inputs/outputs of the camera at time of exposure start/end (sample time and bits are specific for each camera model)
-	DWORD         black_level;// Black level of image (ONLY for MONO and RAW formats). (See Note2*)
+	DWORD         black_level;// Black level of image (ONLY for MONO and RAW formats). (see Note4)
 	DWORD         padding_x; // Number of extra bytes provided at the end of each line to facilitate image alignment in buffers.
 	DWORD         AbsoluteOffsetX;// Horizontal offset of origin of sensor and buffer image first pixel.
 	DWORD         AbsoluteOffsetY;// Vertical offset of origin of sensor and buffer image first pixel.
@@ -1327,11 +1327,11 @@ typedef struct
 	DWORD         DownsamplingX;// Horizontal downsampling
 	DWORD         DownsamplingY;// Vertical downsampling
 	DWORD         flags;     // description of XI_IMG.
-	DWORD         exposure_time_us;// Exposure time of this image in microseconds. (See Note3*)
-	float         gain_db;   // Gain used for this image in deci-bells. (see Note4*)
+	DWORD         exposure_time_us;// Exposure time of this image in microseconds. (see Note5)
+	float         gain_db;   // Gain used for this image in deci-bells. (see Note6)
 	DWORD         acq_nframe;// Frame number. Reset only by acquisition start. NOT reset by change of exposure, gain, downsampling, auto exposure (AEAG).
-	DWORD         image_user_data;// See Note7*
-	DWORD         exposure_sub_times_us[5];// See note8*
+	DWORD         image_user_data;// (see Note7)
+	DWORD         exposure_sub_times_us[5];// (see Note8)
 	double        data_saturation;// Pixel value of saturation
 	float         wb_red;    // Red coefficient of white balance
 	float         wb_green;  // Green coefficient of white balance

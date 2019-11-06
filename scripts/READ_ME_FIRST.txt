@@ -8,9 +8,9 @@ The xml files which are dumped directly from the camera and the files generated 
 
 Steemer Imaging Common Vision Blox Viewer correctly dumps out a reasonably formated genicam xml file. The problem is that the ximea support for genicam is a bit light and would take some effort to make work. Other Genicam cameras do not understand the hardware enough to work so for the instant, so we are using the XIapi derived files, modified to be parse by Mark Rivers's genicam scripts and trimmed to remove redindant and excessive registers.
 
-Beta contains the xiapi xml files as devived from the beta versions of the ximea software, stable are the xiapi xml files for the older version of the ximea software, and Steemer is the location for the currently unusbale genicam xml files.
+Beta contains the xiapi xml files as devived from the beta versions of the ximea software, not saving other versions of these files which are not actively used.
 
-MC023CG and MQ022HG are the renamed beta xiapi files as used with this area detector.
+MC023CG and MQ022HG are the directories where the renamed beta xiapi files and all the created content generated are stored that is used with the 2 current flavors of this area detector.
  
 
  

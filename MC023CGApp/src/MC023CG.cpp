@@ -8,7 +8,6 @@
 #include <epicsExit.h>
 #include <epicsExport.h>
 
-
 #ifdef _WIN32
 #include <windows.h>
 #include "xiApi.h"       // Windows
@@ -66,34 +65,7 @@ ADDriver(portName, 1, 0, maxBuffers, maxMemory, asynDrvUserMask | asynFloat64Arr
     device = 0;
     deviceId = (char*)calloc(1, strlen(id)+1);
     memcpy(deviceId,id, strlen(id)+1);
-   
-printf("Before MC023CG_3.inc \n");
-#include "MC023CG_3.inc"
-printf("After MC023CG_3.inc \n");
-/*
-    createParam(SB_HardwareRevisionString, asynParamOctet, &sb_HardwareRevision);
-    createParam(SB_HasLampString, asynParamInt32, &sb_HasLamp);
-    createParam(SB_HasShutterString, asynParamInt32, &sb_HasShutter);
-    createParam(SB_HasLightSourceString, asynParamInt32, &sb_HasLightSource);
-    createParam(SB_HasAcquisitionDelayString, asynParamInt32, &sb_HasAcquisitionDelay);
-    createParam(SB_HasTemperatureString, asynParamInt32, &sb_HasTemperature);
-    createParam(SB_EnableLampString, asynParamInt32, &sb_EnableLamp);
-    createParam(SB_MinimumIntegrationTimeString, asynParamFloat64, &sb_MinimumIntegrationTime);
-    createParam(SB_IntegrationTimeString, asynParamFloat64, &sb_IntegrationTime);
-    createParam(SB_UseFormatedSpectrumString, asynParamInt32, &sb_UseFormatedSpectrum);
-    createParam(SB_FormatedSpectrumSizeString, asynParamInt32, &sb_FormatedSpectrumSize);
-    createParam(SB_RawSpectrumSizeString, asynParamInt32, &sb_RawSpectrumSize);
-    createParam(SB_MaxIntensityString, asynParamFloat64, &sb_MaxIntensity);
-    createParam(SB_WaveLengthString, asynParamFloat64, &sb_WaveLength);
-   
-    sbapi_initialize();
-    if(sbapi_probe_devices() == 0) {
-        printf("%s\n", "No devices found!");
-//        return;
-		exit(0); //no reason to actually run things when it isn't going to actually work
-    }
-*/
-    
+       
     HandleNewImageEvent = epicsEventCreate(epicsEventEmpty);
     /* Create the thread that updates the images */
     imageThreadId = epicsThreadCreate("MC023CGHandleNewImageTaskC",
@@ -112,18 +84,13 @@ printf("After MC023CG_3.inc \n");
 }
 
 MC023CG::~MC023CG(void) {
-    int error;
- /*   
+    
     if(device) {
         if(mAcquiringData)
             acquireStop();
-        sbapi_close_device(device, &error);
-        if(error != ERROR_SUCCESS) {
-            printf("%s\n", sbapi_get_error_string(error));
-        }
+	   xiCloseDevice(xiH);
     }
-    sbapi_shutdown();
-	*/
+	
 }
 
 void MC023CG::report(FILE *fp, int details) {
@@ -204,11 +171,14 @@ asynStatus MC023CG::initializeDetector() {
 	 systemString = (char *)calloc(80, sizeof(char));
 	XI_RETURN XI_status = XI_OK;
 
-     #include "MC023CG_3.inc"
+printf("Before MC023CG_3.inc \n");
+#include "MC023CG_3.inc"
+printf("After MC023CG_3.inc \n");
 
  printf("Before MC023CG_4.inc \n");
-	#include "MC023CG_4.inc"
+#include "MC023CG_4.inc"
  printf("After MC023CG_4.inc \n");
+
 /*    
     connected_device_count = sbapi_get_number_of_device_ids();
     if(connected_device_count == 0)
@@ -529,8 +499,8 @@ asynStatus MC023CG::writeInt32(asynUser *pasynUser, epicsInt32 value) {
 
      getParamName(function, (const char **)&whoami);
 
-//	asynPrint(pasynUserSelf, ASYN_TRACE_ERROR, "*******%s:%s:%d entry '%s' value %d %s\n",
-//		driverName, functionName, function, whoami, value,XI_ERRORS[value]);
+	asynPrint(pasynUserSelf, ASYN_TRACE_ERROR, "*******%s:%s:%d entry '%s' value %d %s\n",
+		driverName, functionName, function, whoami, value,XI_ERRORS[value]);
 
     getIntegerParam(ADAcquire, &acquiring);
     
@@ -545,6 +515,11 @@ asynStatus MC023CG::writeInt32(asynUser *pasynUser, epicsInt32 value) {
 	  printf("GetParamInt %s %d XI_status %d:%s\n", whoami,systemInteger,XI_status, XI_ERRORS[XI_status]); 
       status = setIntegerParam(function, systemInteger); 
   }
+              else {
+                if (function < FIRST_MC023CG_PARAM) {
+                    status = ADDriver::writeInt32(pasynUser, value);
+                }
+			  }
  /*   
     if(function == sb_EnableLamp) {
         sbapi_lamp_set_lamp_enable(device, lamps[0], &error, value);

@@ -1,8 +1,0 @@
-# Macros:
-#% macro, P, Device Prefix
-#% macro, R, Device Suffix
-#% macro, PORT, Asyn Port name
-#% macro, TIMEOUT, Timeout
-#% macro, ADDR, Asyn Port address
-#% gui, $(PORT), edmtab, xxx.edl, P=$(P),R=$(R)
-

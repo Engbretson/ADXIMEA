@@ -38,7 +38,7 @@ list = [
 #edl_filename = os.path.join(prefix, "opi", "edl", camera_name + ".edl")
 #adl_filename= os.path.join(prefix, "opi", "adl", camera_name + "_")
 
-db_filename = (camera_name + ".template")
+#db_filename = (camera_name + ".template")
 edl_filename = (camera_name + ".edl")
 adl_filename= (camera_name + "_")
 
@@ -144,9 +144,9 @@ for category in categories:
     handle_category(category)
     
 # Spit out a database file
-db_file = open(db_filename, "w")
+#db_file = open(db_filename, "w")
 stdout = sys.stdout
-sys.stdout = db_file
+#sys.stdout = db_file
 
 include_1_filename = open(include_1_filename, "w")
 include_1_filename.write('/* %s */ \n\n' % camera_name)  
@@ -162,14 +162,14 @@ include_4_filename.write('/* %s */ \n\n' % camera_name)
  
 
 # print a header
-print '# Macros:'
-print '#% macro, P, Device Prefix'
-print '#% macro, R, Device Suffix'
-print '#% macro, PORT, Asyn Port name'
-print '#% macro, TIMEOUT, Timeout'
-print '#% macro, ADDR, Asyn Port address'
-print '#%% gui, $(PORT), edmtab, %s.edl, P=$(P),R=$(R)' % camera_name
-print 
+#print '# Macros:'
+#print '#% macro, P, Device Prefix'
+#print '#% macro, R, Device Suffix'
+#print '#% macro, PORT, Asyn Port name'
+#print '#% macro, TIMEOUT, Timeout'
+#print '#% macro, ADDR, Asyn Port address'
+#print '#%% gui, $(PORT), edmtab, %s.edl, P=$(P),R=$(R)' % camera_name
+#print 
 
 
 # for each node
@@ -201,7 +201,7 @@ for node in doneNodes:
  
         if str(n.nodeName) == "Xiapi_Par": 
             xiapi_par = getText(n)
-            nodeName = xiapi_par
+#            nodeName = xiapi_par
             nodeName0 = xiapi_par
 #            print "+++",xiapi_par,"+++"
   
@@ -215,20 +215,20 @@ for node in doneNodes:
     if node.nodeName in ["Integer", "IntConverter", "IntSwissKnife", "IntReg"]:
         nodeName1 = "GC_I_" + nodeName		
 #        print 'record(longin, "$(P)$(R)%s_RBV") {' % records[nodeName]
-        print 'record(longin, "$(P)$(R)%s_RBV") {' % nodeName
-        print '  field(DTYP, "asynInt32")'
-        print '  field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))%s")' % nodeName
-        print '  field(SCAN, "I/O Intr")'
-        print '  field(DISA, "0")'        
-        print '}'
-        print 	
+#        print 'record(longin, "$(P)$(R)%s_RBV") {' % nodeName
+#        print '  field(DTYP, "asynInt32")'
+#        print '  field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))%s")' % nodeName
+#        print '  field(SCAN, "I/O Intr")'
+#        print '  field(DISA, "0")'        
+#        print '}'
+#        print 	
 	include_1_filename.write('int %s; \n' % nodeName1)   
-	include_2_filename.write('#define %(one)sString "%(two)s" \n'  % {"one":nodeName1, "two":nodeName}) 
+	include_2_filename.write('#define %(one)sString "%(two)s" \n'  % {"one":nodeName1, "two":nodeName0}) 
 	include_3_filename.write('createParam(%(one)sString, asynParamInt32, &%(two)s);\n\n'  % {"one":nodeName1, "two":nodeName1}) 
 ##	include_4_filename.write('try { \n')
 #	include_4_filename.write('systemInteger = grabber.getInteger<Euresys::%(one)sModule>("%(three)s"); \n'  % {"three":nodeName0,"one":mask_name}) 
 	include_4_filename.write('XI_status = xiGetParamInt(xiH,"%s",&systemInteger); \n'  % nodeName0) 
-	include_4_filename.write('printf("%%s %%d \\n", "%(one)s",systemInteger); \n' % {"one":nodeName0}) 
+	include_4_filename.write('printf("%%s %%d %%d\\n", "%(one)s",systemInteger, XI_status); \n' % {"one":nodeName0}) 
 	include_4_filename.write('status = setIntegerParam(%(one)s, systemInteger); \n\n'  % {"one":nodeName1}) 
 #	include_4_filename.write('} catch (const std::exception &e) { std::cout << "error: %(one)s (" << %(one)s << ") " << e.what() << std::endl; }  \n' % {"one":nodeName1)}  
 #	include_4_filename.write('} catch (const std::exception &e) { std::cout << "error: %(one)s (" << %(one)s << ") " <<e.what() << std::endl; }  \n' % {"one":nodeName1})  
@@ -236,31 +236,31 @@ for node in doneNodes:
         if ro:
             continue        
 #        print 'record(longout, "$(P)$(R)%s") {' % records[nodeName]
-        print 'record(longout, "$(P)$(R)%s") {' % nodeName
-        print '  field(DTYP, "asynInt32")'
-        print '  field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))%s")' % nodeName
-        print '  field(DISA, "0")'
-        print '}'
-        print        
+#        print 'record(longout, "$(P)$(R)%s") {' % nodeName
+#        print '  field(DTYP, "asynInt32")'
+#        print '  field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))%s")' % nodeName
+#        print '  field(DISA, "0")'
+#        print '}'
+#        print        
     elif node.nodeName in ["Boolean"]:
         nodeName1 = "GC_B_" + nodeName		
 #        print 'record(bi, "$(P)$(R)%s_RBV") {' % records[nodeName]
-        print 'record(bi, "$(P)$(R)%s_RBV") {' % nodeName
-        print '  field(DTYP, "asynInt32")'
-        print '  field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))%s")' % nodeName
-        print '  field(SCAN, "I/O Intr")'
-        print '  field(ZNAM, "No")'
-        print '  field(ONAM, "Yes")'                        
-        print '  field(DISA, "0")'
-        print '}'
-        print
+#        print 'record(bi, "$(P)$(R)%s_RBV") {' % nodeName
+#        print '  field(DTYP, "asynInt32")'
+#        print '  field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))%s")' % nodeName
+#        print '  field(SCAN, "I/O Intr")'
+#        print '  field(ZNAM, "No")'
+#        print '  field(ONAM, "Yes")'                        
+#        print '  field(DISA, "0")'
+#        print '}'
+#        print
 	include_1_filename.write('int %s; \n' % nodeName1)   
-	include_2_filename.write('#define %(one)sString "%(two)s" \n'  % {"one":nodeName1, "two":nodeName})   
+	include_2_filename.write('#define %(one)sString "%(two)s" \n'  % {"one":nodeName1, "two":nodeName0})   
 	include_3_filename.write('createParam(%(one)sString, asynParamInt32, &%(two)s);\n\n'  % {"one":nodeName1, "two":nodeName1}) 
 ##	include_4_filename.write('try { \n')
 #	include_4_filename.write('systemInteger = grabber.getInteger<Euresys::%(one)sModule>("%(three)s"); \n'  % {"three":nodeName0,"one":mask_name}) 
 	include_4_filename.write('XI_status = xiGetParamInt(xiH,"%s",&systemInteger); \n'  % nodeName0) 
-	include_4_filename.write('printf("%%s %%d \\n", "%(one)s",systemInteger); \n' % {"one":nodeName0}) 
+	include_4_filename.write('printf("%%s %%d %%d\\n", "%(one)s",systemInteger, XI_status); \n' % {"one":nodeName0}) 
 	include_4_filename.write('status = setIntegerParam(%(one)s, systemInteger); \n\n'  % {"one":nodeName1}) 
 #	include_4_filename.write('} catch (const std::exception &e) { std::cout << "error: %(one)s (" << %(one)s << ") " <<e.what() << std::endl; }  \n' % {"one":nodeName1})  
 ##	include_4_filename.write('} catch (const std::exception &e) { }  \n')  
@@ -268,32 +268,32 @@ for node in doneNodes:
         if ro:
             continue        
 #        print 'record(bo, "$(P)$(R)%s") {' % records[nodeName]
-        print 'record(bo, "$(P)$(R)%s") {' % nodeName
-        print '  field(DTYP, "asynInt32")'
-        print '  field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))%s")' % nodeName
-        print '  field(ZNAM, "No")'
-        print '  field(ONAM, "Yes")'                                
-        print '  field(DISA, "0")'
-        print '}'
-        print           
+#        print 'record(bo, "$(P)$(R)%s") {' % nodeName
+#        print '  field(DTYP, "asynInt32")'
+#        print '  field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))%s")' % nodeName
+#        print '  field(ZNAM, "No")'
+#        print '  field(ONAM, "Yes")'                                
+#        print '  field(DISA, "0")'
+#        print '}'
+#        print           
     elif node.nodeName in ["Float", "Converter", "SwissKnife","FloatReg"]:
         nodeName1 = "GC_D_" + nodeName			
 #        print 'record(ai, "$(P)$(R)%s_RBV") {' % records[nodeName]
-        print 'record(ai, "$(P)$(R)%s_RBV") {' % nodeName
-        print '  field(DTYP, "asynFloat64")'
-        print '  field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))%s")' % nodeName
-        print '  field(PREC, "3")'        
-        print '  field(SCAN, "I/O Intr")'
-        print '  field(DISA, "0")'
-        print '}'
-        print 
+#        print 'record(ai, "$(P)$(R)%s_RBV") {' % nodeName
+#        print '  field(DTYP, "asynFloat64")'
+#        print '  field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))%s")' % nodeName
+#        print '  field(PREC, "3")'        
+#        print '  field(SCAN, "I/O Intr")'
+#        print '  field(DISA, "0")'
+#        print '}'
+#        print 
 	include_1_filename.write('int %s; \n' % nodeName1)     
-	include_2_filename.write('#define %(one)sString "%(two)s" \n'  % {"one":nodeName1, "two":nodeName})   
+	include_2_filename.write('#define %(one)sString "%(two)s" \n'  % {"one":nodeName1, "two":nodeName0})   
 	include_3_filename.write('createParam(%(one)sString, asynParamFloat64, &%(two)s);\n\n'  % {"one":nodeName1, "two":nodeName1}) 
 ##	include_4_filename.write('try { \n')
 #	include_4_filename.write('systemDouble = grabber.getFloat<Euresys::%(one)sModule>("%(three)s"); \n'  % {"three":nodeName0,"one":mask_name}) 
 	include_4_filename.write('XI_status = xiGetParamFloat(xiH,"%s",&systemFloat); \n'  % nodeName0) 
-	include_4_filename.write('printf("%%s %%f \\n", "%(one)s",systemFloat); \n' % {"one":nodeName0}) 
+	include_4_filename.write('printf("%%s %%f %%d\\n", "%(one)s",systemFloat, XI_status); \n' % {"one":nodeName0}) 
 	include_4_filename.write('systemDouble = systemFloat; \n')
  	include_4_filename.write('status = setDoubleParam(%(one)s, systemDouble); \n\n'  % {"one":nodeName1}) 
 #	include_4_filename.write('} catch (const std::exception &e) { std::cout << "error: %(one)s (" << %(one)s << ") " <<e.what() << std::endl; }  \n' % {"one":nodeName1})  
@@ -302,32 +302,32 @@ for node in doneNodes:
         if ro:
             continue    
 #        print 'record(ao, "$(P)$(R)%s") {' % records[nodeName]
-        print 'record(ao, "$(P)$(R)%s") {' % nodeName
-        print '  field(DTYP, "asynFloat64")'
-        print '  field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))%s")' % nodeName
-        print '  field(PREC, "3")'
-        print '  field(DISA, "0")'
-        print '}'
-        print
+#        print 'record(ao, "$(P)$(R)%s") {' % nodeName
+#        print '  field(DTYP, "asynFloat64")'
+#        print '  field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))%s")' % nodeName
+#        print '  field(PREC, "3")'
+#        print '  field(DISA, "0")'
+#        print '}'
+#        print
     elif node.nodeName in ["StringReg","String"]:
         nodeName1 = "GC_S_" + nodeName		
 
 #        print 'record(stringin, "$(P)$(R)%s_RBV") {' % records[nodeName]
-        print 'record(stringin, "$(P)$(R)%s_RBV") {' % nodeName
-        print '  field(DTYP, "asynOctetRead")'
-        print '  field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))%s")' % nodeName
-        print '  field(SCAN, "I/O Intr")'
-        print '  field(DISA, "0")'
-        print '}'
-        print
+#        print 'record(stringin, "$(P)$(R)%s_RBV") {' % nodeName
+#        print '  field(DTYP, "asynOctetRead")'
+#        print '  field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))%s")' % nodeName
+#        print '  field(SCAN, "I/O Intr")'
+#        print '  field(DISA, "0")'
+#        print '}'
+#        print
 	include_1_filename.write('int %s; \n' % nodeName1)  
-	include_2_filename.write('#define %(one)sString "%(two)s" \n'  % {"one":nodeName1, "two":nodeName})   
+	include_2_filename.write('#define %(one)sString "%(two)s" \n'  % {"one":nodeName1, "two":nodeName0})   
 	include_3_filename.write('createParam(%(one)sString, asynParamOctet, &%(two)s);\n\n'  % {"one":nodeName1, "two":nodeName1}) 
 ##	include_4_filename.write('try { \n')
 #	include_4_filename.write('systemString = grabber.getString<Euresys::%(one)sModule>(%(three)sString); \n'  % {"three":nodeName1,"one":mask_name}) 
 #	include_4_filename.write('systemString = grabber.getString<Euresys::%(one)sModule>("%(three)s"); \n'  % {"three":nodeName0,"one":mask_name}) 
 	include_4_filename.write('XI_status = xiGetParamString(xiH,"%s",systemString, sizeof(systemString)); \n'  % nodeName0) 
-	include_4_filename.write('printf("%%s %%s \\n", "%(one)s",systemString); \n' % {"one":nodeName0}) 
+	include_4_filename.write('printf("%%s %%s %%d\\n", "%(one)s",systemString,XI_status); \n' % {"one":nodeName0}) 
 	include_4_filename.write('status = setStringParam(%(one)s, systemString); \n\n'  % {"one":nodeName1}) 
 #	include_4_filename.write('} catch (const std::exception &e) { std::cout << "error: %(one)s (" << %(one)s << ") " <<e.what() << std::endl; }  \n' % {"one":nodeName1})  
 ##	include_4_filename.write('} catch (const std::exception &e) { }  \n')  
@@ -335,14 +335,14 @@ for node in doneNodes:
         nodeName1 = "GC_C_" + nodeName		
 
 #        print 'record(longout, "$(P)$(R)%s") {' % records[nodeName]
-        print 'record(longout, "$(P)$(R)%s") {' % nodeName
-        print '  field(DTYP, "asynInt32")'
-        print '  field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))%s")' % nodeName
-        print '  field(DISA, "0")'
-        print '}'
-        print 
+#        print 'record(longout, "$(P)$(R)%s") {' % nodeName
+#        print '  field(DTYP, "asynInt32")'
+#        print '  field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))%s")' % nodeName
+#        print '  field(DISA, "0")'
+#        print '}'
+#        print 
 	include_1_filename.write('int %s; \n' % nodeName1)          
-	include_2_filename.write('#define %(one)sString "%(two)s" \n'  % {"one":nodeName1, "two":nodeName})   
+	include_2_filename.write('#define %(one)sString "%(two)s" \n'  % {"one":nodeName1, "two":nodeName0})   
 	include_3_filename.write('createParam(%(one)sString, asynParamInt32, &%(two)s);\n\n'  % {"one":nodeName1, "two":nodeName1}) 
         if execute:
 	    include_4_filename.write('\n// start of an execute (write Only) command \n')
@@ -350,7 +350,7 @@ for node in doneNodes:
 ##	include_4_filename.write('try { \n')
 #	include_4_filename.write('systemInteger = grabber.getInteger<Euresys::%(one)sModule>("%(three)s"); \n'  % {"three":nodeName0,"one":mask_name}) 
 	include_4_filename.write('XI_status = xiGetParamInt(xiH,"%s",&systemInteger); \n'  % nodeName0) 
-	include_4_filename.write('printf("%%s %%d \\n", "%(one)s",systemInteger); \n' % {"one":nodeName0}) 
+	include_4_filename.write('printf("%%s %%d %%d\\n", "%(one)s",systemInteger, XI_status); \n' % {"one":nodeName0}) 
 	include_4_filename.write('status = setIntegerParam(%(one)s, systemInteger); \n\n'  % {"one":nodeName1}) 
 #	include_4_filename.write('} catch (const std::exception &e) { std::cout << "error: %(one)s (" << %(one)s << ") " <<e.what() << std::endl; }  \n' % {"one":nodeName1})  
 ##	include_4_filename.write('} catch (const std::exception &e) { }  \n')  
@@ -397,66 +397,65 @@ for node in doneNodes:
 		enumerations += '  field(%sVL, "%s")\n' %(epicsId[i], getText(value[0]))                
                 i += 1                
 #        print 'record(mbbi, "$(P)$(R)%s_RBV") {' % records[nodeName]
-	if longenum:
-		print '#record(mbbi, "$(P)$(R)%s_RBV") {' % nodeName
-	        print '#  field(DTYP, "asynInt32")'
-	        print '#  field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))%s")' % nodeName
-	        print bigenumerations,
-	        print '#  field(SCAN, "I/O Intr")'
-	        print '#  field(DISA, "0")'
-	        print '#}'
-	        print
-		print 'record(stringin, "$(P)$(R)%s_RBV") {' % nodeName
-        	print '  field(DTYP, "asynOctetRead")'
-        	print '  field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))%s")' % nodeName
-        	print '  field(SCAN, "I/O Intr")'
-        	print '  field(DISA, "0")'
-        	print '}'
-        	print
+#	if longenum:
+#		print '#record(mbbi, "$(P)$(R)%s_RBV") {' % nodeName
+#	        print '#  field(DTYP, "asynInt32")'
+#	        print '#  field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))%s")' % nodeName
+#	        print bigenumerations,
+#	        print '#  field(SCAN, "I/O Intr")'
+#	        print '#  field(DISA, "0")'
+#	        print '#}'
+#	        print
+#		print 'record(stringin, "$(P)$(R)%s_RBV") {' % nodeName
+#        	print '  field(DTYP, "asynOctetRead")'
+#        	print '  field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))%s")' % nodeName
+#        	print '  field(SCAN, "I/O Intr")'
+#        	print '  field(DISA, "0")'
+#        	print '}'
+#        	print
 
-	else:
-		print 'record(mbbi, "$(P)$(R)%s_RBV") {' % nodeName
-	        print '  field(DTYP, "asynInt32")'
-	        print '  field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))%s")' % nodeName
-	        print enumerations,
-	        print '  field(SCAN, "I/O Intr")'
-	        print '  field(DISA, "0")'
-	        print '}'
-	        print
-	
- 	include_1_filename.write('int %s; \n' % nodeName1)  
-	include_2_filename.write('#define %(one)sString "%(two)s" \n'  % {"one":nodeName1, "two":nodeName})   
+#	else:
+#		print 'record(mbbi, "$(P)$(R)%s_RBV") {' % nodeName
+#	        print '  field(DTYP, "asynInt32")'
+#	        print '  field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))%s")' % nodeName
+#	        print enumerations,
+#	        print '  field(SCAN, "I/O Intr")'
+#	        print '  field(DISA, "0")'
+#	        print '}'
+#	        print
+	include_1_filename.write('int %s; \n' % nodeName1)  
+	include_2_filename.write('#define %(one)sString "%(two)s" \n'  % {"one":nodeName1, "two":nodeName0})   
 	include_3_filename.write('createParam(%(one)sString, asynParamInt32, &%(two)s);\n\n'  % {"one":nodeName1, "two":nodeName1}) 
 ##	include_4_filename.write('try { \n')
 #	include_4_filename.write('systemInteger = grabber.getInteger<Euresys::%(one)sModule>("%(three)s"); \n'  % {"three":nodeName0,"one":mask_name}) 
-	include_4_filename.write('XI_status = xiGetParamInt(xiH,"%s",&systemInteger); \n'  % nodeName0) 
-	include_4_filename.write('printf("%%s %%d \\n", "%(one)s",systemInteger); \n' % {"one":nodeName0}) 
-	include_4_filename.write('status = setIntegerParam(%(one)s, systemInteger); \n\n'  % {"one":nodeName1}) 
+    include_4_filename.write('XI_status = xiGetParamInt(xiH,"%s",&systemInteger); \n'  % nodeName0) 
+    include_4_filename.write('printf("%%s %%d %%d\\n", "%(one)s",systemInteger, XI_status); \n' % {"one":nodeName0}) 
+    include_4_filename.write('status = setIntegerParam(%(one)s, systemInteger); \n\n'  % {"one":nodeName1}) 
 #	include_4_filename.write('} catch (const std::exception &e) { std::cout << "error: %(one)s (" << %(one)s << ") " <<e.what() << std::endl; }  \n' % {"one":nodeName1})  
 ##	include_4_filename.write('} catch (const std::exception &e) { }  \n')  
-        if ro:
-            continue        
+#        if ro:
+#            continue        
 #        print 'record(mbbo, "$(P)$(R)%s") {' % records[nodeName]
-	if longenum:
-		print '#record(mbbo, "$(P)$(R)%s") {' % nodeName
-        	print '#  field(DTYP, "asynInt32")'
-        	print '#  field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))%s")' % nodeName
-        	print bigenumerations,       
-        	print '#  field(DISA, "0")'
-        	print '#}'
-        	print
-	else:
-		print 'record(mbbo, "$(P)$(R)%s") {' % nodeName
-        	print '  field(DTYP, "asynInt32")'
-        	print '  field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))%s")' % nodeName
-        	print enumerations,       
-        	print '  field(DISA, "0")'
-        	print '}'
-        	print
+#	if longenum:
+#		print '#record(mbbo, "$(P)$(R)%s") {' % nodeName
+#        	print '#  field(DTYP, "asynInt32")'
+#        	print '#  field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))%s")' % nodeName
+#        	print bigenumerations,       
+#        	print '#  field(DISA, "0")'
+#        	print '#}'
+#        	print
+#	else:
+#		print 'record(mbbo, "$(P)$(R)%s") {' % nodeName
+#        	print '  field(DTYP, "asynInt32")'
+#        	print '  field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))%s")' % nodeName
+#        	print enumerations,       
+#        	print '  field(DISA, "0")'
+#        	print '}'
+#        	print
 	          
         
-    else:
-        print >> sys.stderr, "Don't know what to do with >%s<" % node.nodeName
+#    else:
+#        print >> sys.stderr, "Don't know what to do with >%s<" % node.nodeName
     
 # tidy up
 include_1_filename.close()
@@ -464,7 +463,7 @@ include_2_filename.close()
 include_3_filename.close()
 include_4_filename.close()
 
-db_file.close()     
+#db_file.close()     
 sys.stdout = stdout
 
 

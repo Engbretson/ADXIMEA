@@ -382,7 +382,7 @@ for name, nodes in structure:
         nx += 10
         text += make_label()
         nx += 110            
-        if node.nodeName in ["StringReg", "String"] or ro:
+        if node.nodeName in ["StringReg","String"] or ro:
             text += make_ro()
         elif node.nodeName in ["Integer", "Float", "Converter", "IntConverter", "IntSwissKnife", "SwissKnife"]:  
             text += make_demand()

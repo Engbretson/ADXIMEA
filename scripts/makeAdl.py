@@ -1,5 +1,5 @@
 #!/bin/env python
-import os, sys
+import os, sys, re
 from xml.dom.minidom import parseString
 from optparse import OptionParser
 
@@ -55,9 +55,21 @@ def handle_node(node):
     elif node.hasAttribute("Name"):
         name = str(node.getAttribute("Name"))
         lookup[name] = node
+        # Add a leading GC_ to the name to prevent identical record names to those in ADBase.template
+#        recordName = "GC_" + name
         recordName = name
-        if len(recordName) > 16:
-            recordName = recordName[:16]
+        if len(recordName) > 20:
+            words=re.findall('[a-zA-Z][^A-Z]*', recordName)
+            for i in range(len(words)):
+                word = words[i]
+                if (len(word) > 3):
+                    word = word[:3]
+                    words[i] = word
+                    s = ''
+                    recordName = s.join(words)
+                    if (len(recordName) <= 20): break
+        if len(recordName) > 20:                    
+            recordName = recordName[:20]
         i = 0
         while recordName in records.values():
             recordName = recordName[:-len(str(i))] + str(i)
@@ -420,17 +432,18 @@ maxScreenHeight = 850
 headingHeight = 20
 labelWidth = 220
 maxLabelHeight = 20
-readonlyWidth = 150
+readonlyWidth = 240
 readonlyHeight = 18
-readbackWidth = 90
+readbackWidth = 120
 readbackHeight = 18
 textEntryWidth = 60
 textEntryHeight = 20
-menuWidth = 150
+menuWidth = 120
 menuHeight = 20
-messageButtonWidth = 150
+messageButtonWidth = 200
 messageButtonHeight = 20
-boxWidth = 5 + labelWidth + 5 + readonlyWidth + 5
+# boxWidth must be set to the widest combination of widgets in one row
+boxWidth = 5 + labelWidth + 5 + menuWidth + 5 + readbackWidth + 5
 w = boxWidth
 h = 40
 x = 5
@@ -502,7 +515,7 @@ for name, nodes in structure:
             labelHeight = 10
         text += make_label()
         nx += labelWidth + 5
-        if node.nodeName in ["StringReg", "String"] or ro:
+        if node.nodeName in ["StringReg","String"] or ro:
             text += make_ro()
         elif node.nodeName in ["Integer", "Float", "Converter", "IntConverter", "IntSwissKnife", "SwissKnife"]:  
             text += make_demand()
@@ -510,6 +523,8 @@ for name, nodes in structure:
             text += make_rbv() 
         elif node.nodeName in ["Enumeration", "Boolean"]:
             text += make_menu()
+            nx += menuWidth + 5 
+            text += make_rbv() 
         elif node.nodeName in ["Command"]:
             text += make_cmd()
         else:
